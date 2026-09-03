@@ -1,18 +1,28 @@
 import Link from "next/link";
-import { addToSchedule, addWatch, removeFromSchedule, unwatch } from "@/app/actions";
-import { getFilm, getScreeningsForFilm, getWatchItemForScreening, isScreeningInSchedule } from "@/lib/queries";
+import { addToSchedule, removeFromSchedule } from "@/app/actions";
+import {
+  getFilm,
+  getFilmLikeCounts,
+  getScreeningsForFilm,
+  isFilmLiked,
+  isScreeningInSchedule,
+} from "@/lib/queries";
 import { fmtDateWithWeekday, fmtTime } from "@/lib/format";
-import { SectionBadge } from "@/components/ui";
+import { HeartButton, SectionBadge } from "@/components/ui";
 
 export default async function FilmDetailPage({ params }: PageProps<"/s/[token]/films/[filmId]">) {
   const { token, filmId } = await params;
-  const [film, screenings] = await Promise.all([getFilm(filmId), getScreeningsForFilm(filmId)]);
+  const [film, screenings, liked, likeCounts] = await Promise.all([
+    getFilm(filmId),
+    getScreeningsForFilm(filmId),
+    isFilmLiked(token, filmId),
+    getFilmLikeCounts(),
+  ]);
 
   const screeningStates = await Promise.all(
     screenings.map(async (s) => ({
       screening: s,
       inSchedule: await isScreeningInSchedule(token, s.id),
-      watch: await getWatchItemForScreening(token, s.id),
     }))
   );
 
@@ -42,7 +52,10 @@ export default async function FilmDetailPage({ params }: PageProps<"/s/[token]/f
               {film.is_imported && <SectionBadge tone="yellow">수입작 · {film.import_distributor}</SectionBadge>}
               {film.wp_status && <SectionBadge tone="gray">{film.wp_status}</SectionBadge>}
             </div>
-            <div className="mb-1 text-[21px] font-extrabold tracking-tight">{film.title_kor}</div>
+            <div className="mb-1 flex items-center justify-between gap-2">
+              <span className="text-[21px] font-extrabold tracking-tight">{film.title_kor}</span>
+              <HeartButton token={token} filmId={film.id} liked={liked} count={likeCounts.get(film.id) ?? 0} size="lg" />
+            </div>
             {film.title_eng && <div className="mb-2.5 text-[12.5px] text-white/55">{film.title_eng}</div>}
             <div className="text-[13px] leading-relaxed text-white/78">
               {film.director}
@@ -77,7 +90,7 @@ export default async function FilmDetailPage({ params }: PageProps<"/s/[token]/f
         )}
 
         <div className="flex flex-col gap-2.5">
-          {screeningStates.map(({ screening, inSchedule, watch }) => (
+          {screeningStates.map(({ screening, inSchedule }) => (
             <div key={screening.id} className="flex items-center gap-3 rounded-[13px] border border-border bg-card p-3.5">
               <div className="flex-1">
                 <div className="tabular mb-1 flex items-center gap-1.5 text-[14px] font-semibold">
@@ -90,20 +103,7 @@ export default async function FilmDetailPage({ params }: PageProps<"/s/[token]/f
                 </div>
               </div>
 
-              {screening.is_sold_out ? (
-                <form action={watch?.status === "감시중" ? unwatch.bind(null, token, screening.id) : addWatch.bind(null, token, screening.id)}>
-                  <button
-                    className={`flex flex-none items-center gap-1.5 rounded-[9px] px-3 py-2.5 text-[12.5px] font-semibold ${
-                      watch?.status === "감시중"
-                        ? "border border-watch-blue-border bg-watch-blue-bg text-watch-blue"
-                        : "border border-border-2 bg-card text-text-muted"
-                    }`}
-                  >
-                    {watch?.status === "감시중" && <span className="h-1.5 w-1.5 rounded-full bg-watch-blue" />}
-                    {watch?.status === "감시중" ? "취소표 알림 중" : "취소표 알림"}
-                  </button>
-                </form>
-              ) : inSchedule ? (
+              {screening.is_sold_out ? null : inSchedule ? (
                 <form action={removeFromSchedule.bind(null, token, screening.id)}>
                   <button className="flex-none rounded-[9px] bg-ink-2 px-3.5 py-2.5 text-[12.5px] font-semibold text-white">
                     담김 ✓

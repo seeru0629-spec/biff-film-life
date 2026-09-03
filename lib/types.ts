@@ -53,16 +53,36 @@ export type ScheduleItem = {
   created_at: string;
 };
 
-export type WatchStatus = "감시중" | "알림완료" | "해제됨";
-
-export type WatchItem = {
+export type FilmLike = {
   id: string;
+  film_id: string;
   viewer_token: string;
-  screening_id: string;
-  status: WatchStatus;
   created_at: string;
-  updated_at: string;
 };
+
+export type FilmWithLikes = Film & { likeCount: number };
+
+export type PostCategory = "자유" | "양도";
+
+export type Post = {
+  id: string;
+  category: PostCategory;
+  title: string;
+  body: string;
+  created_at: string;
+};
+
+export type PostWithMeta = Post & { commentCount: number; isMine: boolean };
+
+export type Comment = {
+  id: string;
+  post_id: string;
+  parent_comment_id: string | null;
+  body: string;
+  created_at: string;
+};
+
+export type CommentWithMeta = Comment & { isMine: boolean; replies: CommentWithMeta[] };
 
 export type Restaurant = {
   id: string;

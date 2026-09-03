@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { likeFilm, unlikeFilm } from "@/app/actions";
 
 export function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
@@ -61,6 +62,45 @@ export function EmptyState({
         </a>
       ) : null}
     </div>
+  );
+}
+
+export function HeartButton({
+  token,
+  filmId,
+  liked,
+  count,
+  size = "sm",
+}: {
+  token: string;
+  filmId: string;
+  liked: boolean;
+  count: number;
+  size?: "sm" | "lg";
+}) {
+  const sizeCls = size === "lg" ? "px-3.5 py-2.5 text-[13px]" : "px-2.5 py-1.5 text-[12px]";
+  return (
+    <form action={(liked ? unlikeFilm : likeFilm).bind(null, token, filmId)}>
+      <button
+        className={`flex items-center gap-1 rounded-full font-semibold ${sizeCls} ${
+          liked ? "bg-biff-red-bg text-biff-red-dark" : "border border-border-2 bg-card text-text-muted"
+        }`}
+      >
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill={liked ? "currentColor" : "none"}
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M12 21s-7.5-4.6-10-9.2C.4 8.4 2 4.5 5.8 4c2.2-.3 4 .9 6.2 3.4C14.2 4.9 16 3.7 18.2 4c3.8.5 5.4 4.4 3.8 7.8C19.5 16.4 12 21 12 21z" />
+        </svg>
+        {count > 0 && <span className="tabular">{count}</span>}
+      </button>
+    </form>
   );
 }
 

@@ -14,7 +14,7 @@ export function supabasePublic() {
 }
 
 /**
- * 개인 데이터(viewers/schedule_items/watch_items) 조작용. service_role 키 사용 — RLS 우회.
+ * 개인 데이터(viewers/schedule_items) 조작용. service_role 키 사용 — RLS 우회.
  * 서버 전용(Server Component/Server Action/Route Handler)에서만 import할 것.
  */
 export function supabaseAdmin() {

@@ -18,12 +18,19 @@ export function SaveImageSheet({
 }) {
   const [open, setOpen] = useState(false);
   const [scope, setScope] = useState<"day" | "all">("day");
+  const [ratio, setRatio] = useState<"feed" | "story">("feed");
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [includeWarnings, setIncludeWarnings] = useState(true);
   const [busy, setBusy] = useState(false);
   const exportRef = useRef<HTMLDivElement>(null);
+  const isStory = ratio === "story";
 
-  const activeGroups = scope === "day" ? groups.slice(0, 1) : groups;
+  const activeGroups = scope === "day" || isStory ? groups.slice(0, 1) : groups;
+
+  function handleRatio(v: "feed" | "story") {
+    setRatio(v);
+    if (v === "story") setScope("day");
+  }
 
   async function handleSave() {
     if (!exportRef.current) return;
@@ -32,7 +39,7 @@ export function SaveImageSheet({
       const dataUrl = await toPng(exportRef.current, { pixelRatio: 1, cacheBust: true });
       const a = document.createElement("a");
       a.href = dataUrl;
-      a.download = `영화제라이프_시간표_${groups[0]?.date ?? "export"}.png`;
+      a.download = `영화제라이프_시간표_${groups[0]?.date ?? "export"}${isStory ? "_9x16" : ""}.png`;
       a.click();
       setOpen(false);
     } finally {
@@ -67,13 +74,30 @@ export function SaveImageSheet({
             <div className="mb-4.5 flex gap-3">
               <div className="flex-1 space-y-3">
                 <div>
+                  <div className="mb-1.75 text-[11px] font-semibold text-text-faint">비율</div>
+                  <div className="flex gap-1.5">
+                    {(["feed", "story"] as const).map((v) => (
+                      <button
+                        key={v}
+                        onClick={() => handleRatio(v)}
+                        className={`flex-1 rounded-lg py-2.5 text-[12px] font-semibold ${
+                          ratio === v ? "bg-ink-2 text-white" : "border border-border-2 bg-card text-text-muted"
+                        }`}
+                      >
+                        {v === "feed" ? "기본" : "9:16 스토리"}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <div>
                   <div className="mb-1.75 text-[11px] font-semibold text-text-faint">범위</div>
                   <div className="flex gap-1.5">
                     {(["day", "all"] as const).map((v) => (
                       <button
                         key={v}
                         onClick={() => setScope(v)}
-                        className={`flex-1 rounded-lg py-2.5 text-[12px] font-semibold ${
+                        disabled={v === "all" && isStory}
+                        className={`flex-1 rounded-lg py-2.5 text-[12px] font-semibold disabled:opacity-40 ${
                           scope === v ? "bg-ink-2 text-white" : "border border-border-2 bg-card text-text-muted"
                         }`}
                       >
@@ -81,6 +105,7 @@ export function SaveImageSheet({
                       </button>
                     ))}
                   </div>
+                  {isStory && <div className="mt-1.5 text-[10.5px] text-text-faint">스토리는 하루 단위로 저장돼요</div>}
                 </div>
                 <div>
                   <div className="mb-1.75 text-[11px] font-semibold text-text-faint">테마</div>
@@ -137,7 +162,15 @@ export function SaveImageSheet({
             const warnings = includeWarnings ? findTravelWarnings(g.screenings, travelMatrix) : [];
             const sorted = [...g.screenings].sort((a, b) => a.start_time.localeCompare(b.start_time));
             return (
-              <div key={g.date} style={{ padding: "80px 72px", position: "relative", overflow: "hidden" }}>
+              <div
+                key={g.date}
+                style={{
+                  padding: isStory ? "88px 64px" : "80px 72px",
+                  position: "relative",
+                  overflow: "hidden",
+                  ...(isStory ? { width: 1080, height: 1920, display: "flex", flexDirection: "column" } : {}),
+                }}
+              >
                 <div
                   style={{
                     position: "absolute",
@@ -150,7 +183,7 @@ export function SaveImageSheet({
                     opacity: 0.2,
                   }}
                 />
-                <div style={{ position: "relative" }}>
+                <div style={{ position: "relative", flex: "none" }}>
                   <div style={{ fontWeight: 700, fontSize: 26, letterSpacing: "0.22em", color: "#F5C518", marginBottom: 26 }}>
                     31st BIFF · MY TIMETABLE
                   </div>
@@ -162,7 +195,16 @@ export function SaveImageSheet({
                   </div>
                 </div>
 
-                <div style={{ position: "relative", display: "flex", flexDirection: "column", gap: 26, padding: "36px 0" }}>
+                <div
+                  style={{
+                    position: "relative",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 26,
+                    padding: "36px 0",
+                    ...(isStory ? { flex: 1, minHeight: 0, overflow: "hidden", justifyContent: "center" } : {}),
+                  }}
+                >
                   {sorted.map((s, i) => (
                     <div key={s.id}>
                       <div
@@ -218,6 +260,7 @@ export function SaveImageSheet({
                     justifyContent: "space-between",
                     paddingTop: 34,
                     borderTop: `2px solid ${theme === "dark" ? "rgba(255,255,255,.14)" : "#E7E1D8"}`,
+                    ...(isStory ? { flex: "none" } : {}),
                   }}
                 >
                   <span style={{ fontWeight: 600, fontSize: 24, color: fgDim }}>영화제 라이프</span>

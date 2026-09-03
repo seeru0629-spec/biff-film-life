@@ -1,12 +1,15 @@
 import { supabaseAdmin, supabasePublic } from "./supabase";
 import type {
+  CommentWithMeta,
   Film,
+  FilmWithLikes,
+  PostCategory,
+  PostWithMeta,
   Restaurant,
   ScheduleItem,
   ScreeningWithDetails,
   Venue,
   VenueTravelTime,
-  WatchItem,
 } from "./types";
 
 export async function ensureViewer(token: string) {
@@ -88,24 +91,34 @@ export async function isScreeningInSchedule(token: string, screeningId: string) 
   return !!data;
 }
 
-export async function getWatchItemsForViewer(token: string): Promise<(WatchItem & { screening: ScreeningWithDetails })[]> {
-  const { data, error } = await supabaseAdmin()
-    .from("filmlife_watch_items")
-    .select("*, screening:filmlife_screenings(*, film:filmlife_films(*), venue:filmlife_venues(*))")
-    .eq("viewer_token", token)
-    .order("created_at", { ascending: false });
+export async function getFilmLikeCounts(): Promise<Map<string, number>> {
+  const { data, error } = await supabasePublic().rpc("filmlife_film_like_counts");
   if (error) throw error;
-  return data as unknown as (WatchItem & { screening: ScreeningWithDetails })[];
+  return new Map((data as { film_id: string; like_count: number }[]).map((r) => [r.film_id, Number(r.like_count)]));
 }
 
-export async function getWatchItemForScreening(token: string, screeningId: string) {
+export async function getLikedFilmIdsForViewer(token: string): Promise<Set<string>> {
+  const { data, error } = await supabaseAdmin().from("filmlife_film_likes").select("film_id").eq("viewer_token", token);
+  if (error) throw error;
+  return new Set((data as { film_id: string }[]).map((r) => r.film_id));
+}
+
+export async function isFilmLiked(token: string, filmId: string) {
   const { data } = await supabaseAdmin()
-    .from("filmlife_watch_items")
-    .select("*")
+    .from("filmlife_film_likes")
+    .select("id")
     .eq("viewer_token", token)
-    .eq("screening_id", screeningId)
+    .eq("film_id", filmId)
     .maybeSingle();
-  return data as WatchItem | null;
+  return !!data;
+}
+
+export async function getPopularFilms(): Promise<FilmWithLikes[]> {
+  const [films, counts] = await Promise.all([getFilms(), getFilmLikeCounts()]);
+  return films
+    .map((f) => ({ ...f, likeCount: counts.get(f.id) ?? 0 }))
+    .filter((f) => f.likeCount > 0)
+    .sort((a, b) => b.likeCount - a.likeCount);
 }
 
 export async function getVenueTravelTimes(): Promise<VenueTravelTime[]> {
@@ -118,6 +131,112 @@ export async function getVenues(): Promise<Venue[]> {
   const { data, error } = await supabasePublic().from("filmlife_venues").select("*");
   if (error) throw error;
   return data as Venue[];
+}
+
+export async function getPosts(category: PostCategory, token: string): Promise<PostWithMeta[]> {
+  const { data, error } = await supabaseAdmin()
+    .from("filmlife_posts")
+    .select("id, category, title, body, viewer_token, created_at")
+    .eq("category", category)
+    .order("created_at", { ascending: false });
+  if (error) throw error;
+  const posts = data as (PostWithMeta & { viewer_token: string })[];
+  if (posts.length === 0) return [];
+
+  const { data: comments, error: cErr } = await supabaseAdmin()
+    .from("filmlife_comments")
+    .select("post_id")
+    .in(
+      "post_id",
+      posts.map((p) => p.id)
+    );
+  if (cErr) throw cErr;
+  const countByPost = new Map<string, number>();
+  for (const c of comments as { post_id: string }[]) {
+    countByPost.set(c.post_id, (countByPost.get(c.post_id) ?? 0) + 1);
+  }
+
+  return posts.map(({ viewer_token, ...p }) => ({
+    ...p,
+    isMine: viewer_token === token,
+    commentCount: countByPost.get(p.id) ?? 0,
+  }));
+}
+
+export async function getPost(id: string, token: string): Promise<PostWithMeta | null> {
+  const { data, error } = await supabaseAdmin()
+    .from("filmlife_posts")
+    .select("id, category, title, body, viewer_token, created_at")
+    .eq("id", id)
+    .maybeSingle();
+  if (error) throw error;
+  if (!data) return null;
+  const { count } = await supabaseAdmin()
+    .from("filmlife_comments")
+    .select("id", { count: "exact", head: true })
+    .eq("post_id", id);
+  const { viewer_token, ...post } = data as PostWithMeta & { viewer_token: string };
+  return { ...post, isMine: viewer_token === token, commentCount: count ?? 0 };
+}
+
+export async function isPostOwner(id: string, token: string) {
+  const { data } = await supabaseAdmin().from("filmlife_posts").select("id").eq("id", id).eq("viewer_token", token).maybeSingle();
+  return !!data;
+}
+
+export async function isCommentOwner(id: string, token: string) {
+  const { data } = await supabaseAdmin().from("filmlife_comments").select("id").eq("id", id).eq("viewer_token", token).maybeSingle();
+  return !!data;
+}
+
+type CommentRow = { id: string; post_id: string; parent_comment_id: string | null; body: string; viewer_token: string; created_at: string };
+
+function buildCommentTree(rows: CommentRow[], token: string): CommentWithMeta[] {
+  const byId = new Map(rows.map((r) => [r.id, r]));
+  function topAncestorId(row: (typeof rows)[number]): string {
+    let cur = row;
+    while (cur.parent_comment_id) {
+      const parent = byId.get(cur.parent_comment_id);
+      if (!parent) break;
+      cur = parent;
+    }
+    return cur.id;
+  }
+  const toMeta = (r: (typeof rows)[number]): CommentWithMeta => ({
+    id: r.id,
+    post_id: r.post_id,
+    parent_comment_id: r.parent_comment_id,
+    body: r.body,
+    created_at: r.created_at,
+    isMine: r.viewer_token === token,
+    replies: [],
+  });
+
+  const tops = new Map<string, CommentWithMeta>();
+  const order: string[] = [];
+  for (const r of rows) {
+    if (!r.parent_comment_id) {
+      tops.set(r.id, toMeta(r));
+      order.push(r.id);
+    }
+  }
+  for (const r of rows) {
+    if (r.parent_comment_id) {
+      const top = tops.get(topAncestorId(r));
+      top?.replies.push(toMeta(r));
+    }
+  }
+  return order.map((id) => tops.get(id)!);
+}
+
+export async function getCommentsForPost(postId: string, token: string): Promise<CommentWithMeta[]> {
+  const { data, error } = await supabaseAdmin()
+    .from("filmlife_comments")
+    .select("id, post_id, parent_comment_id, body, viewer_token, created_at")
+    .eq("post_id", postId)
+    .order("created_at", { ascending: true });
+  if (error) throw error;
+  return buildCommentTree(data as CommentRow[], token);
 }
 
 export async function getRestaurants(): Promise<Restaurant[]> {

@@ -1,15 +1,16 @@
 import Link from "next/link";
-import { addToSchedule, addWatch, removeFromSchedule, unwatch } from "@/app/actions";
+import { addToSchedule, removeFromSchedule } from "@/app/actions";
 import {
+  getFilmLikeCounts,
   getFilms,
   getFilmSections,
+  getLikedFilmIdsForViewer,
   getScheduleForViewer,
   getScreeningsByDate,
-  getWatchItemsForViewer,
 } from "@/lib/queries";
 import { festivalDates, weekdayKor } from "@/lib/festival";
 import { fmtMonthDay, fmtTime } from "@/lib/format";
-import { SectionBadge } from "@/components/ui";
+import { HeartButton, SectionBadge } from "@/components/ui";
 import type { ScreeningWithDetails } from "@/lib/types";
 
 export default async function FilmsPage({
@@ -25,7 +26,18 @@ export default async function FilmsPage({
   return (
     <div>
       <div className="sticky top-0 z-10 bg-surface px-4 pt-16">
-        <div className="mb-3.5 text-[24px] font-extrabold tracking-tight">상영작</div>
+        <div className="mb-3.5 flex items-center justify-between">
+          <span className="text-[24px] font-extrabold tracking-tight">상영작</span>
+          <Link
+            href={`/s/${token}/popular`}
+            className="flex items-center gap-1 rounded-full border border-border-2 bg-card px-3 py-1.5 text-[12.5px] font-semibold text-biff-red-dark"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 21s-7.5-4.6-10-9.2C.4 8.4 2 4.5 5.8 4c2.2-.3 4 .9 6.2 3.4C14.2 4.9 16 3.7 18.2 4c3.8.5 5.4 4.4 3.8 7.8C19.5 16.4 12 21 12 21z" />
+            </svg>
+            인기 기대작
+          </Link>
+        </div>
         <div className="mb-3.5 flex gap-1.5 rounded-[11px] bg-skeleton-2 p-1">
           <Link
             href={`/s/${token}/films`}
@@ -56,7 +68,12 @@ export default async function FilmsPage({
 }
 
 async function FilmsByTitle({ token, q, section }: { token: string; q?: string; section?: string }) {
-  const [films, sections] = await Promise.all([getFilms({ search: q, section }), getFilmSections()]);
+  const [films, sections, likeCounts, likedFilmIds] = await Promise.all([
+    getFilms({ search: q, section }),
+    getFilmSections(),
+    getFilmLikeCounts(),
+    getLikedFilmIdsForViewer(token),
+  ]);
 
   return (
     <>
@@ -108,11 +125,8 @@ async function FilmsByTitle({ token, q, section }: { token: string; q?: string; 
           </div>
         )}
         {films.map((film) => (
-          <Link
-            key={film.id}
-            href={`/s/${token}/films/${film.id}`}
-            className="flex gap-3 rounded-[14px] border border-border bg-card p-3"
-          >
+          <div key={film.id} className="relative flex gap-3 rounded-[14px] border border-border bg-card p-3">
+            <Link href={`/s/${token}/films/${film.id}`} className="absolute inset-0 z-0" aria-label={film.title_kor} />
             {film.still_image_url ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
@@ -124,10 +138,15 @@ async function FilmsByTitle({ token, q, section }: { token: string; q?: string; 
               <div className="h-[92px] w-[92px] flex-none rounded-lg bg-skeleton" />
             )}
             <div className="min-w-0 flex-1">
-              <div className="mb-1.5 flex flex-wrap gap-1.5">
-                {film.section && <SectionBadge>{film.section}</SectionBadge>}
-                {film.is_imported && <SectionBadge tone="ink">수입 · {film.import_distributor}</SectionBadge>}
-                {film.wp_status && <SectionBadge tone="gray">{film.wp_status}</SectionBadge>}
+              <div className="mb-1.5 flex flex-wrap items-center justify-between gap-1.5">
+                <div className="flex flex-wrap gap-1.5">
+                  {film.section && <SectionBadge>{film.section}</SectionBadge>}
+                  {film.is_imported && <SectionBadge tone="ink">수입 · {film.import_distributor}</SectionBadge>}
+                  {film.wp_status && <SectionBadge tone="gray">{film.wp_status}</SectionBadge>}
+                </div>
+                <div className="relative z-10">
+                  <HeartButton token={token} filmId={film.id} liked={likedFilmIds.has(film.id)} count={likeCounts.get(film.id) ?? 0} />
+                </div>
               </div>
               <div className="mb-0.5 truncate text-[15px] font-bold">{film.title_kor}</div>
               {film.title_eng && <div className="mb-2 truncate text-[12px] text-text-faint">{film.title_eng}</div>}
@@ -137,7 +156,7 @@ async function FilmsByTitle({ token, q, section }: { token: string; q?: string; 
                   .join(" · ")}
               </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </>
@@ -148,14 +167,9 @@ async function FilmsByDate({ token, selectedDate }: { token: string; selectedDat
   const dates = festivalDates();
   const date = selectedDate && dates.includes(selectedDate) ? selectedDate : dates[0];
 
-  const [screenings, schedule, watchItems] = await Promise.all([
-    getScreeningsByDate(date),
-    getScheduleForViewer(token),
-    getWatchItemsForViewer(token),
-  ]);
+  const [screenings, schedule] = await Promise.all([getScreeningsByDate(date), getScheduleForViewer(token)]);
 
   const scheduledIds = new Set(schedule.map((s) => s.screening_id));
-  const watchStatusById = new Map(watchItems.map((w) => [w.screening_id, w.status]));
 
   const byVenue = new Map<string, ScreeningWithDetails[]>();
   for (const s of screenings) {
@@ -198,7 +212,6 @@ async function FilmsByDate({ token, selectedDate }: { token: string; selectedDat
             <div className="flex flex-col gap-2">
               {list.map((s) => {
                 const inSchedule = scheduledIds.has(s.id);
-                const watchStatus = watchStatusById.get(s.id);
                 return (
                   <div key={s.id} className="flex items-center gap-3 rounded-[13px] border border-border bg-card p-3.5">
                     <div className="min-w-0 flex-1">
@@ -217,20 +230,7 @@ async function FilmsByDate({ token, selectedDate }: { token: string; selectedDat
                       )}
                     </div>
 
-                    {s.is_sold_out ? (
-                      <form action={watchStatus === "감시중" ? unwatch.bind(null, token, s.id) : addWatch.bind(null, token, s.id)}>
-                        <button
-                          className={`flex flex-none items-center gap-1.5 rounded-[9px] px-3 py-2.5 text-[12.5px] font-semibold ${
-                            watchStatus === "감시중"
-                              ? "border border-watch-blue-border bg-watch-blue-bg text-watch-blue"
-                              : "border border-border-2 bg-card text-text-muted"
-                          }`}
-                        >
-                          {watchStatus === "감시중" && <span className="h-1.5 w-1.5 rounded-full bg-watch-blue" />}
-                          {watchStatus === "감시중" ? "알림 중" : "취소표 알림"}
-                        </button>
-                      </form>
-                    ) : inSchedule ? (
+                    {s.is_sold_out ? null : inSchedule ? (
                       <form action={removeFromSchedule.bind(null, token, s.id)}>
                         <button className="flex-none rounded-[9px] bg-ink-2 px-3.5 py-2.5 text-[12.5px] font-semibold text-white">
                           담김 ✓

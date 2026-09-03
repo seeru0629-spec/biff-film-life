@@ -13,6 +13,20 @@ declare global {
 
 const CENTUM_CITY = { lat: 35.1691, lng: 129.1306 };
 
+const CATEGORY_COLORS: Record<string, string> = {
+  한식: "#F2994A",
+  일식: "#2F80ED",
+  중식: "#EB5757",
+  양식: "#9B51E0",
+  술집: "#A9762C",
+  카페: "#27AE60",
+};
+const DEFAULT_CATEGORY_COLOR = "#8C8378";
+
+function categoryColor(category: string | null) {
+  return (category && CATEGORY_COLORS[category]) || DEFAULT_CATEGORY_COLOR;
+}
+
 const VENUE_MARKER_SVG =
   "data:image/svg+xml;base64," +
   btoa(
@@ -21,6 +35,18 @@ const VENUE_MARKER_SVG =
       <circle cx="13" cy="13" r="6" fill="white"/>
     </svg>`
   );
+
+function restaurantMarkerSvg(color: string) {
+  return (
+    "data:image/svg+xml;base64," +
+    btoa(
+      `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="29" viewBox="0 0 22 29">
+        <path d="M11 0C4.9 0 0 4.9 0 11c0 8 11 18 11 18s11-10 11-18C22 4.9 17.1 0 11 0z" fill="${color}"/>
+        <circle cx="11" cy="11" r="4.5" fill="white"/>
+      </svg>`
+    )
+  );
+}
 
 export function FoodExplorer({ restaurants, venues }: { restaurants: Restaurant[]; venues: Venue[] }) {
   const mapDivRef = useRef<HTMLDivElement>(null);
@@ -57,9 +83,19 @@ export function FoodExplorer({ restaurants, venues }: { restaurants: Restaurant[
         kakao.maps.event.addListener(marker, "click", () => info.open(map, marker));
       }
 
+      const restaurantMarkerImages = new Map<string, InstanceType<typeof kakao.maps.MarkerImage>>();
+      function markerImageFor(color: string) {
+        let img = restaurantMarkerImages.get(color);
+        if (!img) {
+          img = new kakao.maps.MarkerImage(restaurantMarkerSvg(color), new kakao.maps.Size(22, 29));
+          restaurantMarkerImages.set(color, img);
+        }
+        return img;
+      }
+
       for (const r of restaurants) {
         const position = new kakao.maps.LatLng(r.lat, r.lng);
-        const marker = new kakao.maps.Marker({ position, map, zIndex: 1 });
+        const marker = new kakao.maps.Marker({ position, map, image: markerImageFor(categoryColor(r.category)), zIndex: 1 });
         const info = new kakao.maps.InfoWindow({
           content: `<div style="font-family:Pretendard,sans-serif;padding:6px 10px;min-width:140px">
             <div style="font-weight:700;font-size:13px;margin-bottom:4px">${r.name}</div>
@@ -110,10 +146,11 @@ export function FoodExplorer({ restaurants, venues }: { restaurants: Restaurant[
             <button
               key={c}
               onClick={() => setCategory(c)}
-              className={`flex-none whitespace-nowrap rounded-full px-3.25 py-2.25 text-[12px] font-medium ${
+              className={`flex flex-none items-center gap-1.5 whitespace-nowrap rounded-full px-3.25 py-2.25 text-[12px] font-medium ${
                 category === c ? "bg-ink-2 text-white" : "border border-border-2 bg-card text-text-muted"
               }`}
             >
+              <span className="h-2 w-2 flex-none rounded-full" style={{ background: categoryColor(c) }} />
               {c}
             </button>
           ))}
@@ -122,7 +159,10 @@ export function FoodExplorer({ restaurants, venues }: { restaurants: Restaurant[
           {filtered.map((r) => (
             <div key={r.id} className="flex items-center gap-2 rounded-[13px] border border-border bg-card p-3.5">
               <button onClick={() => focusRestaurant(r.id)} className="flex flex-1 items-center gap-3 text-left">
-                <div className="flex h-11 w-11 flex-none items-center justify-center rounded-[10px] bg-biff-red-bg text-[12px] font-bold text-biff-red-dark">
+                <div
+                  className="flex h-11 w-11 flex-none items-center justify-center rounded-[10px] text-[12px] font-bold"
+                  style={{ background: `${categoryColor(r.category)}22`, color: categoryColor(r.category) }}
+                >
                   {r.category?.slice(0, 2)}
                 </div>
                 <div className="flex-1">

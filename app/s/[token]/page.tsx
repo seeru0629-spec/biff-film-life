@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getScheduleForViewer, getVenueTravelTimes, getVenues, getWatchItemsForViewer } from "@/lib/queries";
+import { getScheduleForViewer, getVenueTravelTimes, getVenues } from "@/lib/queries";
 import { ddayLabel, FESTIVAL_END, FESTIVAL_NAME, FESTIVAL_START } from "@/lib/festival";
 import { findTravelWarnings } from "@/lib/travel";
 import { fmtTimeRange } from "@/lib/format";
@@ -7,14 +7,12 @@ import { TravelTimeTable } from "@/components/TravelTimeTable";
 
 export default async function HomePage({ params }: PageProps<"/s/[token]">) {
   const { token } = await params;
-  const [schedule, watchItems, venues, travelMatrix] = await Promise.all([
+  const [schedule, venues, travelMatrix] = await Promise.all([
     getScheduleForViewer(token),
-    getWatchItemsForViewer(token),
     getVenues(),
     getVenueTravelTimes(),
   ]);
 
-  const watchingCount = watchItems.filter((w) => w.status === "감시중").length;
   const screenings = schedule.map((s) => s.screening).sort((a, b) => `${a.screen_date}${a.start_time}`.localeCompare(`${b.screen_date}${b.start_time}`));
   const next = screenings[0];
 
@@ -40,7 +38,7 @@ export default async function HomePage({ params }: PageProps<"/s/[token]">) {
             </span>
           </div>
           <div className="text-[13px] text-white/70">
-            담은 회차 <b className="text-white">{screenings.length}</b>편 · 감시중 <b className="text-white">{watchingCount}</b>건
+            담은 회차 <b className="text-white">{screenings.length}</b>편
           </div>
         </div>
       </div>
