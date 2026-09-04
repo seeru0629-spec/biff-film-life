@@ -2,13 +2,13 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "영화제 라이프",
+  title: "부국쨈 [BIFF-JJAM]",
   description: "BIFF 개인 시간표 · 맛집 · 소식을 한 곳에서",
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "영화제 라이프",
+    title: "부국쨈 [BIFF-JJAM]",
   },
   icons: {
     apple: "/icons/apple-touch-icon.png",

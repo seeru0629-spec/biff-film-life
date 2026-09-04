@@ -39,7 +39,7 @@ export function SaveImageSheet({
       const dataUrl = await toPng(exportRef.current, { pixelRatio: 1, cacheBust: true });
       const a = document.createElement("a");
       a.href = dataUrl;
-      a.download = `영화제라이프_시간표_${groups[0]?.date ?? "export"}${isStory ? "_9x16" : ""}.png`;
+      a.download = `부국쨈_시간표_${groups[0]?.date ?? "export"}${isStory ? "_9x16" : ""}.png`;
       a.click();
       setOpen(false);
     } finally {
@@ -263,7 +263,7 @@ export function SaveImageSheet({
                     ...(isStory ? { flex: "none" } : {}),
                   }}
                 >
-                  <span style={{ fontWeight: 600, fontSize: 24, color: fgDim }}>영화제 라이프</span>
+                  <span style={{ fontWeight: 600, fontSize: 24, color: fgDim }}>부국쨈 [BIFF-JJAM]</span>
                   <span style={{ fontSize: 22, color: fgDim2, fontVariantNumeric: "tabular-nums" }}>2026-10-06 → 10-15</span>
                 </div>
               </div>

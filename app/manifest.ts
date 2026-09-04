@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "영화제 라이프",
-    short_name: "영화제라이프",
+    name: "부국쨈 [BIFF-JJAM]",
+    short_name: "부국쨈",
     description: "BIFF 개인 시간표 · 맛집 · 소식",
     start_url: "/",
     display: "standalone",
