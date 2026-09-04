@@ -11,7 +11,7 @@ if (!url || !serviceKey) {
 }
 const supabase = createClient(url, serviceKey);
 
-// 확정된 수입작만 표기 (progress.md 2026-09-01 기준). 찬란 6편은 아직 개별 제목 미확인 — 확인되는 대로 추가.
+// 확정된 수입작만 표기 (progress.md 2026-09-01 기준).
 const GREENNARAE_IMPORTS = new Set([
   "갑자기 병세가 악화되다",
   "미노타우로스",
@@ -20,13 +20,29 @@ const GREENNARAE_IMPORTS = new Set([
   "우리는 외계인",
 ]);
 
+// 찬란 배급 6편 (2026-09-04 사용자 확인)
+const CHANRAN_IMPORTS = new Set([
+  "블랙 볼",
+  "겁쟁이",
+  "엄마의 바다",
+  "클럽 키드",
+  "파더랜드",
+  "페이퍼 타이거",
+]);
+
 const main = JSON.parse(await readFile(new URL("../data/biff_films.json", import.meta.url)));
 const community = JSON.parse(
   await readFile(new URL("../data/community_biff_films.json", import.meta.url)).catch(() => "[]")
 );
 
+function importDistributor(titleKor) {
+  if (GREENNARAE_IMPORTS.has(titleKor)) return "그린나래미디어";
+  if (CHANRAN_IMPORTS.has(titleKor)) return "찬란";
+  return null;
+}
+
 function toRow(f, sourceUrlBase) {
-  const isImported = GREENNARAE_IMPORTS.has(f.title_kor);
+  const distributor = importDistributor(f.title_kor);
   return {
     title_kor: f.title_kor,
     title_eng: f.title_eng || null,
@@ -36,8 +52,8 @@ function toRow(f, sourceUrlBase) {
     synopsis: f.synopsis || null,
     runtime_min: f.runtime_min ?? null,
     release_year: f.release_year ?? null,
-    is_imported: isImported,
-    import_distributor: isImported ? "그린나래미디어" : null,
+    is_imported: distributor !== null,
+    import_distributor: distributor,
     wp_status: f.wp_status || null,
     still_image_url: f.still_image_url || null,
     source_url: `${sourceUrlBase}?idx=${f.idx}&c_idx=${f.c_idx}`,
