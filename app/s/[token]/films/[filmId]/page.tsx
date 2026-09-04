@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { addToSchedule, rateFilm, removeFromSchedule } from "@/app/actions";
 import {
@@ -46,10 +47,11 @@ export default async function FilmDetailPage({ params }: PageProps<"/s/[token]/f
         </Link>
         <div className="flex gap-3.5">
           {film.still_image_url ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
+            <Image
               src={film.still_image_url}
               alt={`${film.title_kor} 스틸`}
+              width={124}
+              height={124}
               className="h-[124px] w-[124px] flex-none rounded-[10px] bg-white/10 object-cover"
             />
           ) : (

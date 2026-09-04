@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 // 이미지로 저장(html-to-image) 캡처 시 CloudFront 스틸컷이 CORS 헤더를 안 줘서
 // canvas가 tainted 되는 문제를 막기 위한 동일 출처 프록시. BIFF CDN 이미지만 허용.
-const ALLOWED_HOST = "d2j6u4o1bq9z89.cloudfront.net";
+const ALLOWED_HOSTS = new Set(["d2j6u4o1bq9z89.cloudfront.net", "community.biff.kr"]);
 
 export async function GET(req: Request) {
   const target = new URL(req.url).searchParams.get("url");
@@ -14,7 +14,7 @@ export async function GET(req: Request) {
   } catch {
     return NextResponse.json({ error: "잘못된 url" }, { status: 400 });
   }
-  if (parsed.hostname !== ALLOWED_HOST) {
+  if (!ALLOWED_HOSTS.has(parsed.hostname)) {
     return NextResponse.json({ error: "허용되지 않은 호스트" }, { status: 400 });
   }
 

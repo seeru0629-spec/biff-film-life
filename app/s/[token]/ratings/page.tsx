@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getMyRatings } from "@/lib/queries";
 import { fmtRelativeTime } from "@/lib/format";
@@ -24,10 +25,11 @@ export default async function MyRatingsPage({ params }: PageProps<"/s/[token]/ra
           <div key={film.id} className="relative flex gap-3 rounded-[14px] border border-border bg-card p-3">
             <Link href={`/s/${token}/films/${film.id}`} className="absolute inset-0 z-0" aria-label={film.title_kor} />
             {film.still_image_url ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
+              <Image
                 src={film.still_image_url}
                 alt={`${film.title_kor} 스틸`}
+                width={72}
+                height={72}
                 className="h-[72px] w-[72px] flex-none rounded-lg bg-skeleton object-cover"
               />
             ) : (

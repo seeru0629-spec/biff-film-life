@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getLikedFilms } from "@/lib/queries";
 import { HeartButton, SectionBadge } from "@/components/ui";
@@ -23,10 +24,11 @@ export default async function LikedFilmsPage({ params }: PageProps<"/s/[token]/l
           <div key={film.id} className="relative flex items-center gap-3 rounded-[14px] border border-border bg-card p-3">
             <Link href={`/s/${token}/films/${film.id}`} className="absolute inset-0 z-0" aria-label={film.title_kor} />
             {film.still_image_url ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
+              <Image
                 src={film.still_image_url}
                 alt={`${film.title_kor} 스틸`}
+                width={72}
+                height={72}
                 className="h-[72px] w-[72px] flex-none rounded-lg bg-skeleton object-cover"
               />
             ) : (

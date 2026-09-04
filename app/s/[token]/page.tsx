@@ -4,6 +4,7 @@ import { ddayLabel, FESTIVAL_END, FESTIVAL_NAME, FESTIVAL_START } from "@/lib/fe
 import { findTravelWarnings } from "@/lib/travel";
 import { fmtTimeRange } from "@/lib/format";
 import { TravelTimeTable } from "@/components/TravelTimeTable";
+import { ShareAppButton } from "@/components/ShareAppButton";
 
 export default async function HomePage({ params }: PageProps<"/s/[token]">) {
   const { token } = await params;
@@ -28,8 +29,11 @@ export default async function HomePage({ params }: PageProps<"/s/[token]">) {
       <div className="relative overflow-hidden rounded-b-[22px] bg-ink-2 px-5 pb-6 pt-16 text-white">
         <div className="absolute -right-12 -top-12 h-[190px] w-[190px] rounded-full bg-biff-red opacity-20" />
         <div className="relative">
-          <div className="mb-2.5 text-[11px] font-semibold tracking-[0.14em] text-festival-yellow">
-            {FESTIVAL_NAME}
+          <div className="mb-2.5 flex items-center justify-between">
+            <span className="text-[11px] font-semibold tracking-[0.14em] text-festival-yellow">
+              {FESTIVAL_NAME}
+            </span>
+            <ShareAppButton />
           </div>
           <div className="mb-1.5 flex items-end gap-2.5">
             <span className="tabular text-[46px] font-extrabold leading-none tracking-tight">{ddayLabel()}</span>
