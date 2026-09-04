@@ -62,6 +62,20 @@ export type FilmLike = {
 
 export type FilmWithLikes = Film & { likeCount: number };
 
+export type RatingSummary = { avg: number; count: number };
+
+export type Rating = {
+  id: string;
+  film_id: string;
+  rating: number;
+  review: string | null;
+  created_at: string;
+};
+
+export type RatingWithMeta = Rating & { nickname: string; isMine: boolean };
+
+export type FilmWithRating = Film & { myRating: Rating };
+
 export type PostCategory = "자유" | "양도";
 
 export type Post = {

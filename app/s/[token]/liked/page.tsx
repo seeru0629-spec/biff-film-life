@@ -1,28 +1,27 @@
 import Link from "next/link";
-import { getPopularFilms, getLikedFilmIdsForViewer } from "@/lib/queries";
+import { getLikedFilms } from "@/lib/queries";
 import { HeartButton, SectionBadge } from "@/components/ui";
 
-export default async function PopularFilmsPage({ params }: PageProps<"/s/[token]/popular">) {
+export default async function LikedFilmsPage({ params }: PageProps<"/s/[token]/liked">) {
   const { token } = await params;
-  const [films, likedFilmIds] = await Promise.all([getPopularFilms(), getLikedFilmIdsForViewer(token)]);
+  const films = await getLikedFilms(token);
 
   return (
     <div>
       <div className="sticky top-0 z-10 bg-surface px-4 pb-3.5 pt-16">
-        <div className="text-[24px] font-extrabold tracking-tight">인기 상영작</div>
-        <div className="mt-1 text-[12.5px] text-text-faint">사용자들이 기대하는 영화를 한 눈에 볼 수 있어요</div>
+        <div className="text-[24px] font-extrabold tracking-tight">찜한 영화</div>
+        <div className="mt-1 text-[12.5px] text-text-faint">내가 하트를 누른 영화만 모아봤어요</div>
       </div>
 
       <div className="flex flex-col gap-2.5 px-4">
         {films.length === 0 && (
           <div className="rounded-[14px] border border-border bg-card p-8 text-center text-[13px] text-text-faint">
-            아직 찜한 영화가 없어요. 상영작에서 하트를 눌러보세요
+            아직 찜한 영화가 없어요. <Link href={`/s/${token}/films`} className="font-semibold text-biff-red">상영작 둘러보기</Link>
           </div>
         )}
-        {films.map((film, i) => (
+        {films.map((film) => (
           <div key={film.id} className="relative flex items-center gap-3 rounded-[14px] border border-border bg-card p-3">
             <Link href={`/s/${token}/films/${film.id}`} className="absolute inset-0 z-0" aria-label={film.title_kor} />
-            <div className="w-6 flex-none text-center text-[15px] font-extrabold text-text-faint">{i + 1}</div>
             {film.still_image_url ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
@@ -43,7 +42,7 @@ export default async function PopularFilmsPage({ params }: PageProps<"/s/[token]
               <div className="truncate text-[12.5px] text-text-muted">{[film.director, film.country].filter(Boolean).join(" · ")}</div>
             </div>
             <div className="relative z-10 flex-none">
-              <HeartButton token={token} filmId={film.id} liked={likedFilmIds.has(film.id)} count={film.likeCount} />
+              <HeartButton token={token} filmId={film.id} liked count={film.likeCount} />
             </div>
           </div>
         ))}

@@ -104,6 +104,30 @@ export function HeartButton({
   );
 }
 
+export function StarDisplay({
+  avg,
+  count,
+  size = "sm",
+  showCount = true,
+}: {
+  avg: number;
+  count: number;
+  size?: "sm" | "lg";
+  showCount?: boolean;
+}) {
+  if (count === 0) return null;
+  const textCls = size === "lg" ? "text-[15px]" : "text-[12px]";
+  return (
+    <span className={`flex items-center gap-1 font-bold text-[#F2994A] ${textCls}`}>
+      <svg width={size === "lg" ? 15 : 12} height={size === "lg" ? 15 : 12} viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2.5l2.9 6.06 6.6.77-4.85 4.63 1.25 6.6L12 17.4l-5.9 3.16 1.25-6.6L2.5 9.33l6.6-.77L12 2.5z" />
+      </svg>
+      {avg.toFixed(1)}
+      {showCount && <span className="font-medium text-text-faint">({count})</span>}
+    </span>
+  );
+}
+
 export function ErrorState({ message = "네트워크 상태를 확인한 뒤 다시 시도해 주세요." }: { message?: string }) {
   return (
     <div className="flex items-start gap-3 rounded-2xl border border-biff-red-border bg-card p-5">

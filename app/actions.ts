@@ -85,3 +85,28 @@ export async function deleteComment(token: string, postId: string, commentId: st
   revalidatePath(`/s/${token}/board/${postId}`);
 }
 
+export async function rateFilm(token: string, filmId: string, formData: FormData) {
+  const rating = Number(formData.get("rating"));
+  if (!rating || rating < 0.5 || rating > 5) throw new Error("별점을 선택해주세요");
+  const review = String(formData.get("review") ?? "").trim() || null;
+  const nickname = String(formData.get("nickname") ?? "").trim();
+
+  const admin = supabaseAdmin();
+  const { data: viewer } = await admin.from("filmlife_viewers").select("nickname").eq("token", token).maybeSingle();
+  if (!viewer?.nickname) {
+    if (!nickname) throw new Error("닉네임을 입력해주세요");
+    const { error: nickErr } = await admin.from("filmlife_viewers").update({ nickname }).eq("token", token);
+    if (nickErr) throw new Error(nickErr.message);
+  }
+
+  const { error } = await admin
+    .from("filmlife_ratings")
+    .upsert(
+      { viewer_token: token, film_id: filmId, rating, review, updated_at: new Date().toISOString() },
+      { onConflict: "viewer_token,film_id" }
+    );
+  if (error) throw new Error(error.message);
+  revalidatePath(`/s/${token}/films/${filmId}`);
+  revalidatePath(`/s/${token}/ratings`);
+}
+

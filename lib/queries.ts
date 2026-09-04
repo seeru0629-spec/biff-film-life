@@ -3,8 +3,12 @@ import type {
   CommentWithMeta,
   Film,
   FilmWithLikes,
+  FilmWithRating,
   PostCategory,
   PostWithMeta,
+  Rating,
+  RatingSummary,
+  RatingWithMeta,
   Restaurant,
   ScheduleItem,
   ScreeningWithDetails,
@@ -119,6 +123,11 @@ export async function getPopularFilms(): Promise<FilmWithLikes[]> {
     .map((f) => ({ ...f, likeCount: counts.get(f.id) ?? 0 }))
     .filter((f) => f.likeCount > 0)
     .sort((a, b) => b.likeCount - a.likeCount);
+}
+
+export async function getLikedFilms(token: string): Promise<FilmWithLikes[]> {
+  const [films, counts, likedIds] = await Promise.all([getFilms(), getFilmLikeCounts(), getLikedFilmIdsForViewer(token)]);
+  return films.filter((f) => likedIds.has(f.id)).map((f) => ({ ...f, likeCount: counts.get(f.id) ?? 0 }));
 }
 
 export async function getVenueTravelTimes(): Promise<VenueTravelTime[]> {
@@ -237,6 +246,75 @@ export async function getCommentsForPost(postId: string, token: string): Promise
     .order("created_at", { ascending: true });
   if (error) throw error;
   return buildCommentTree(data as CommentRow[], token);
+}
+
+export async function getViewerNickname(token: string): Promise<string | null> {
+  const { data } = await supabaseAdmin().from("filmlife_viewers").select("nickname").eq("token", token).maybeSingle();
+  return (data as { nickname: string | null } | null)?.nickname ?? null;
+}
+
+export async function getMyRating(token: string, filmId: string): Promise<Rating | null> {
+  const { data } = await supabaseAdmin()
+    .from("filmlife_ratings")
+    .select("id, film_id, rating, review, created_at")
+    .eq("viewer_token", token)
+    .eq("film_id", filmId)
+    .maybeSingle();
+  return data as Rating | null;
+}
+
+export async function getRatingSummary(filmId: string): Promise<RatingSummary> {
+  const { data, error } = await supabaseAdmin().from("filmlife_ratings").select("rating").eq("film_id", filmId);
+  if (error) throw error;
+  const rows = data as { rating: number }[];
+  if (rows.length === 0) return { avg: 0, count: 0 };
+  const sum = rows.reduce((acc, r) => acc + Number(r.rating), 0);
+  return { avg: sum / rows.length, count: rows.length };
+}
+
+export async function getRatingSummaries(): Promise<Map<string, RatingSummary>> {
+  const { data, error } = await supabaseAdmin().from("filmlife_ratings").select("film_id, rating");
+  if (error) throw error;
+  const byFilm = new Map<string, number[]>();
+  for (const r of data as { film_id: string; rating: number }[]) {
+    byFilm.set(r.film_id, [...(byFilm.get(r.film_id) ?? []), Number(r.rating)]);
+  }
+  const summaries = new Map<string, RatingSummary>();
+  for (const [filmId, ratings] of byFilm) {
+    summaries.set(filmId, { avg: ratings.reduce((a, b) => a + b, 0) / ratings.length, count: ratings.length });
+  }
+  return summaries;
+}
+
+export async function getFilmReviews(filmId: string, token: string): Promise<RatingWithMeta[]> {
+  const { data, error } = await supabaseAdmin()
+    .from("filmlife_ratings")
+    .select("id, film_id, rating, review, created_at, viewer_token, viewer:filmlife_viewers(nickname)")
+    .eq("film_id", filmId)
+    .order("created_at", { ascending: false });
+  if (error) throw error;
+  return (data as unknown as (Rating & { viewer_token: string; viewer: { nickname: string | null } | null })[]).map((r) => ({
+    id: r.id,
+    film_id: r.film_id,
+    rating: r.rating,
+    review: r.review,
+    created_at: r.created_at,
+    nickname: r.viewer?.nickname ?? "익명",
+    isMine: r.viewer_token === token,
+  }));
+}
+
+export async function getMyRatings(token: string): Promise<FilmWithRating[]> {
+  const { data, error } = await supabaseAdmin()
+    .from("filmlife_ratings")
+    .select("id, film_id, rating, review, created_at, film:filmlife_films(*)")
+    .eq("viewer_token", token)
+    .order("created_at", { ascending: false });
+  if (error) throw error;
+  return (data as unknown as (Rating & { film: Film })[]).map((r) => ({
+    ...r.film,
+    myRating: { id: r.id, film_id: r.film_id, rating: r.rating, review: r.review, created_at: r.created_at },
+  }));
 }
 
 export async function getRestaurants(): Promise<Restaurant[]> {

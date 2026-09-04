@@ -1,22 +1,31 @@
 import Link from "next/link";
-import { addToSchedule, removeFromSchedule } from "@/app/actions";
+import { addToSchedule, rateFilm, removeFromSchedule } from "@/app/actions";
 import {
   getFilm,
   getFilmLikeCounts,
+  getFilmReviews,
+  getMyRating,
+  getRatingSummary,
   getScreeningsForFilm,
+  getViewerNickname,
   isFilmLiked,
   isScreeningInSchedule,
 } from "@/lib/queries";
-import { fmtDateWithWeekday, fmtTime } from "@/lib/format";
-import { HeartButton, SectionBadge } from "@/components/ui";
+import { fmtDateWithWeekday, fmtRelativeTime, fmtTime } from "@/lib/format";
+import { HeartButton, SectionBadge, StarDisplay } from "@/components/ui";
+import { StarRatingInput } from "@/components/StarRatingInput";
 
 export default async function FilmDetailPage({ params }: PageProps<"/s/[token]/films/[filmId]">) {
   const { token, filmId } = await params;
-  const [film, screenings, liked, likeCounts] = await Promise.all([
+  const [film, screenings, liked, likeCounts, ratingSummary, myRating, nickname, reviews] = await Promise.all([
     getFilm(filmId),
     getScreeningsForFilm(filmId),
     isFilmLiked(token, filmId),
     getFilmLikeCounts(),
+    getRatingSummary(filmId),
+    getMyRating(token, filmId),
+    getViewerNickname(token),
+    getFilmReviews(filmId, token),
   ]);
 
   const screeningStates = await Promise.all(
@@ -56,6 +65,11 @@ export default async function FilmDetailPage({ params }: PageProps<"/s/[token]/f
               <span className="text-[21px] font-extrabold tracking-tight">{film.title_kor}</span>
               <HeartButton token={token} filmId={film.id} liked={liked} count={likeCounts.get(film.id) ?? 0} size="lg" />
             </div>
+            {ratingSummary.count > 0 && (
+              <div className="mb-1.5">
+                <StarDisplay avg={ratingSummary.avg} count={ratingSummary.count} size="lg" />
+              </div>
+            )}
             {film.title_eng && <div className="mb-2.5 text-[12.5px] text-white/55">{film.title_eng}</div>}
             <div className="text-[13px] leading-relaxed text-white/78">
               {film.director}
@@ -78,6 +92,49 @@ export default async function FilmDetailPage({ params }: PageProps<"/s/[token]/f
       )}
 
       <div className="px-4 pt-5.5">
+        <div className="mb-2.5 text-[14px] font-bold">별점 · 한줄평</div>
+        <div className="mb-4 rounded-[13px] border border-border bg-card p-3.5">
+          <form action={rateFilm.bind(null, token, filmId)} className="flex flex-col gap-3">
+            <StarRatingInput defaultValue={myRating?.rating ?? 0} />
+            {!nickname && (
+              <input
+                type="text"
+                name="nickname"
+                placeholder="닉네임 (한 번만 정하면 계속 쓰여요)"
+                required
+                maxLength={20}
+                className="rounded-[10px] border border-border-2 bg-surface px-3 py-2.5 text-[13.5px] outline-none placeholder:text-icon-muted"
+              />
+            )}
+            <textarea
+              name="review"
+              defaultValue={myRating?.review ?? ""}
+              placeholder="한줄평을 남겨보세요 (선택)"
+              rows={2}
+              className="resize-none rounded-[10px] border border-border-2 bg-surface px-3 py-2.5 text-[13.5px] outline-none placeholder:text-icon-muted"
+            />
+            <button className="rounded-[10px] bg-biff-red py-2.5 text-[13px] font-bold text-white">
+              {myRating ? "수정하기" : "등록"}
+            </button>
+          </form>
+        </div>
+
+        {reviews.length > 0 && (
+          <div className="mb-5.5 flex flex-col gap-2.5">
+            {reviews.map((r) => (
+              <div key={r.id} className="rounded-[12px] border border-border bg-card p-3">
+                <div className="mb-1 flex items-center gap-1.5">
+                  <span className="text-[12.5px] font-bold">{r.nickname}</span>
+                  {r.isMine && <SectionBadge tone="ink">나</SectionBadge>}
+                  <StarDisplay avg={r.rating} count={1} showCount={false} />
+                  <span className="ml-auto text-[11px] text-text-faint">{fmtRelativeTime(r.created_at)}</span>
+                </div>
+                {r.review && <div className="text-[13px] leading-relaxed">{r.review}</div>}
+              </div>
+            ))}
+          </div>
+        )}
+
         <div className="mb-2.5 flex items-baseline gap-2">
           <span className="text-[14px] font-bold">상영 회차</span>
           <span className="text-[12px] text-text-faint">{screenings.length}회차</span>
