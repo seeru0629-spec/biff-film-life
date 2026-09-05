@@ -1,4 +1,6 @@
 // data/biff_films.json(본편) + data/community_biff_films.json(커뮤니티비프)를 filmlife_films 테이블에 upsert.
+// films 테이블은 전체 delete+reinsert 방식이라 film_id를 참조하는 찜/별점은 cascade로 같이 지워지는데,
+// source_url(=idx+c_idx)로 remap해서 자동 복구한다(회차/시간표는 아직 크롤링 대상 아니라 복구 대상 아님).
 // 실행: node --env-file=.env.local scripts/seed_films.mjs
 import { readFile } from "node:fs/promises";
 import { createClient } from "@supabase/supabase-js";
@@ -106,6 +108,33 @@ const rows = [
   ...community.map((f) => toRow(f, "https://community.biff.kr/kor/addon/00000001/program_view.asp")),
 ];
 
+// filmlife_films를 delete하면 film_id를 참조하는 찜/별점/회차(→시간표)가 전부 on delete cascade로
+// 같이 삭제된다. source_url(=idx+c_idx, festival 고유값)을 키로 삼아 찜·별점을 백업해뒀다가
+// 재삽입 후 새 id로 되살린다. 회차/시간표는 아직 크롤링 대상이 아니라(9/11 시간표 발표 전) 복구 대상에서 제외.
+console.log("기존 찜/별점 백업 중...");
+const { data: oldFilms, error: oldFilmsErr } = await supabase.from("filmlife_films").select("id, source_url");
+if (oldFilmsErr) {
+  console.error("기존 films 조회 실패:", oldFilmsErr);
+  process.exit(1);
+}
+const oldIdToSourceUrl = new Map(oldFilms.map((f) => [f.id, f.source_url]));
+
+const { data: oldLikes, error: oldLikesErr } = await supabase
+  .from("filmlife_film_likes")
+  .select("film_id, viewer_token, created_at");
+if (oldLikesErr) {
+  console.error("기존 찜 조회 실패:", oldLikesErr);
+  process.exit(1);
+}
+const { data: oldRatings, error: oldRatingsErr } = await supabase
+  .from("filmlife_ratings")
+  .select("film_id, viewer_token, rating, review, created_at, updated_at");
+if (oldRatingsErr) {
+  console.error("기존 별점 조회 실패:", oldRatingsErr);
+  process.exit(1);
+}
+console.log(`백업 완료: 찜 ${oldLikes.length}건, 별점 ${oldRatings.length}건`);
+
 // 기존 시드 데이터 초기화 후 재삽입 (source_url로 idx 추적 가능하므로 멱등하게 재실행 가능)
 const { error: delErr } = await supabase.from("filmlife_films").delete().not("id", "is", null);
 if (delErr) {
@@ -113,15 +142,54 @@ if (delErr) {
   process.exit(1);
 }
 
+const newSourceUrlToId = new Map();
 const chunkSize = 100;
 for (let i = 0; i < rows.length; i += chunkSize) {
   const chunk = rows.slice(i, i + chunkSize);
-  const { error } = await supabase.from("filmlife_films").insert(chunk);
+  const { data: inserted, error } = await supabase.from("filmlife_films").insert(chunk).select("id, source_url");
   if (error) {
     console.error(`삽입 실패 (offset ${i}):`, error);
     process.exit(1);
   }
+  for (const row of inserted) newSourceUrlToId.set(row.source_url, row.id);
   console.log(`${i + chunk.length}/${rows.length} 삽입 완료`);
 }
 
 console.log(`시드 완료: ${rows.length}편`);
+
+// 찜/별점을 새 film_id로 remap해서 복구 (같은 영화가 이번에도 있을 때만 — idx/c_idx가 없어졌으면 스킵)
+function remap(oldRows, label) {
+  const remapped = [];
+  let skipped = 0;
+  for (const row of oldRows) {
+    const sourceUrl = oldIdToSourceUrl.get(row.film_id);
+    const newId = sourceUrl && newSourceUrlToId.get(sourceUrl);
+    if (!newId) {
+      skipped++;
+      continue;
+    }
+    remapped.push({ ...row, film_id: newId });
+  }
+  if (skipped > 0) console.log(`${label}: ${skipped}건은 대응하는 영화가 이번 시딩에 없어 복구 스킵`);
+  return remapped;
+}
+
+const remappedLikes = remap(oldLikes, "찜");
+if (remappedLikes.length > 0) {
+  const { error } = await supabase.from("filmlife_film_likes").insert(remappedLikes);
+  if (error) {
+    console.error("찜 복구 실패:", error);
+    process.exit(1);
+  }
+}
+console.log(`찜 복구 완료: ${remappedLikes.length}/${oldLikes.length}건`);
+
+const remappedRatings = remap(oldRatings, "별점");
+if (remappedRatings.length > 0) {
+  const { error } = await supabase.from("filmlife_ratings").insert(remappedRatings);
+  if (error) {
+    console.error("별점 복구 실패:", error);
+    process.exit(1);
+  }
+}
+console.log(`별점 복구 완료: ${remappedRatings.length}/${oldRatings.length}건`);
