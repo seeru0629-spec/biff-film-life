@@ -1,3 +1,4 @@
+import { rawSectionsInGroup, sectionGroupOf } from "./sections";
 import { supabaseAdmin, supabasePublic } from "./supabase";
 import type {
   CommentWithMeta,
@@ -36,17 +37,19 @@ export async function getFilms(opts: { search?: string; section?: string } = {})
     const term = opts.search.replace(/[%,]/g, "");
     q = q.or(`title_kor.ilike.%${term}%,title_eng.ilike.%${term}%,director.ilike.%${term}%`);
   }
-  if (opts.section && opts.section !== "전체") q = q.eq("section", opts.section);
+  if (opts.section && opts.section !== "전체") q = q.in("section", rawSectionsInGroup(opts.section));
   const { data, error } = await q;
   if (error) throw error;
   return data as Film[];
 }
 
+/** 상단 필터 칩 목록 — 원본 section을 그룹으로 묶어서 보여줌(개별 영화 배지는 원본 그대로 유지, lib/sections.ts 참고) */
 export async function getFilmSections() {
   const { data, error } = await supabasePublic().from("filmlife_films").select("section");
   if (error) throw error;
-  const set = new Set((data as { section: string | null }[]).map((r) => r.section).filter(Boolean));
-  return Array.from(set) as string[];
+  const rawSet = new Set((data as { section: string | null }[]).map((r) => r.section).filter(Boolean) as string[]);
+  const groupSet = new Set(Array.from(rawSet).map(sectionGroupOf));
+  return Array.from(groupSet);
 }
 
 export async function getFilm(id: string) {

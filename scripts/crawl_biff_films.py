@@ -82,7 +82,11 @@ def parse_detail(page_html: str) -> dict:
     else:
         out["synopsis"] = None
 
-    out["wp_status"] = "WP" if re.search(r"\bWorld Premiere\b|월드\s*프리미어", page_html) else None
+    # "World Premiere" 문자열이 매 페이지 <!-- World Premiere 뱃지 --> 주석으로 항상 존재해
+    # 페이지 전체 검색은 오탐(전 편 WP로 표기)을 일으킴 — 실제 뱃지 span으로 범위를 좁힘.
+    m = re.search(r'class="pg_section"><span class="sectionName">(.*?)</span>', page_html)
+    badge = html.unescape(m.group(1)).strip() if m else ""
+    out["wp_status"] = "WP" if re.search(r"\bWorld Premiere\b|월드\s*프리미어", badge) else None
     return out
 
 
