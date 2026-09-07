@@ -4,10 +4,28 @@ import { useEffect, useState } from "react";
 
 const DISMISS_KEY = "biffjjam:install-hint-dismissed";
 
+type Platform = "ios" | "android" | "other";
+
+function detectPlatform(): Platform {
+  const ua = navigator.userAgent;
+  if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
+  if (/Android/i.test(ua)) return "android";
+  return "other";
+}
+
+const HINT_TEXT: Record<Platform, string> = {
+  ios: "하단 공유 버튼(⬆️)을 누르고 '홈 화면에 추가'를 선택하면 앱처럼 편리하게 사용할 수 있어요",
+  android:
+    "브라우저 메뉴(⋮)에서 '홈 화면에 추가' 또는 '앱 설치'를 선택하면 앱처럼 편리하게 사용할 수 있어요",
+  other: "이 사이트를 홈 화면에 추가하면 앱처럼 편리하게 사용할 수 있어요",
+};
+
 export function InstallHintBanner() {
   const [dismissed, setDismissed] = useState(true);
+  const [platform, setPlatform] = useState<Platform>("other");
 
   useEffect(() => {
+    setPlatform(detectPlatform());
     try {
       setDismissed(localStorage.getItem(DISMISS_KEY) === "1");
     } catch {
@@ -30,7 +48,7 @@ export function InstallHintBanner() {
     <div className="flex items-center gap-2.5 rounded-[14px] border border-border bg-card px-3.5 py-3">
       <span className="text-[17px]">📲</span>
       <span className="flex-1 text-[12.5px] leading-snug text-text-muted">
-        이 사이트를 홈 화면에 추가하면 앱처럼 편리하게 사용할 수 있어요
+        {HINT_TEXT[platform]}
       </span>
       <button
         onClick={dismiss}
