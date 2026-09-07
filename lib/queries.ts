@@ -104,6 +104,16 @@ export async function getFilmLikeCounts(): Promise<Map<string, number>> {
   return new Map((data as { film_id: string; like_count: number }[]).map((r) => [r.film_id, Number(r.like_count)]));
 }
 
+/** 영화 1편의 찜 개수만 필요할 때(상세페이지) — 전체 277편 집계 RPC 대신 단일 count 쿼리 */
+export async function getFilmLikeCount(filmId: string): Promise<number> {
+  const { count, error } = await supabaseAdmin()
+    .from("filmlife_film_likes")
+    .select("*", { count: "exact", head: true })
+    .eq("film_id", filmId);
+  if (error) throw error;
+  return count ?? 0;
+}
+
 export async function getLikedFilmIdsForViewer(token: string): Promise<Set<string>> {
   const { data, error } = await supabaseAdmin().from("filmlife_film_likes").select("film_id").eq("viewer_token", token);
   if (error) throw error;

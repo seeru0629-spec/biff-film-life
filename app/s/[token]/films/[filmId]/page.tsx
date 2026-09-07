@@ -3,7 +3,7 @@ import Link from "next/link";
 import { addToSchedule, rateFilm, removeFromSchedule } from "@/app/actions";
 import {
   getFilm,
-  getFilmLikeCounts,
+  getFilmLikeCount,
   getFilmReviews,
   getMyRating,
   getRatingSummary,
@@ -18,11 +18,11 @@ import { StarRatingInput } from "@/components/StarRatingInput";
 
 export default async function FilmDetailPage({ params }: PageProps<"/s/[token]/films/[filmId]">) {
   const { token, filmId } = await params;
-  const [film, screenings, liked, likeCounts, ratingSummary, myRating, nickname, reviews] = await Promise.all([
+  const [film, screenings, liked, likeCount, ratingSummary, myRating, nickname, reviews] = await Promise.all([
     getFilm(filmId),
     getScreeningsForFilm(filmId),
     isFilmLiked(token, filmId),
-    getFilmLikeCounts(),
+    getFilmLikeCount(filmId),
     getRatingSummary(filmId),
     getMyRating(token, filmId),
     getViewerNickname(token),
@@ -65,7 +65,7 @@ export default async function FilmDetailPage({ params }: PageProps<"/s/[token]/f
             </div>
             <div className="mb-1 flex items-center justify-between gap-2">
               <span className="text-[21px] font-extrabold tracking-tight">{film.title_kor}</span>
-              <HeartButton token={token} filmId={film.id} liked={liked} count={likeCounts.get(film.id) ?? 0} size="lg" />
+              <HeartButton token={token} filmId={film.id} liked={liked} count={likeCount} size="lg" />
             </div>
             {ratingSummary.count > 0 && (
               <div className="mb-1.5">
