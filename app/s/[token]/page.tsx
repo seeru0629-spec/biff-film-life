@@ -5,6 +5,7 @@ import { findTravelWarnings } from "@/lib/travel";
 import { fmtTimeRange } from "@/lib/format";
 import { TravelTimeTable } from "@/components/TravelTimeTable";
 import { ShareAppButton } from "@/components/ShareAppButton";
+import { InstallHintBanner } from "@/components/InstallHintBanner";
 
 export default async function HomePage({ params }: PageProps<"/s/[token]">) {
   const { token } = await params;
@@ -48,6 +49,10 @@ export default async function HomePage({ params }: PageProps<"/s/[token]">) {
       </div>
 
       <div className="px-4 pt-4.5">
+        <InstallHintBanner />
+      </div>
+
+      <div className="px-4 pt-3">
         <div className="mb-2.5 flex items-center justify-between">
           <span className="text-[15px] font-bold">내 시간표 미리보기</span>
           <Link href={`/s/${token}/schedule`} className="text-[12.5px] font-medium text-biff-red">
