@@ -4,19 +4,22 @@ import { useEffect, useState } from "react";
 
 const DISMISS_KEY = "biffjjam:install-hint-dismissed";
 
-type Platform = "ios" | "android" | "other";
+type Platform = "ios" | "samsung" | "android" | "other";
 
 function detectPlatform(): Platform {
   const ua = navigator.userAgent;
   if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
+  if (/SamsungBrowser/i.test(ua)) return "samsung";
   if (/Android/i.test(ua)) return "android";
   return "other";
 }
 
 const HINT_TEXT: Record<Platform, string> = {
   ios: "하단 공유 버튼(⬆️)을 누르고 '홈 화면에 추가'를 선택하면 앱처럼 편리하게 사용할 수 있어요",
+  samsung:
+    "하단 메뉴 아이콘(≡)을 누르고 '페이지 추가하기' → '홈 화면'을 선택하면 앱처럼 편리하게 사용할 수 있어요",
   android:
-    "브라우저 메뉴(⋮)에서 '홈 화면에 추가' 또는 '앱 설치'를 선택하면 앱처럼 편리하게 사용할 수 있어요",
+    "우측 상단 메뉴(⋮)에서 '홈 화면에 추가' 또는 '앱 설치'를 선택하면 앱처럼 편리하게 사용할 수 있어요",
   other: "이 사이트를 홈 화면에 추가하면 앱처럼 편리하게 사용할 수 있어요",
 };
 
