@@ -1,11 +1,40 @@
-// 상영관·이동시간·상영회차는 아직 실 데이터가 없다(상영관 위치는 운영자 제공 대기, 시간표는 9/11 발표 예정).
-// 실제 형식과 동일한 목업으로 화면/이동시간 경고 로직을 먼저 개발한다(PRD 4.9/7장 방침).
-// 상영관 3곳은 실존 부산 센텀시티 소재 영화관(공개 정보) 좌표 기준. 이동시간(분)은 임시값 — 운영자 실측 후 교체 필요.
+// 개발 초기 화면/이동시간 경고 로직 검증용 목업 스크립트. filmlife_venues/filmlife_screenings를
+// 통째로 delete하고 고정된 가짜 3개 상영관 + 5개 회차로 덮어쓴다.
+// ⚠️ 2026-09-12에 실제 상영관(6곳, 실측 이동시간)·실제 상영시간표·실사용자 개인 시간표가 이미
+// 쌓여있는 운영 DB에 이 스크립트를 다시 돌려서 전부 날려먹은 사고가 있었다. 실 데이터가 하나라도
+// 있으면(회차에 걸린 개인 시간표든, 상영관 3곳 초과든) --force 없이는 무조건 중단한다.
+// 실행: node --env-file=.env.local scripts/seed_mock_schedule.mjs [--force]
 import { createClient } from "@supabase/supabase-js";
+import { guardAgainstScheduleLoss } from "./lib/guard.mjs";
 
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const supabase = createClient(url, serviceKey);
+
+const MOCK_VENUE_NAMES = ["영화의전당 하늘연", "롯데시네마 센텀시티", "CGV 센텀시티"];
+
+async function guardAgainstRealDataOverwrite() {
+  await guardAgainstScheduleLoss(supabase, {
+    label: "목업 시간표 시딩 (filmlife_venues/filmlife_screenings 전체 delete)",
+    countQuery: supabase
+      .from("filmlife_schedule_items")
+      .select("*", { count: "exact", head: true })
+      .not("screening_id", "is", null),
+  });
+
+  const force = process.argv.includes("--force");
+  const { data: existingVenues, error } = await supabase.from("filmlife_venues").select("name");
+  if (error) throw error;
+  const hasExtraVenues = existingVenues.some((v) => !MOCK_VENUE_NAMES.includes(v.name));
+  if (hasExtraVenues && !force) {
+    console.error(`\n🛑 중단: 현재 filmlife_venues에 목업 3곳 외의 실제 상영관이 있습니다.`);
+    console.error(`   (${existingVenues.map((v) => v.name).join(", ")})`);
+    console.error(`   실 데이터를 목업으로 덮어쓰는 게 맞다면 --force로 다시 실행하세요.\n`);
+    process.exit(1);
+  }
+}
+
+await guardAgainstRealDataOverwrite();
 
 async function upsertVenues() {
   const venues = [

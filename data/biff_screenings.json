@@ -1,0 +1,7499 @@
+[
+ {
+  "film_idx": "91137",
+  "film_c_idx": "428",
+  "title_kor": "낮과 밤은 서로에게",
+  "sessions": [
+   {
+    "booking_code": "001",
+    "screen_date": "2026-10-06",
+    "start_time": "18:00",
+    "venue_name": "영화의전당 루프씨어터",
+    "has_gv": true
+   },
+   {
+    "booking_code": "156",
+    "screen_date": "2026-10-08",
+    "start_time": "11:20",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": true
+   },
+   {
+    "booking_code": "225",
+    "screen_date": "2026-10-09",
+    "start_time": "09:00",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "324",
+    "screen_date": "2026-10-10",
+    "start_time": "22:40",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91170",
+  "film_c_idx": "442",
+  "title_kor": "그날의 태주",
+  "sessions": [
+   {
+    "booking_code": "267",
+    "screen_date": "2026-10-10",
+    "start_time": "16:00",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "380",
+    "screen_date": "2026-10-11",
+    "start_time": "18:10",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "528",
+    "screen_date": "2026-10-12",
+    "start_time": "10:00",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "701",
+    "screen_date": "2026-10-14",
+    "start_time": "13:00",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91045",
+  "film_c_idx": "442",
+  "title_kor": "긴긴밤",
+  "sessions": [
+   {
+    "booking_code": "074",
+    "screen_date": "2026-10-08",
+    "start_time": "20:30",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "182",
+    "screen_date": "2026-10-09",
+    "start_time": "19:10",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "557",
+    "screen_date": "2026-10-13",
+    "start_time": "16:00",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "703",
+    "screen_date": "2026-10-14",
+    "start_time": "19:20",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90984",
+  "film_c_idx": "442",
+  "title_kor": "마이 마더",
+  "sessions": [
+   {
+    "booking_code": "073",
+    "screen_date": "2026-10-08",
+    "start_time": "16:40",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "181",
+    "screen_date": "2026-10-09",
+    "start_time": "16:00",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "291",
+    "screen_date": "2026-10-10",
+    "start_time": "22:00",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "387",
+    "screen_date": "2026-10-11",
+    "start_time": "09:40",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91136",
+  "film_c_idx": "442",
+  "title_kor": "면도",
+  "sessions": [
+   {
+    "booking_code": "072",
+    "screen_date": "2026-10-08",
+    "start_time": "13:10",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "179",
+    "screen_date": "2026-10-09",
+    "start_time": "09:00",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "464",
+    "screen_date": "2026-10-11",
+    "start_time": "16:20",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "700",
+    "screen_date": "2026-10-14",
+    "start_time": "10:20",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91155",
+  "film_c_idx": "442",
+  "title_kor": "바다에 새겨진 이름",
+  "sessions": [
+   {
+    "booking_code": "366",
+    "screen_date": "2026-10-11",
+    "start_time": "20:10",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "480",
+    "screen_date": "2026-10-12",
+    "start_time": "15:20",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "636",
+    "screen_date": "2026-10-13",
+    "start_time": "19:40",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": false
+   },
+   {
+    "booking_code": "653",
+    "screen_date": "2026-10-14",
+    "start_time": "12:00",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "84521",
+  "film_c_idx": "442",
+  "title_kor": "비트윈 투 러버스",
+  "sessions": [
+   {
+    "booking_code": "364",
+    "screen_date": "2026-10-11",
+    "start_time": "12:20",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "478",
+    "screen_date": "2026-10-12",
+    "start_time": "09:40",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   },
+   {
+    "booking_code": "570",
+    "screen_date": "2026-10-13",
+    "start_time": "19:20",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "720",
+    "screen_date": "2026-10-14",
+    "start_time": "10:00",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89787",
+  "film_c_idx": "442",
+  "title_kor": "빵과 책",
+  "sessions": [
+   {
+    "booking_code": "167",
+    "screen_date": "2026-10-09",
+    "start_time": "20:00",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "279",
+    "screen_date": "2026-10-10",
+    "start_time": "12:20",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "391",
+    "screen_date": "2026-10-11",
+    "start_time": "21:30",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "706",
+    "screen_date": "2026-10-14",
+    "start_time": "15:00",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89725",
+  "film_c_idx": "442",
+  "title_kor": "사토코는 언제나",
+  "sessions": [
+   {
+    "booking_code": "005",
+    "screen_date": "2026-10-07",
+    "start_time": "12:20",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "180",
+    "screen_date": "2026-10-09",
+    "start_time": "12:10",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "371",
+    "screen_date": "2026-10-11",
+    "start_time": "22:20",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "722",
+    "screen_date": "2026-10-14",
+    "start_time": "16:20",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89875",
+  "film_c_idx": "442",
+  "title_kor": "실버 익스프레스",
+  "sessions": [
+   {
+    "booking_code": "268",
+    "screen_date": "2026-10-10",
+    "start_time": "20:30",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "378",
+    "screen_date": "2026-10-11",
+    "start_time": "12:00",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "621",
+    "screen_date": "2026-10-13",
+    "start_time": "19:50",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "723",
+    "screen_date": "2026-10-14",
+    "start_time": "19:40",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90841",
+  "film_c_idx": "442",
+  "title_kor": "일요일 다음날",
+  "sessions": [
+   {
+    "booking_code": "007",
+    "screen_date": "2026-10-07",
+    "start_time": "20:40",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "084",
+    "screen_date": "2026-10-08",
+    "start_time": "09:00",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "224",
+    "screen_date": "2026-10-09",
+    "start_time": "22:00",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "538",
+    "screen_date": "2026-10-12",
+    "start_time": "17:00",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91147",
+  "film_c_idx": "442",
+  "title_kor": "처음 만난 외로움",
+  "sessions": [
+   {
+    "booking_code": "006",
+    "screen_date": "2026-10-07",
+    "start_time": "16:30",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "085",
+    "screen_date": "2026-10-08",
+    "start_time": "12:00",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "420",
+    "screen_date": "2026-10-11",
+    "start_time": "22:00",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "654",
+    "screen_date": "2026-10-14",
+    "start_time": "10:20",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89795",
+  "film_c_idx": "442",
+  "title_kor": "평범하기 위하여",
+  "sessions": [
+   {
+    "booking_code": "365",
+    "screen_date": "2026-10-11",
+    "start_time": "16:20",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "481",
+    "screen_date": "2026-10-12",
+    "start_time": "19:10",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "632",
+    "screen_date": "2026-10-13",
+    "start_time": "18:10",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "716",
+    "screen_date": "2026-10-14",
+    "start_time": "10:20",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90003",
+  "film_c_idx": "442",
+  "title_kor": "힐롤",
+  "sessions": [
+   {
+    "booking_code": "266",
+    "screen_date": "2026-10-10",
+    "start_time": "12:30",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "379",
+    "screen_date": "2026-10-11",
+    "start_time": "15:10",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "550",
+    "screen_date": "2026-10-12",
+    "start_time": "10:00",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "631",
+    "screen_date": "2026-10-13",
+    "start_time": "15:40",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91245",
+  "film_c_idx": "429",
+  "title_kor": "그 소녀의 기억",
+  "sessions": [
+   {
+    "booking_code": "270",
+    "screen_date": "2026-10-10",
+    "start_time": "16:30",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "473",
+    "screen_date": "2026-10-12",
+    "start_time": "18:30",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "648",
+    "screen_date": "2026-10-14",
+    "start_time": "10:00",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91182",
+  "film_c_idx": "429",
+  "title_kor": "내일은 이름이 있다",
+  "sessions": [
+   {
+    "booking_code": "466",
+    "screen_date": "2026-10-12",
+    "start_time": "20:00",
+    "venue_name": "영화의전당 루프씨어터",
+    "has_gv": true
+   },
+   {
+    "booking_code": "560",
+    "screen_date": "2026-10-13",
+    "start_time": "12:30",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91134",
+  "film_c_idx": "429",
+  "title_kor": "도라",
+  "sessions": [
+   {
+    "booking_code": "165",
+    "screen_date": "2026-10-09",
+    "start_time": "12:10",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "494",
+    "screen_date": "2026-10-12",
+    "start_time": "13:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "582",
+    "screen_date": "2026-10-13",
+    "start_time": "10:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "651",
+    "screen_date": "2026-10-14",
+    "start_time": "18:30",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91123",
+  "film_c_idx": "429",
+  "title_kor": "룩백",
+  "sessions": [
+   {
+    "booking_code": "003",
+    "screen_date": "2026-10-07",
+    "start_time": "20:00",
+    "venue_name": "영화의전당 루프씨어터",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91279",
+  "film_c_idx": "429",
+  "title_kor": "실낙원",
+  "sessions": [
+   {
+    "booking_code": "738",
+    "screen_date": "2026-10-09",
+    "start_time": "16:20",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "739",
+    "screen_date": "2026-10-10",
+    "start_time": "09:00",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "740",
+    "screen_date": "2026-10-13",
+    "start_time": "09:40",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "741",
+    "screen_date": "2026-10-14",
+    "start_time": "18:40",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91125",
+  "film_c_idx": "429",
+  "title_kor": "우리 할머니는 큐브왕",
+  "sessions": [
+   {
+    "booking_code": "011",
+    "screen_date": "2026-10-07",
+    "start_time": "19:30",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "112",
+    "screen_date": "2026-10-08",
+    "start_time": "20:30",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "263",
+    "screen_date": "2026-10-09",
+    "start_time": "18:20",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91115",
+  "film_c_idx": "430",
+  "title_kor": "가능한 사랑",
+  "sessions": [
+   {
+    "booking_code": "020",
+    "screen_date": "2026-10-07",
+    "start_time": "15:00",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "089",
+    "screen_date": "2026-10-08",
+    "start_time": "09:00",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "606",
+    "screen_date": "2026-10-13",
+    "start_time": "13:20",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "737",
+    "screen_date": "2026-10-14",
+    "start_time": "15:30",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91097",
+  "film_c_idx": "430",
+  "title_kor": "갑자기 병세가 악화되다",
+  "sessions": [
+   {
+    "booking_code": "349",
+    "screen_date": "2026-10-10",
+    "start_time": "16:00",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "471",
+    "screen_date": "2026-10-12",
+    "start_time": "09:40",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "573",
+    "screen_date": "2026-10-13",
+    "start_time": "17:00",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90305",
+  "film_c_idx": "430",
+  "title_kor": "겁쟁이",
+  "sessions": [
+   {
+    "booking_code": "059",
+    "screen_date": "2026-10-07",
+    "start_time": "20:20",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "091",
+    "screen_date": "2026-10-08",
+    "start_time": "15:40",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "611",
+    "screen_date": "2026-10-13",
+    "start_time": "16:50",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91192",
+  "film_c_idx": "430",
+  "title_kor": "긴 겨울",
+  "sessions": [
+   {
+    "booking_code": "133",
+    "screen_date": "2026-10-08",
+    "start_time": "09:00",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "234",
+    "screen_date": "2026-10-09",
+    "start_time": "22:00",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "698",
+    "screen_date": "2026-10-14",
+    "start_time": "15:40",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90715",
+  "film_c_idx": "430",
+  "title_kor": "나기 노트",
+  "sessions": [
+   {
+    "booking_code": "055",
+    "screen_date": "2026-10-07",
+    "start_time": "19:00",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "081",
+    "screen_date": "2026-10-08",
+    "start_time": "12:00",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "721",
+    "screen_date": "2026-10-14",
+    "start_time": "13:20",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91139",
+  "film_c_idx": "430",
+  "title_kor": "내가 사랑하는 남자",
+  "sessions": [
+   {
+    "booking_code": "079",
+    "screen_date": "2026-10-08",
+    "start_time": "22:20",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "363",
+    "screen_date": "2026-10-11",
+    "start_time": "09:40",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "483",
+    "screen_date": "2026-10-12",
+    "start_time": "12:40",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91135",
+  "film_c_idx": "430",
+  "title_kor": "눈 둘 데가 없네",
+  "sessions": [
+   {
+    "booking_code": "053",
+    "screen_date": "2026-10-07",
+    "start_time": "13:00",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "113",
+    "screen_date": "2026-10-08",
+    "start_time": "22:00",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "222",
+    "screen_date": "2026-10-09",
+    "start_time": "16:20",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "679",
+    "screen_date": "2026-10-14",
+    "start_time": "19:00",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91206",
+  "film_c_idx": "430",
+  "title_kor": "더스트",
+  "sessions": [
+   {
+    "booking_code": "150",
+    "screen_date": "2026-10-08",
+    "start_time": "20:30",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "280",
+    "screen_date": "2026-10-10",
+    "start_time": "16:00",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "399",
+    "screen_date": "2026-10-11",
+    "start_time": "18:20",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "674",
+    "screen_date": "2026-10-14",
+    "start_time": "13:20",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91119",
+  "film_c_idx": "430",
+  "title_kor": "라두 주데의 어느 하녀의 일기",
+  "sessions": [
+   {
+    "booking_code": "052",
+    "screen_date": "2026-10-07",
+    "start_time": "10:20",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "277",
+    "screen_date": "2026-10-10",
+    "start_time": "22:20",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "410",
+    "screen_date": "2026-10-11",
+    "start_time": "22:30",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91167",
+  "film_c_idx": "430",
+  "title_kor": "레이 건",
+  "sessions": [
+   {
+    "booking_code": "382",
+    "screen_date": "2026-10-11",
+    "start_time": "09:20",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "548",
+    "screen_date": "2026-10-12",
+    "start_time": "15:20",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "556",
+    "screen_date": "2026-10-13",
+    "start_time": "12:30",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "726",
+    "screen_date": "2026-10-14",
+    "start_time": "18:20",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91150",
+  "film_c_idx": "430",
+  "title_kor": "로마 엘라스티카",
+  "sessions": [
+   {
+    "booking_code": "284",
+    "screen_date": "2026-10-10",
+    "start_time": "13:00",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "368",
+    "screen_date": "2026-10-11",
+    "start_time": "12:10",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "650",
+    "screen_date": "2026-10-14",
+    "start_time": "15:30",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91159",
+  "film_c_idx": "430",
+  "title_kor": "마더 메리",
+  "sessions": [
+   {
+    "booking_code": "021",
+    "screen_date": "2026-10-07",
+    "start_time": "19:00",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "256",
+    "screen_date": "2026-10-09",
+    "start_time": "10:00",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "637",
+    "screen_date": "2026-10-13",
+    "start_time": "12:00",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91195",
+  "film_c_idx": "430",
+  "title_kor": "마키키란 포",
+  "sessions": [
+   {
+    "booking_code": "111",
+    "screen_date": "2026-10-08",
+    "start_time": "16:30",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "252",
+    "screen_date": "2026-10-09",
+    "start_time": "14:00",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "346",
+    "screen_date": "2026-10-10",
+    "start_time": "19:00",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "537",
+    "screen_date": "2026-10-12",
+    "start_time": "13:10",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "728",
+    "screen_date": "2026-10-14",
+    "start_time": "13:20",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90312",
+  "film_c_idx": "430",
+  "title_kor": "미노타우로스",
+  "sessions": [
+   {
+    "booking_code": "186",
+    "screen_date": "2026-10-09",
+    "start_time": "15:00",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "415",
+    "screen_date": "2026-10-11",
+    "start_time": "22:00",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "614",
+    "screen_date": "2026-10-13",
+    "start_time": "13:00",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91144",
+  "film_c_idx": "430",
+  "title_kor": "백 투 부에노스아이레스",
+  "sessions": [
+   {
+    "booking_code": "271",
+    "screen_date": "2026-10-10",
+    "start_time": "13:10",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "383",
+    "screen_date": "2026-10-11",
+    "start_time": "12:10",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "612",
+    "screen_date": "2026-10-13",
+    "start_time": "20:00",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91151",
+  "film_c_idx": "430",
+  "title_kor": "버킹 패스타드",
+  "sessions": [
+   {
+    "booking_code": "042",
+    "screen_date": "2026-10-07",
+    "start_time": "14:30",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "458",
+    "screen_date": "2026-10-11",
+    "start_time": "10:00",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "725",
+    "screen_date": "2026-10-14",
+    "start_time": "15:20",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89990",
+  "film_c_idx": "430",
+  "title_kor": "붉은 바위에 아이들이 있다",
+  "sessions": [
+   {
+    "booking_code": "041",
+    "screen_date": "2026-10-07",
+    "start_time": "12:00",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "123",
+    "screen_date": "2026-10-08",
+    "start_time": "09:00",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "435",
+    "screen_date": "2026-10-11",
+    "start_time": "22:20",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "482",
+    "screen_date": "2026-10-12",
+    "start_time": "09:40",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90119",
+  "film_c_idx": "430",
+  "title_kor": "비터 크리스마스",
+  "sessions": [
+   {
+    "booking_code": "114",
+    "screen_date": "2026-10-08",
+    "start_time": "09:00",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "211",
+    "screen_date": "2026-10-09",
+    "start_time": "09:00",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "451",
+    "screen_date": "2026-10-11",
+    "start_time": "16:40",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89793",
+  "film_c_idx": "430",
+  "title_kor": "어느 날, 아내가 울었다",
+  "sessions": [
+   {
+    "booking_code": "450",
+    "screen_date": "2026-10-11",
+    "start_time": "12:40",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "588",
+    "screen_date": "2026-10-13",
+    "start_time": "17:30",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90120",
+  "film_c_idx": "430",
+  "title_kor": "언노운",
+  "sessions": [
+   {
+    "booking_code": "189",
+    "screen_date": "2026-10-09",
+    "start_time": "09:40",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "485",
+    "screen_date": "2026-10-12",
+    "start_time": "18:40",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "561",
+    "screen_date": "2026-10-13",
+    "start_time": "16:20",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90564",
+  "film_c_idx": "430",
+  "title_kor": "에밀리아, 사랑을 기억하다",
+  "sessions": [
+   {
+    "booking_code": "285",
+    "screen_date": "2026-10-10",
+    "start_time": "16:20",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "532",
+    "screen_date": "2026-10-12",
+    "start_time": "10:40",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91095",
+  "film_c_idx": "430",
+  "title_kor": "에코 체임버",
+  "sessions": [
+   {
+    "booking_code": "148",
+    "screen_date": "2026-10-08",
+    "start_time": "14:00",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "172",
+    "screen_date": "2026-10-09",
+    "start_time": "18:10",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "286",
+    "screen_date": "2026-10-10",
+    "start_time": "19:30",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "677",
+    "screen_date": "2026-10-14",
+    "start_time": "12:40",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89839",
+  "film_c_idx": "430",
+  "title_kor": "옐로우 레터스",
+  "sessions": [
+   {
+    "booking_code": "092",
+    "screen_date": "2026-10-08",
+    "start_time": "19:00",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "452",
+    "screen_date": "2026-10-11",
+    "start_time": "20:00",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91201",
+  "film_c_idx": "430",
+  "title_kor": "오늘 밤, 사랑은 일어난다",
+  "sessions": [
+   {
+    "booking_code": "151",
+    "screen_date": "2026-10-08",
+    "start_time": "08:40",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": false
+   },
+   {
+    "booking_code": "461",
+    "screen_date": "2026-10-11",
+    "start_time": "19:50",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "468",
+    "screen_date": "2026-10-12",
+    "start_time": "13:00",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89993",
+  "film_c_idx": "430",
+  "title_kor": "오렌지 맛 웨딩",
+  "sessions": [
+   {
+    "booking_code": "149",
+    "screen_date": "2026-10-08",
+    "start_time": "17:00",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "288",
+    "screen_date": "2026-10-10",
+    "start_time": "09:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "639",
+    "screen_date": "2026-10-13",
+    "start_time": "18:00",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90557",
+  "film_c_idx": "430",
+  "title_kor": "와일드 호스 나인",
+  "sessions": [
+   {
+    "booking_code": "140",
+    "screen_date": "2026-10-08",
+    "start_time": "15:40",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "358",
+    "screen_date": "2026-10-10",
+    "start_time": "16:20",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "549",
+    "screen_date": "2026-10-12",
+    "start_time": "18:30",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "647",
+    "screen_date": "2026-10-14",
+    "start_time": "19:30",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91157",
+  "film_c_idx": "430",
+  "title_kor": "와줘서 고맙다는 거장의 인사",
+  "sessions": [
+   {
+    "booking_code": "147",
+    "screen_date": "2026-10-08",
+    "start_time": "11:00",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "210",
+    "screen_date": "2026-10-09",
+    "start_time": "22:10",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "310",
+    "screen_date": "2026-10-10",
+    "start_time": "22:50",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "449",
+    "screen_date": "2026-10-11",
+    "start_time": "10:20",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90250",
+  "film_c_idx": "430",
+  "title_kor": "장 물랭",
+  "sessions": [
+   {
+    "booking_code": "188",
+    "screen_date": "2026-10-09",
+    "start_time": "21:40",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "347",
+    "screen_date": "2026-10-10",
+    "start_time": "09:20",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "613",
+    "screen_date": "2026-10-13",
+    "start_time": "09:40",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91160",
+  "film_c_idx": "430",
+  "title_kor": "텐더 러빙 케어",
+  "sessions": [
+   {
+    "booking_code": "016",
+    "screen_date": "2026-10-07",
+    "start_time": "09:20",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   },
+   {
+    "booking_code": "357",
+    "screen_date": "2026-10-10",
+    "start_time": "13:10",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "638",
+    "screen_date": "2026-10-13",
+    "start_time": "15:00",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90251",
+  "film_c_idx": "430",
+  "title_kor": "파더랜드",
+  "sessions": [
+   {
+    "booking_code": "090",
+    "screen_date": "2026-10-08",
+    "start_time": "13:20",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "287",
+    "screen_date": "2026-10-10",
+    "start_time": "23:00",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "474",
+    "screen_date": "2026-10-12",
+    "start_time": "10:00",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90245",
+  "film_c_idx": "430",
+  "title_kor": "패러렐 테일즈: 데칼로그",
+  "sessions": [
+   {
+    "booking_code": "173",
+    "screen_date": "2026-10-09",
+    "start_time": "21:40",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "388",
+    "screen_date": "2026-10-11",
+    "start_time": "12:10",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "563",
+    "screen_date": "2026-10-13",
+    "start_time": "10:20",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89791",
+  "film_c_idx": "430",
+  "title_kor": "페이퍼 타이거",
+  "sessions": [
+   {
+    "booking_code": "259",
+    "screen_date": "2026-10-09",
+    "start_time": "19:40",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "509",
+    "screen_date": "2026-10-12",
+    "start_time": "12:40",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "686",
+    "screen_date": "2026-10-14",
+    "start_time": "15:30",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91152",
+  "film_c_idx": "430",
+  "title_kor": "페터 춤토르 by 빔 벤더스, 3D",
+  "sessions": [
+   {
+    "booking_code": "141",
+    "screen_date": "2026-10-08",
+    "start_time": "18:30",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "430",
+    "screen_date": "2026-10-11",
+    "start_time": "21:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "525",
+    "screen_date": "2026-10-12",
+    "start_time": "12:40",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90300",
+  "film_c_idx": "430",
+  "title_kor": "피오르",
+  "sessions": [
+   {
+    "booking_code": "027",
+    "screen_date": "2026-10-07",
+    "start_time": "12:20",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "071",
+    "screen_date": "2026-10-08",
+    "start_time": "09:00",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "384",
+    "screen_date": "2026-10-11",
+    "start_time": "15:30",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "562",
+    "screen_date": "2026-10-13",
+    "start_time": "19:30",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90752",
+  "film_c_idx": "430",
+  "title_kor": "zi",
+  "sessions": [
+   {
+    "booking_code": "038",
+    "screen_date": "2026-10-07",
+    "start_time": "12:20",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "152",
+    "screen_date": "2026-10-08",
+    "start_time": "11:20",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": true
+   },
+   {
+    "booking_code": "689",
+    "screen_date": "2026-10-14",
+    "start_time": "12:40",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90515",
+  "film_c_idx": "431",
+  "title_kor": "1982",
+  "sessions": [
+   {
+    "booking_code": "375",
+    "screen_date": "2026-10-11",
+    "start_time": "19:00",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "544",
+    "screen_date": "2026-10-12",
+    "start_time": "12:40",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": true
+   },
+   {
+    "booking_code": "643",
+    "screen_date": "2026-10-13",
+    "start_time": "19:20",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "718",
+    "screen_date": "2026-10-14",
+    "start_time": "16:10",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90187",
+  "film_c_idx": "431",
+  "title_kor": "노래가 끝난 후",
+  "sessions": [
+   {
+    "booking_code": "176",
+    "screen_date": "2026-10-09",
+    "start_time": "15:40",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "344",
+    "screen_date": "2026-10-10",
+    "start_time": "13:30",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "426",
+    "screen_date": "2026-10-11",
+    "start_time": "09:00",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "512",
+    "screen_date": "2026-10-12",
+    "start_time": "09:20",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91124",
+  "film_c_idx": "431",
+  "title_kor": "다시 눈이 올 거야",
+  "sessions": [
+   {
+    "booking_code": "374",
+    "screen_date": "2026-10-11",
+    "start_time": "16:00",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "496",
+    "screen_date": "2026-10-12",
+    "start_time": "21:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "601",
+    "screen_date": "2026-10-13",
+    "start_time": "19:10",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "696",
+    "screen_date": "2026-10-14",
+    "start_time": "10:20",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89759",
+  "film_c_idx": "431",
+  "title_kor": "데드 엔드",
+  "sessions": [
+   {
+    "booking_code": "274",
+    "screen_date": "2026-10-10",
+    "start_time": "12:30",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "437",
+    "screen_date": "2026-10-11",
+    "start_time": "13:00",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "578",
+    "screen_date": "2026-10-13",
+    "start_time": "10:20",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "707",
+    "screen_date": "2026-10-14",
+    "start_time": "18:20",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91175",
+  "film_c_idx": "431",
+  "title_kor": "리아",
+  "sessions": [
+   {
+    "booking_code": "276",
+    "screen_date": "2026-10-10",
+    "start_time": "19:00",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "499",
+    "screen_date": "2026-10-12",
+    "start_time": "19:20",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "574",
+    "screen_date": "2026-10-13",
+    "start_time": "10:00",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "730",
+    "screen_date": "2026-10-14",
+    "start_time": "19:40",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "87783",
+  "film_c_idx": "431",
+  "title_kor": "멈춰서다",
+  "sessions": [
+   {
+    "booking_code": "373",
+    "screen_date": "2026-10-11",
+    "start_time": "12:40",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "511",
+    "screen_date": "2026-10-12",
+    "start_time": "19:20",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "624",
+    "screen_date": "2026-10-13",
+    "start_time": "18:40",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "673",
+    "screen_date": "2026-10-14",
+    "start_time": "10:20",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90060",
+  "film_c_idx": "431",
+  "title_kor": "미몽",
+  "sessions": [
+   {
+    "booking_code": "298",
+    "screen_date": "2026-10-10",
+    "start_time": "16:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "475",
+    "screen_date": "2026-10-12",
+    "start_time": "12:20",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "629",
+    "screen_date": "2026-10-13",
+    "start_time": "10:20",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "717",
+    "screen_date": "2026-10-14",
+    "start_time": "13:20",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91202",
+  "film_c_idx": "431",
+  "title_kor": "부아",
+  "sessions": [
+   {
+    "booking_code": "299",
+    "screen_date": "2026-10-10",
+    "start_time": "19:20",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "463",
+    "screen_date": "2026-10-11",
+    "start_time": "13:00",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "476",
+    "screen_date": "2026-10-12",
+    "start_time": "15:40",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "598",
+    "screen_date": "2026-10-13",
+    "start_time": "10:20",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91096",
+  "film_c_idx": "431",
+  "title_kor": "셀비",
+  "sessions": [
+   {
+    "booking_code": "175",
+    "screen_date": "2026-10-09",
+    "start_time": "12:30",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "395",
+    "screen_date": "2026-10-11",
+    "start_time": "20:00",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "642",
+    "screen_date": "2026-10-13",
+    "start_time": "16:30",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "676",
+    "screen_date": "2026-10-14",
+    "start_time": "20:00",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90501",
+  "film_c_idx": "431",
+  "title_kor": "어둠 속의 새들",
+  "sessions": [
+   {
+    "booking_code": "297",
+    "screen_date": "2026-10-10",
+    "start_time": "12:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "447",
+    "screen_date": "2026-10-11",
+    "start_time": "16:00",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "477",
+    "screen_date": "2026-10-12",
+    "start_time": "19:20",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "665",
+    "screen_date": "2026-10-14",
+    "start_time": "10:00",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89688",
+  "film_c_idx": "431",
+  "title_kor": "탯줄",
+  "sessions": [
+   {
+    "booking_code": "177",
+    "screen_date": "2026-10-09",
+    "start_time": "18:50",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "394",
+    "screen_date": "2026-10-11",
+    "start_time": "16:20",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "508",
+    "screen_date": "2026-10-12",
+    "start_time": "09:40",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "672",
+    "screen_date": "2026-10-14",
+    "start_time": "19:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "84111",
+  "film_c_idx": "431",
+  "title_kor": "환상의 불빛",
+  "sessions": [
+   {
+    "booking_code": "275",
+    "screen_date": "2026-10-10",
+    "start_time": "15:30",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "493",
+    "screen_date": "2026-10-12",
+    "start_time": "10:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "635",
+    "screen_date": "2026-10-13",
+    "start_time": "16:10",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": true
+   },
+   {
+    "booking_code": "691",
+    "screen_date": "2026-10-14",
+    "start_time": "18:30",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91171",
+  "film_c_idx": "431",
+  "title_kor": "귀벌레",
+  "sessions": [
+   {
+    "booking_code": "209",
+    "screen_date": "2026-10-09",
+    "start_time": "19:10",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "422",
+    "screen_date": "2026-10-11",
+    "start_time": "12:10",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "591",
+    "screen_date": "2026-10-13",
+    "start_time": "13:40",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "669",
+    "screen_date": "2026-10-14",
+    "start_time": "10:20",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89762",
+  "film_c_idx": "431",
+  "title_kor": "극장에 두고 온 것들",
+  "sessions": [
+   {
+    "booking_code": "322",
+    "screen_date": "2026-10-10",
+    "start_time": "16:00",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "407",
+    "screen_date": "2026-10-11",
+    "start_time": "12:20",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "586",
+    "screen_date": "2026-10-13",
+    "start_time": "10:20",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "713",
+    "screen_date": "2026-10-14",
+    "start_time": "12:50",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91112",
+  "film_c_idx": "431",
+  "title_kor": "당신을 위한 것은 아닌",
+  "sessions": [
+   {
+    "booking_code": "221",
+    "screen_date": "2026-10-09",
+    "start_time": "12:40",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "409",
+    "screen_date": "2026-10-11",
+    "start_time": "19:00",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "514",
+    "screen_date": "2026-10-12",
+    "start_time": "15:40",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "712",
+    "screen_date": "2026-10-14",
+    "start_time": "09:40",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91111",
+  "film_c_idx": "431",
+  "title_kor": "모종의 탐정",
+  "sessions": [
+   {
+    "booking_code": "207",
+    "screen_date": "2026-10-09",
+    "start_time": "13:00",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "423",
+    "screen_date": "2026-10-11",
+    "start_time": "15:10",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "603",
+    "screen_date": "2026-10-13",
+    "start_time": "17:00",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "727",
+    "screen_date": "2026-10-14",
+    "start_time": "10:40",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "85132",
+  "film_c_idx": "431",
+  "title_kor": "베일러",
+  "sessions": [
+   {
+    "booking_code": "208",
+    "screen_date": "2026-10-09",
+    "start_time": "16:00",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "321",
+    "screen_date": "2026-10-10",
+    "start_time": "12:50",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "400",
+    "screen_date": "2026-10-11",
+    "start_time": "21:20",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "495",
+    "screen_date": "2026-10-12",
+    "start_time": "17:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "617",
+    "screen_date": "2026-10-13",
+    "start_time": "09:40",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91030",
+  "film_c_idx": "431",
+  "title_kor": "사랑의 지평선 너머로",
+  "sessions": [
+   {
+    "booking_code": "323",
+    "screen_date": "2026-10-10",
+    "start_time": "19:30",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "405",
+    "screen_date": "2026-10-11",
+    "start_time": "22:10",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "503",
+    "screen_date": "2026-10-12",
+    "start_time": "20:20",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "584",
+    "screen_date": "2026-10-13",
+    "start_time": "17:20",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "704",
+    "screen_date": "2026-10-14",
+    "start_time": "10:00",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91073",
+  "film_c_idx": "431",
+  "title_kor": "새",
+  "sessions": [
+   {
+    "booking_code": "307",
+    "screen_date": "2026-10-10",
+    "start_time": "12:30",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "424",
+    "screen_date": "2026-10-11",
+    "start_time": "18:10",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "583",
+    "screen_date": "2026-10-13",
+    "start_time": "13:20",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "684",
+    "screen_date": "2026-10-14",
+    "start_time": "09:40",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90158",
+  "film_c_idx": "431",
+  "title_kor": "스페이스",
+  "sessions": [
+   {
+    "booking_code": "320",
+    "screen_date": "2026-10-10",
+    "start_time": "09:00",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "502",
+    "screen_date": "2026-10-12",
+    "start_time": "16:20",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "602",
+    "screen_date": "2026-10-13",
+    "start_time": "13:00",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "709",
+    "screen_date": "2026-10-14",
+    "start_time": "12:50",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90308",
+  "film_c_idx": "431",
+  "title_kor": "아직 아무 일도 일어나지 않은",
+  "sessions": [
+   {
+    "booking_code": "220",
+    "screen_date": "2026-10-09",
+    "start_time": "09:20",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "408",
+    "screen_date": "2026-10-11",
+    "start_time": "15:50",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "515",
+    "screen_date": "2026-10-12",
+    "start_time": "19:20",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "577",
+    "screen_date": "2026-10-13",
+    "start_time": "19:00",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90791",
+  "film_c_idx": "431",
+  "title_kor": "우주의 흔적",
+  "sessions": [
+   {
+    "booking_code": "309",
+    "screen_date": "2026-10-10",
+    "start_time": "19:30",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "498",
+    "screen_date": "2026-10-12",
+    "start_time": "16:00",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "604",
+    "screen_date": "2026-10-13",
+    "start_time": "20:00",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "663",
+    "screen_date": "2026-10-14",
+    "start_time": "15:00",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91173",
+  "film_c_idx": "431",
+  "title_kor": "풀문",
+  "sessions": [
+   {
+    "booking_code": "308",
+    "screen_date": "2026-10-10",
+    "start_time": "16:20",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "421",
+    "screen_date": "2026-10-11",
+    "start_time": "09:00",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "587",
+    "screen_date": "2026-10-13",
+    "start_time": "14:00",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "708",
+    "screen_date": "2026-10-14",
+    "start_time": "10:00",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91172",
+  "film_c_idx": "431",
+  "title_kor": "화곡사",
+  "sessions": [
+   {
+    "booking_code": "223",
+    "screen_date": "2026-10-09",
+    "start_time": "19:10",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "501",
+    "screen_date": "2026-10-12",
+    "start_time": "13:20",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "593",
+    "screen_date": "2026-10-13",
+    "start_time": "19:40",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "705",
+    "screen_date": "2026-10-14",
+    "start_time": "12:40",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91235",
+  "film_c_idx": "432",
+  "title_kor": "겨울 이야기",
+  "sessions": [
+   {
+    "booking_code": "014",
+    "screen_date": "2026-10-07",
+    "start_time": "16:00",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "218",
+    "screen_date": "2026-10-09",
+    "start_time": "16:00",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "667",
+    "screen_date": "2026-10-14",
+    "start_time": "16:20",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90388",
+  "film_c_idx": "432",
+  "title_kor": "그대, 별처럼",
+  "sessions": [
+   {
+    "booking_code": "008",
+    "screen_date": "2026-10-07",
+    "start_time": "08:40",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "143",
+    "screen_date": "2026-10-08",
+    "start_time": "10:00",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "248",
+    "screen_date": "2026-10-09",
+    "start_time": "13:40",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "681",
+    "screen_date": "2026-10-14",
+    "start_time": "13:00",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91106",
+  "film_c_idx": "432",
+  "title_kor": "나의 사소하고도 큰 일들",
+  "sessions": [
+   {
+    "booking_code": "108",
+    "screen_date": "2026-10-08",
+    "start_time": "20:00",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "231",
+    "screen_date": "2026-10-09",
+    "start_time": "12:10",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "671",
+    "screen_date": "2026-10-14",
+    "start_time": "16:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89822",
+  "film_c_idx": "432",
+  "title_kor": "내 친구로 남아줄래?",
+  "sessions": [
+   {
+    "booking_code": "032",
+    "screen_date": "2026-10-07",
+    "start_time": "19:20",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "317",
+    "screen_date": "2026-10-10",
+    "start_time": "13:30",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "497",
+    "screen_date": "2026-10-12",
+    "start_time": "12:40",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "687",
+    "screen_date": "2026-10-14",
+    "start_time": "18:30",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91102",
+  "film_c_idx": "432",
+  "title_kor": "눈에는 눈",
+  "sessions": [
+   {
+    "booking_code": "044",
+    "screen_date": "2026-10-07",
+    "start_time": "10:00",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "159",
+    "screen_date": "2026-10-08",
+    "start_time": "10:00",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "261",
+    "screen_date": "2026-10-09",
+    "start_time": "13:20",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "714",
+    "screen_date": "2026-10-14",
+    "start_time": "15:50",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "83938",
+  "film_c_idx": "432",
+  "title_kor": "다라, 흘러감",
+  "sessions": [
+   {
+    "booking_code": "103",
+    "screen_date": "2026-10-08",
+    "start_time": "15:40",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "199",
+    "screen_date": "2026-10-09",
+    "start_time": "15:40",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "580",
+    "screen_date": "2026-10-13",
+    "start_time": "16:20",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91126",
+  "film_c_idx": "432",
+  "title_kor": "무명소녀",
+  "sessions": [
+   {
+    "booking_code": "060",
+    "screen_date": "2026-10-07",
+    "start_time": "13:20",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "124",
+    "screen_date": "2026-10-08",
+    "start_time": "11:30",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "513",
+    "screen_date": "2026-10-12",
+    "start_time": "12:20",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "690",
+    "screen_date": "2026-10-14",
+    "start_time": "15:20",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91190",
+  "film_c_idx": "432",
+  "title_kor": "미친 노인의 일기",
+  "sessions": [
+   {
+    "booking_code": "035",
+    "screen_date": "2026-10-07",
+    "start_time": "15:40",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "137",
+    "screen_date": "2026-10-08",
+    "start_time": "21:50",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "467",
+    "screen_date": "2026-10-12",
+    "start_time": "10:00",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "682",
+    "screen_date": "2026-10-14",
+    "start_time": "16:40",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91174",
+  "film_c_idx": "432",
+  "title_kor": "불타는 거인들",
+  "sessions": [
+   {
+    "booking_code": "030",
+    "screen_date": "2026-10-07",
+    "start_time": "12:00",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "202",
+    "screen_date": "2026-10-09",
+    "start_time": "09:00",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "342",
+    "screen_date": "2026-10-10",
+    "start_time": "19:40",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "545",
+    "screen_date": "2026-10-12",
+    "start_time": "16:00",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91161",
+  "film_c_idx": "432",
+  "title_kor": "블루 나이트의 연인들",
+  "sessions": [
+   {
+    "booking_code": "160",
+    "screen_date": "2026-10-08",
+    "start_time": "12:20",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "328",
+    "screen_date": "2026-10-10",
+    "start_time": "18:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "531",
+    "screen_date": "2026-10-12",
+    "start_time": "18:40",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "569",
+    "screen_date": "2026-10-13",
+    "start_time": "16:00",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "90577",
+  "film_c_idx": "432",
+  "title_kor": "빙판 위의 새들",
+  "sessions": [
+   {
+    "booking_code": "318",
+    "screen_date": "2026-10-10",
+    "start_time": "16:50",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "397",
+    "screen_date": "2026-10-11",
+    "start_time": "12:20",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "670",
+    "screen_date": "2026-10-14",
+    "start_time": "13:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91198",
+  "film_c_idx": "432",
+  "title_kor": "사적인 일에 관하여",
+  "sessions": [
+   {
+    "booking_code": "125",
+    "screen_date": "2026-10-08",
+    "start_time": "14:40",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "290",
+    "screen_date": "2026-10-10",
+    "start_time": "18:40",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "668",
+    "screen_date": "2026-10-14",
+    "start_time": "19:40",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90720",
+  "film_c_idx": "432",
+  "title_kor": "살인의 문",
+  "sessions": [
+   {
+    "booking_code": "158",
+    "screen_date": "2026-10-08",
+    "start_time": "18:20",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": true
+   },
+   {
+    "booking_code": "260",
+    "screen_date": "2026-10-09",
+    "start_time": "10:00",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "445",
+    "screen_date": "2026-10-11",
+    "start_time": "10:30",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "680",
+    "screen_date": "2026-10-14",
+    "start_time": "10:00",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91128",
+  "film_c_idx": "432",
+  "title_kor": "소울 위스퍼러",
+  "sessions": [
+   {
+    "booking_code": "107",
+    "screen_date": "2026-10-08",
+    "start_time": "16:00",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "319",
+    "screen_date": "2026-10-10",
+    "start_time": "20:00",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "465",
+    "screen_date": "2026-10-11",
+    "start_time": "19:00",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91205",
+  "film_c_idx": "432",
+  "title_kor": "수호전사: 황제의 마지막 비밀",
+  "sessions": [
+   {
+    "booking_code": "161",
+    "screen_date": "2026-10-08",
+    "start_time": "15:20",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "316",
+    "screen_date": "2026-10-10",
+    "start_time": "09:20",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "419",
+    "screen_date": "2026-10-11",
+    "start_time": "17:50",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "641",
+    "screen_date": "2026-10-13",
+    "start_time": "13:00",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89329",
+  "film_c_idx": "432",
+  "title_kor": "아버지의 방",
+  "sessions": [
+   {
+    "booking_code": "004",
+    "screen_date": "2026-10-07",
+    "start_time": "09:20",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "439",
+    "screen_date": "2026-10-11",
+    "start_time": "19:00",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "592",
+    "screen_date": "2026-10-13",
+    "start_time": "16:40",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90096",
+  "film_c_idx": "432",
+  "title_kor": "안개 속의 코끼리",
+  "sessions": [
+   {
+    "booking_code": "162",
+    "screen_date": "2026-10-08",
+    "start_time": "19:00",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "338",
+    "screen_date": "2026-10-10",
+    "start_time": "19:30",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "406",
+    "screen_date": "2026-10-11",
+    "start_time": "09:00",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "552",
+    "screen_date": "2026-10-12",
+    "start_time": "15:00",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89788",
+  "film_c_idx": "432",
+  "title_kor": "약속된 공간",
+  "sessions": [
+   {
+    "booking_code": "242",
+    "screen_date": "2026-10-09",
+    "start_time": "16:20",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "360",
+    "screen_date": "2026-10-10",
+    "start_time": "10:00",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": true
+   },
+   {
+    "booking_code": "551",
+    "screen_date": "2026-10-12",
+    "start_time": "12:40",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "619",
+    "screen_date": "2026-10-13",
+    "start_time": "15:50",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "710",
+    "screen_date": "2026-10-14",
+    "start_time": "16:10",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89841",
+  "film_c_idx": "432",
+  "title_kor": "영웅은 아니지만",
+  "sessions": [
+   {
+    "booking_code": "087",
+    "screen_date": "2026-10-08",
+    "start_time": "19:20",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": true
+   },
+   {
+    "booking_code": "233",
+    "screen_date": "2026-10-09",
+    "start_time": "18:50",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "345",
+    "screen_date": "2026-10-10",
+    "start_time": "16:00",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "453",
+    "screen_date": "2026-10-11",
+    "start_time": "11:20",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91164",
+  "film_c_idx": "432",
+  "title_kor": "오래오래 행복하게",
+  "sessions": [
+   {
+    "booking_code": "039",
+    "screen_date": "2026-10-07",
+    "start_time": "16:00",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "136",
+    "screen_date": "2026-10-08",
+    "start_time": "18:30",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "553",
+    "screen_date": "2026-10-12",
+    "start_time": "18:00",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90867",
+  "film_c_idx": "432",
+  "title_kor": "이야기, 이야기",
+  "sessions": [
+   {
+    "booking_code": "061",
+    "screen_date": "2026-10-07",
+    "start_time": "16:30",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "200",
+    "screen_date": "2026-10-09",
+    "start_time": "19:20",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "418",
+    "screen_date": "2026-10-11",
+    "start_time": "14:50",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "535",
+    "screen_date": "2026-10-12",
+    "start_time": "19:40",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91183",
+  "film_c_idx": "432",
+  "title_kor": "자바의 사계절",
+  "sessions": [
+   {
+    "booking_code": "066",
+    "screen_date": "2026-10-07",
+    "start_time": "19:10",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": true
+   },
+   {
+    "booking_code": "121",
+    "screen_date": "2026-10-08",
+    "start_time": "15:50",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "254",
+    "screen_date": "2026-10-09",
+    "start_time": "10:00",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": true
+   },
+   {
+    "booking_code": "534",
+    "screen_date": "2026-10-12",
+    "start_time": "16:30",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90097",
+  "film_c_idx": "432",
+  "title_kor": "조용히 귀 기울이면",
+  "sessions": [
+   {
+    "booking_code": "043",
+    "screen_date": "2026-10-07",
+    "start_time": "17:30",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "120",
+    "screen_date": "2026-10-08",
+    "start_time": "12:00",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "206",
+    "screen_date": "2026-10-09",
+    "start_time": "09:20",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "448",
+    "screen_date": "2026-10-11",
+    "start_time": "19:30",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89768",
+  "film_c_idx": "432",
+  "title_kor": "좋은 남자는 없다",
+  "sessions": [
+   {
+    "booking_code": "067",
+    "screen_date": "2026-10-07",
+    "start_time": "12:00",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "132",
+    "screen_date": "2026-10-08",
+    "start_time": "22:30",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "249",
+    "screen_date": "2026-10-09",
+    "start_time": "17:30",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "628",
+    "screen_date": "2026-10-13",
+    "start_time": "18:00",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90091",
+  "film_c_idx": "432",
+  "title_kor": "천국으로 가는 아홉 사원",
+  "sessions": [
+   {
+    "booking_code": "069",
+    "screen_date": "2026-10-07",
+    "start_time": "18:00",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "144",
+    "screen_date": "2026-10-08",
+    "start_time": "13:20",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "500",
+    "screen_date": "2026-10-12",
+    "start_time": "09:20",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "589",
+    "screen_date": "2026-10-13",
+    "start_time": "20:00",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "90770",
+  "film_c_idx": "432",
+  "title_kor": "코리야",
+  "sessions": [
+   {
+    "booking_code": "219",
+    "screen_date": "2026-10-09",
+    "start_time": "19:10",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "390",
+    "screen_date": "2026-10-11",
+    "start_time": "18:30",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "666",
+    "screen_date": "2026-10-14",
+    "start_time": "13:40",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89840",
+  "film_c_idx": "432",
+  "title_kor": "필리피냐나",
+  "sessions": [
+   {
+    "booking_code": "029",
+    "screen_date": "2026-10-07",
+    "start_time": "19:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "126",
+    "screen_date": "2026-10-08",
+    "start_time": "18:00",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "262",
+    "screen_date": "2026-10-09",
+    "start_time": "15:40",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "350",
+    "screen_date": "2026-10-10",
+    "start_time": "20:20",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "729",
+    "screen_date": "2026-10-14",
+    "start_time": "17:00",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90357",
+  "film_c_idx": "433",
+  "title_kor": "사피엔스",
+  "sessions": [
+   {
+    "booking_code": "040",
+    "screen_date": "2026-10-07",
+    "start_time": "19:40",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "075",
+    "screen_date": "2026-10-08",
+    "start_time": "23:59",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "232",
+    "screen_date": "2026-10-09",
+    "start_time": "15:30",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "539",
+    "screen_date": "2026-10-12",
+    "start_time": "19:20",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90313",
+  "film_c_idx": "433",
+  "title_kor": "세대유감",
+  "sessions": [
+   {
+    "booking_code": "139",
+    "screen_date": "2026-10-08",
+    "start_time": "12:20",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "197",
+    "screen_date": "2026-10-09",
+    "start_time": "09:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "554",
+    "screen_date": "2026-10-13",
+    "start_time": "20:00",
+    "venue_name": "영화의전당 루프씨어터",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91120",
+  "film_c_idx": "433",
+  "title_kor": "정가네",
+  "sessions": [
+   {
+    "booking_code": "050",
+    "screen_date": "2026-10-07",
+    "start_time": "17:10",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "102",
+    "screen_date": "2026-10-08",
+    "start_time": "12:40",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "227",
+    "screen_date": "2026-10-09",
+    "start_time": "15:50",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "536",
+    "screen_date": "2026-10-12",
+    "start_time": "15:40",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "86121",
+  "film_c_idx": "433",
+  "title_kor": "수능, 출제의 비밀",
+  "sessions": [
+   {
+    "booking_code": "045",
+    "screen_date": "2026-10-07",
+    "start_time": "12:20",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "130",
+    "screen_date": "2026-10-08",
+    "start_time": "15:50",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "440",
+    "screen_date": "2026-10-11",
+    "start_time": "22:20",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "693",
+    "screen_date": "2026-10-14",
+    "start_time": "12:30",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91230",
+  "film_c_idx": "433",
+  "title_kor": "여전히 찬란하게",
+  "sessions": [
+   {
+    "booking_code": "135",
+    "screen_date": "2026-10-08",
+    "start_time": "14:50",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "198",
+    "screen_date": "2026-10-09",
+    "start_time": "12:10",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "339",
+    "screen_date": "2026-10-10",
+    "start_time": "09:40",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "615",
+    "screen_date": "2026-10-13",
+    "start_time": "16:40",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90780",
+  "film_c_idx": "433",
+  "title_kor": "자필",
+  "sessions": [
+   {
+    "booking_code": "049",
+    "screen_date": "2026-10-07",
+    "start_time": "13:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "131",
+    "screen_date": "2026-10-08",
+    "start_time": "19:10",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "240",
+    "screen_date": "2026-10-09",
+    "start_time": "10:20",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "692",
+    "screen_date": "2026-10-14",
+    "start_time": "09:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91158",
+  "film_c_idx": "433",
+  "title_kor": "첫세계",
+  "sessions": [
+   {
+    "booking_code": "013",
+    "screen_date": "2026-10-07",
+    "start_time": "12:30",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "236",
+    "screen_date": "2026-10-09",
+    "start_time": "12:00",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "352",
+    "screen_date": "2026-10-10",
+    "start_time": "14:00",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "634",
+    "screen_date": "2026-10-13",
+    "start_time": "13:10",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90758",
+  "film_c_idx": "433",
+  "title_kor": "최종면접",
+  "sessions": [
+   {
+    "booking_code": "056",
+    "screen_date": "2026-10-07",
+    "start_time": "10:00",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "129",
+    "screen_date": "2026-10-08",
+    "start_time": "12:30",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "241",
+    "screen_date": "2026-10-09",
+    "start_time": "13:10",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "605",
+    "screen_date": "2026-10-13",
+    "start_time": "10:20",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91187",
+  "film_c_idx": "433",
+  "title_kor": "호프",
+  "sessions": [
+   {
+    "booking_code": "019",
+    "screen_date": "2026-10-07",
+    "start_time": "09:30",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "571",
+    "screen_date": "2026-10-13",
+    "start_time": "10:00",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91130",
+  "film_c_idx": "434",
+  "title_kor": "15/18",
+  "sessions": [
+   {
+    "booking_code": "142",
+    "screen_date": "2026-10-08",
+    "start_time": "21:30",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "251",
+    "screen_date": "2026-10-09",
+    "start_time": "11:20",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "315",
+    "screen_date": "2026-10-10",
+    "start_time": "22:30",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "594",
+    "screen_date": "2026-10-13",
+    "start_time": "10:20",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91142",
+  "film_c_idx": "434",
+  "title_kor": "가바초 챔피언",
+  "sessions": [
+   {
+    "booking_code": "065",
+    "screen_date": "2026-10-07",
+    "start_time": "15:40",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": false
+   },
+   {
+    "booking_code": "411",
+    "screen_date": "2026-10-11",
+    "start_time": "09:00",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "623",
+    "screen_date": "2026-10-13",
+    "start_time": "15:40",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89769",
+  "film_c_idx": "434",
+  "title_kor": "구원은 없다",
+  "sessions": [
+   {
+    "booking_code": "105",
+    "screen_date": "2026-10-08",
+    "start_time": "09:20",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "178",
+    "screen_date": "2026-10-09",
+    "start_time": "22:20",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "575",
+    "screen_date": "2026-10-13",
+    "start_time": "13:00",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91054",
+  "film_c_idx": "434",
+  "title_kor": "굿바이, 이놈의 잔인한 세상",
+  "sessions": [
+   {
+    "booking_code": "138",
+    "screen_date": "2026-10-08",
+    "start_time": "09:40",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "392",
+    "screen_date": "2026-10-11",
+    "start_time": "10:00",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "559",
+    "screen_date": "2026-10-13",
+    "start_time": "10:00",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91132",
+  "film_c_idx": "434",
+  "title_kor": "그날 밤, 클라리사에게",
+  "sessions": [
+   {
+    "booking_code": "015",
+    "screen_date": "2026-10-07",
+    "start_time": "20:00",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "305",
+    "screen_date": "2026-10-10",
+    "start_time": "21:20",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "609",
+    "screen_date": "2026-10-13",
+    "start_time": "10:00",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91103",
+  "film_c_idx": "434",
+  "title_kor": "내가 사랑한 빌 에반스",
+  "sessions": [
+   {
+    "booking_code": "086",
+    "screen_date": "2026-10-08",
+    "start_time": "15:50",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   },
+   {
+    "booking_code": "282",
+    "screen_date": "2026-10-10",
+    "start_time": "21:40",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   },
+   {
+    "booking_code": "479",
+    "screen_date": "2026-10-12",
+    "start_time": "12:40",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91168",
+  "film_c_idx": "434",
+  "title_kor": "딥 블루",
+  "sessions": [
+   {
+    "booking_code": "171",
+    "screen_date": "2026-10-09",
+    "start_time": "15:00",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "367",
+    "screen_date": "2026-10-11",
+    "start_time": "09:00",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "657",
+    "screen_date": "2026-10-14",
+    "start_time": "19:30",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90315",
+  "film_c_idx": "434",
+  "title_kor": "라 그라디바",
+  "sessions": [
+   {
+    "booking_code": "096",
+    "screen_date": "2026-10-08",
+    "start_time": "15:40",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "257",
+    "screen_date": "2026-10-09",
+    "start_time": "12:50",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "610",
+    "screen_date": "2026-10-13",
+    "start_time": "13:20",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89879",
+  "film_c_idx": "434",
+  "title_kor": "라 페라",
+  "sessions": [
+   {
+    "booking_code": "145",
+    "screen_date": "2026-10-08",
+    "start_time": "16:40",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "246",
+    "screen_date": "2026-10-09",
+    "start_time": "17:00",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "343",
+    "screen_date": "2026-10-10",
+    "start_time": "10:30",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "715",
+    "screen_date": "2026-10-14",
+    "start_time": "18:10",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91149",
+  "film_c_idx": "434",
+  "title_kor": "로즈",
+  "sessions": [
+   {
+    "booking_code": "250",
+    "screen_date": "2026-10-09",
+    "start_time": "20:00",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "348",
+    "screen_date": "2026-10-10",
+    "start_time": "13:20",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "695",
+    "screen_date": "2026-10-14",
+    "start_time": "18:20",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91240",
+  "film_c_idx": "434",
+  "title_kor": "마리가 뭐 어때서",
+  "sessions": [
+   {
+    "booking_code": "355",
+    "screen_date": "2026-10-10",
+    "start_time": "19:00",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": true
+   },
+   {
+    "booking_code": "370",
+    "screen_date": "2026-10-11",
+    "start_time": "18:40",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "655",
+    "screen_date": "2026-10-14",
+    "start_time": "13:30",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91145",
+  "film_c_idx": "434",
+  "title_kor": "메리 크리스마스, 엄마",
+  "sessions": [
+   {
+    "booking_code": "018",
+    "screen_date": "2026-10-07",
+    "start_time": "16:30",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   },
+   {
+    "booking_code": "273",
+    "screen_date": "2026-10-10",
+    "start_time": "10:00",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "369",
+    "screen_date": "2026-10-11",
+    "start_time": "15:30",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91131",
+  "film_c_idx": "434",
+  "title_kor": "모범 직원 카를라",
+  "sessions": [
+   {
+    "booking_code": "119",
+    "screen_date": "2026-10-08",
+    "start_time": "09:20",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "184",
+    "screen_date": "2026-10-11",
+    "start_time": "22:10",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "702",
+    "screen_date": "2026-10-14",
+    "start_time": "16:30",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91203",
+  "film_c_idx": "434",
+  "title_kor": "바이 애니 민즈: 자비는 없다",
+  "sessions": [
+   {
+    "booking_code": "058",
+    "screen_date": "2026-10-07",
+    "start_time": "17:30",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "484",
+    "screen_date": "2026-10-12",
+    "start_time": "15:40",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "616",
+    "screen_date": "2026-10-13",
+    "start_time": "19:40",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90026",
+  "film_c_idx": "434",
+  "title_kor": "베니마나",
+  "sessions": [
+   {
+    "booking_code": "101",
+    "screen_date": "2026-10-08",
+    "start_time": "09:40",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "183",
+    "screen_date": "2026-10-09",
+    "start_time": "22:20",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   },
+   {
+    "booking_code": "620",
+    "screen_date": "2026-10-13",
+    "start_time": "19:00",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91069",
+  "film_c_idx": "434",
+  "title_kor": "비바 카르멘",
+  "sessions": [
+   {
+    "booking_code": "239",
+    "screen_date": "2026-10-09",
+    "start_time": "22:50",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "517",
+    "screen_date": "2026-10-12",
+    "start_time": "13:10",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "607",
+    "screen_date": "2026-10-13",
+    "start_time": "17:20",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91186",
+  "film_c_idx": "434",
+  "title_kor": "스킨타운",
+  "sessions": [
+   {
+    "booking_code": "012",
+    "screen_date": "2026-10-07",
+    "start_time": "10:00",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "083",
+    "screen_date": "2026-10-08",
+    "start_time": "22:00",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "457",
+    "screen_date": "2026-10-11",
+    "start_time": "19:00",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": true
+   },
+   {
+    "booking_code": "597",
+    "screen_date": "2026-10-13",
+    "start_time": "20:00",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91057",
+  "film_c_idx": "434",
+  "title_kor": "아이언 보이",
+  "sessions": [
+   {
+    "booking_code": "017",
+    "screen_date": "2026-10-07",
+    "start_time": "13:00",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   },
+   {
+    "booking_code": "215",
+    "screen_date": "2026-10-09",
+    "start_time": "22:20",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "504",
+    "screen_date": "2026-10-12",
+    "start_time": "09:40",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89792",
+  "film_c_idx": "434",
+  "title_kor": "엄마의 바다",
+  "sessions": [
+   {
+    "booking_code": "134",
+    "screen_date": "2026-10-08",
+    "start_time": "12:00",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "469",
+    "screen_date": "2026-10-12",
+    "start_time": "16:00",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "600",
+    "screen_date": "2026-10-13",
+    "start_time": "16:10",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89989",
+  "film_c_idx": "434",
+  "title_kor": "에브리타임",
+  "sessions": [
+   {
+    "booking_code": "253",
+    "screen_date": "2026-10-09",
+    "start_time": "17:30",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "356",
+    "screen_date": "2026-10-10",
+    "start_time": "10:00",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "377",
+    "screen_date": "2026-10-11",
+    "start_time": "09:00",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   },
+   {
+    "booking_code": "564",
+    "screen_date": "2026-10-13",
+    "start_time": "13:40",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91231",
+  "film_c_idx": "434",
+  "title_kor": "올랴와 올레흐: 난 좀처럼 꿈에서 깨어나지 않지",
+  "sessions": [
+   {
+    "booking_code": "372",
+    "screen_date": "2026-10-11",
+    "start_time": "09:20",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "526",
+    "screen_date": "2026-10-12",
+    "start_time": "15:30",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "661",
+    "screen_date": "2026-10-14",
+    "start_time": "19:40",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91105",
+  "film_c_idx": "434",
+  "title_kor": "우리, 파도처럼",
+  "sessions": [
+   {
+    "booking_code": "127",
+    "screen_date": "2026-10-08",
+    "start_time": "21:20",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "169",
+    "screen_date": "2026-10-09",
+    "start_time": "09:00",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "361",
+    "screen_date": "2026-10-10",
+    "start_time": "20:30",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "626",
+    "screen_date": "2026-10-13",
+    "start_time": "12:40",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "646",
+    "screen_date": "2026-10-14",
+    "start_time": "13:00",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90592",
+  "film_c_idx": "434",
+  "title_kor": "이성과 감성",
+  "sessions": [
+   {
+    "booking_code": "046",
+    "screen_date": "2026-10-07",
+    "start_time": "15:40",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "076",
+    "screen_date": "2026-10-08",
+    "start_time": "09:00",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "470",
+    "screen_date": "2026-10-12",
+    "start_time": "19:00",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "688",
+    "screen_date": "2026-10-14",
+    "start_time": "09:20",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90241",
+  "film_c_idx": "434",
+  "title_kor": "젠틀 몬스터",
+  "sessions": [
+   {
+    "booking_code": "051",
+    "screen_date": "2026-10-07",
+    "start_time": "20:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "095",
+    "screen_date": "2026-10-08",
+    "start_time": "12:40",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "595",
+    "screen_date": "2026-10-13",
+    "start_time": "13:00",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91133",
+  "film_c_idx": "434",
+  "title_kor": "짐 퀸",
+  "sessions": [
+   {
+    "booking_code": "269",
+    "screen_date": "2026-10-10",
+    "start_time": "23:59",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "414",
+    "screen_date": "2026-10-11",
+    "start_time": "18:50",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "555",
+    "screen_date": "2026-10-13",
+    "start_time": "10:00",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90240",
+  "film_c_idx": "434",
+  "title_kor": "짐승이 너무 많아",
+  "sessions": [
+   {
+    "booking_code": "088",
+    "screen_date": "2026-10-08",
+    "start_time": "22:30",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   },
+   {
+    "booking_code": "230",
+    "screen_date": "2026-10-09",
+    "start_time": "09:00",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "699",
+    "screen_date": "2026-10-14",
+    "start_time": "18:40",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91101",
+  "film_c_idx": "434",
+  "title_kor": "초대받지 않은 손님",
+  "sessions": [
+   {
+    "booking_code": "078",
+    "screen_date": "2026-10-08",
+    "start_time": "19:10",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "237",
+    "screen_date": "2026-10-09",
+    "start_time": "15:30",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "329",
+    "screen_date": "2026-10-10",
+    "start_time": "22:10",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "627",
+    "screen_date": "2026-10-13",
+    "start_time": "15:20",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91104",
+  "film_c_idx": "434",
+  "title_kor": "클럽 키드",
+  "sessions": [
+   {
+    "booking_code": "185",
+    "screen_date": "2026-10-09",
+    "start_time": "12:00",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "547",
+    "screen_date": "2026-10-12",
+    "start_time": "12:00",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "694",
+    "screen_date": "2026-10-14",
+    "start_time": "15:10",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91199",
+  "film_c_idx": "434",
+  "title_kor": "프레셔",
+  "sessions": [
+   {
+    "booking_code": "386",
+    "screen_date": "2026-10-09",
+    "start_time": "09:20",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "599",
+    "screen_date": "2026-10-13",
+    "start_time": "13:30",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "675",
+    "screen_date": "2026-10-14",
+    "start_time": "17:20",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89988",
+  "film_c_idx": "435",
+  "title_kor": "노트르 살뤼",
+  "sessions": [
+   {
+    "booking_code": "174",
+    "screen_date": "2026-10-09",
+    "start_time": "09:00",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "413",
+    "screen_date": "2026-10-11",
+    "start_time": "14:40",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "472",
+    "screen_date": "2026-10-12",
+    "start_time": "14:00",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "90095",
+  "film_c_idx": "435",
+  "title_kor": "멜트다운",
+  "sessions": [
+   {
+    "booking_code": "214",
+    "screen_date": "2026-10-09",
+    "start_time": "19:00",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "306",
+    "screen_date": "2026-10-10",
+    "start_time": "09:00",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "622",
+    "screen_date": "2026-10-13",
+    "start_time": "12:40",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90242",
+  "film_c_idx": "435",
+  "title_kor": "베드포드 파크",
+  "sessions": [
+   {
+    "booking_code": "064",
+    "screen_date": "2026-10-07",
+    "start_time": "12:00",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": true
+   },
+   {
+    "booking_code": "115",
+    "screen_date": "2026-10-08",
+    "start_time": "11:50",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "507",
+    "screen_date": "2026-10-12",
+    "start_time": "19:00",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "585",
+    "screen_date": "2026-10-13",
+    "start_time": "20:30",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90249",
+  "film_c_idx": "435",
+  "title_kor": "블랙 볼",
+  "sessions": [
+   {
+    "booking_code": "311",
+    "screen_date": "2026-10-10",
+    "start_time": "09:00",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "460",
+    "screen_date": "2026-10-11",
+    "start_time": "16:10",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91089",
+  "film_c_idx": "435",
+  "title_kor": "블랙 처치 베이",
+  "sessions": [
+   {
+    "booking_code": "313",
+    "screen_date": "2026-10-10",
+    "start_time": "16:00",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "519",
+    "screen_date": "2026-10-12",
+    "start_time": "19:20",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "678",
+    "screen_date": "2026-10-14",
+    "start_time": "16:00",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89773",
+  "film_c_idx": "435",
+  "title_kor": "새드 걸즈",
+  "sessions": [
+   {
+    "booking_code": "028",
+    "screen_date": "2026-10-07",
+    "start_time": "16:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "117",
+    "screen_date": "2026-10-08",
+    "start_time": "18:40",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "441",
+    "screen_date": "2026-10-11",
+    "start_time": "10:00",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "649",
+    "screen_date": "2026-10-14",
+    "start_time": "13:00",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91185",
+  "film_c_idx": "435",
+  "title_kor": "옛날 옛적, 미래에",
+  "sessions": [
+   {
+    "booking_code": "116",
+    "screen_date": "2026-10-08",
+    "start_time": "15:40",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "438",
+    "screen_date": "2026-10-11",
+    "start_time": "16:00",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "652",
+    "screen_date": "2026-10-14",
+    "start_time": "09:40",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91153",
+  "film_c_idx": "435",
+  "title_kor": "오아시스",
+  "sessions": [
+   {
+    "booking_code": "312",
+    "screen_date": "2026-10-10",
+    "start_time": "12:30",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "436",
+    "screen_date": "2026-10-11",
+    "start_time": "09:20",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "505",
+    "screen_date": "2026-10-12",
+    "start_time": "12:40",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91162",
+  "film_c_idx": "435",
+  "title_kor": "이클립스",
+  "sessions": [
+   {
+    "booking_code": "314",
+    "screen_date": "2026-10-10",
+    "start_time": "19:20",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "417",
+    "screen_date": "2026-10-11",
+    "start_time": "11:40",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "565",
+    "screen_date": "2026-10-13",
+    "start_time": "17:00",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91234",
+  "film_c_idx": "435",
+  "title_kor": "조의 하루: 페드라 챕터",
+  "sessions": [
+   {
+    "booking_code": "296",
+    "screen_date": "2026-10-10",
+    "start_time": "09:30",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "412",
+    "screen_date": "2026-10-11",
+    "start_time": "11:40",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "659",
+    "screen_date": "2026-10-14",
+    "start_time": "13:40",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91138",
+  "film_c_idx": "435",
+  "title_kor": "타이타닉 오션",
+  "sessions": [
+   {
+    "booking_code": "109",
+    "screen_date": "2026-10-08",
+    "start_time": "09:00",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "212",
+    "screen_date": "2026-10-09",
+    "start_time": "11:50",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "660",
+    "screen_date": "2026-10-14",
+    "start_time": "16:20",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91188",
+  "film_c_idx": "435",
+  "title_kor": "타인에게 속한 것들",
+  "sessions": [
+   {
+    "booking_code": "213",
+    "screen_date": "2026-10-09",
+    "start_time": "15:40",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "518",
+    "screen_date": "2026-10-12",
+    "start_time": "15:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "656",
+    "screen_date": "2026-10-14",
+    "start_time": "16:40",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91110",
+  "film_c_idx": "436",
+  "title_kor": "개",
+  "sessions": [
+   {
+    "booking_code": "235",
+    "screen_date": "2026-10-09",
+    "start_time": "09:00",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "300",
+    "screen_date": "2026-10-10",
+    "start_time": "23:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "428",
+    "screen_date": "2026-10-11",
+    "start_time": "15:30",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "533",
+    "screen_date": "2026-10-12",
+    "start_time": "14:10",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89439",
+  "film_c_idx": "436",
+  "title_kor": "교량의오후",
+  "sessions": [
+   {
+    "booking_code": "235",
+    "screen_date": "2026-10-09",
+    "start_time": "09:00",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "300",
+    "screen_date": "2026-10-10",
+    "start_time": "23:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "428",
+    "screen_date": "2026-10-11",
+    "start_time": "15:30",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "533",
+    "screen_date": "2026-10-12",
+    "start_time": "14:10",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "86259",
+  "film_c_idx": "436",
+  "title_kor": "낮잠",
+  "sessions": [
+   {
+    "booking_code": "335",
+    "screen_date": "2026-10-10",
+    "start_time": "09:20",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "427",
+    "screen_date": "2026-10-11",
+    "start_time": "12:20",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "529",
+    "screen_date": "2026-10-12",
+    "start_time": "13:40",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "630",
+    "screen_date": "2026-10-13",
+    "start_time": "13:20",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "88164",
+  "film_c_idx": "436",
+  "title_kor": "멀리 있는 집",
+  "sessions": [
+   {
+    "booking_code": "235",
+    "screen_date": "2026-10-09",
+    "start_time": "09:00",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "300",
+    "screen_date": "2026-10-10",
+    "start_time": "23:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "428",
+    "screen_date": "2026-10-11",
+    "start_time": "15:30",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "533",
+    "screen_date": "2026-10-12",
+    "start_time": "14:10",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "88759",
+  "film_c_idx": "436",
+  "title_kor": "변종",
+  "sessions": [
+   {
+    "booking_code": "335",
+    "screen_date": "2026-10-10",
+    "start_time": "09:20",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "427",
+    "screen_date": "2026-10-11",
+    "start_time": "12:20",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "529",
+    "screen_date": "2026-10-12",
+    "start_time": "13:40",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "630",
+    "screen_date": "2026-10-13",
+    "start_time": "13:20",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89057",
+  "film_c_idx": "436",
+  "title_kor": "신원미상",
+  "sessions": [
+   {
+    "booking_code": "335",
+    "screen_date": "2026-10-10",
+    "start_time": "09:20",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "427",
+    "screen_date": "2026-10-11",
+    "start_time": "12:20",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "529",
+    "screen_date": "2026-10-12",
+    "start_time": "13:40",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "630",
+    "screen_date": "2026-10-13",
+    "start_time": "13:20",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89274",
+  "film_c_idx": "436",
+  "title_kor": "아마추어 에너지",
+  "sessions": [
+   {
+    "booking_code": "336",
+    "screen_date": "2026-10-10",
+    "start_time": "13:40",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "429",
+    "screen_date": "2026-10-11",
+    "start_time": "18:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "530",
+    "screen_date": "2026-10-12",
+    "start_time": "16:20",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "576",
+    "screen_date": "2026-10-13",
+    "start_time": "16:20",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89453",
+  "film_c_idx": "436",
+  "title_kor": "여*기의 발가락",
+  "sessions": [
+   {
+    "booking_code": "235",
+    "screen_date": "2026-10-09",
+    "start_time": "09:00",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "300",
+    "screen_date": "2026-10-10",
+    "start_time": "23:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "428",
+    "screen_date": "2026-10-11",
+    "start_time": "15:30",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "533",
+    "screen_date": "2026-10-12",
+    "start_time": "14:10",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "88809",
+  "film_c_idx": "436",
+  "title_kor": "지구에 떨어진 남자",
+  "sessions": [
+   {
+    "booking_code": "336",
+    "screen_date": "2026-10-10",
+    "start_time": "13:40",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "429",
+    "screen_date": "2026-10-11",
+    "start_time": "18:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "530",
+    "screen_date": "2026-10-12",
+    "start_time": "16:20",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "576",
+    "screen_date": "2026-10-13",
+    "start_time": "16:20",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89025",
+  "film_c_idx": "436",
+  "title_kor": "지민지민지",
+  "sessions": [
+   {
+    "booking_code": "336",
+    "screen_date": "2026-10-10",
+    "start_time": "13:40",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "429",
+    "screen_date": "2026-10-11",
+    "start_time": "18:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "530",
+    "screen_date": "2026-10-12",
+    "start_time": "16:20",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "576",
+    "screen_date": "2026-10-13",
+    "start_time": "16:20",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89248",
+  "film_c_idx": "436",
+  "title_kor": "초대받지 않은 이웃",
+  "sessions": [
+   {
+    "booking_code": "336",
+    "screen_date": "2026-10-10",
+    "start_time": "13:40",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "429",
+    "screen_date": "2026-10-11",
+    "start_time": "18:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "530",
+    "screen_date": "2026-10-12",
+    "start_time": "16:20",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "576",
+    "screen_date": "2026-10-13",
+    "start_time": "16:20",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "86296",
+  "film_c_idx": "436",
+  "title_kor": "토마토 파스타 레시피",
+  "sessions": [
+   {
+    "booking_code": "335",
+    "screen_date": "2026-10-10",
+    "start_time": "09:20",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "427",
+    "screen_date": "2026-10-11",
+    "start_time": "12:20",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "529",
+    "screen_date": "2026-10-12",
+    "start_time": "13:40",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "630",
+    "screen_date": "2026-10-13",
+    "start_time": "13:20",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "86619",
+  "film_c_idx": "436",
+  "title_kor": "그녀가 말했다",
+  "sessions": [
+   {
+    "booking_code": "062",
+    "screen_date": "2026-10-07",
+    "start_time": "19:20",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "326",
+    "screen_date": "2026-10-10",
+    "start_time": "12:30",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "492",
+    "screen_date": "2026-10-12",
+    "start_time": "20:00",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "84442",
+  "film_c_idx": "436",
+  "title_kor": "메마른 땅 아래",
+  "sessions": [
+   {
+    "booking_code": "062",
+    "screen_date": "2026-10-07",
+    "start_time": "19:20",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "326",
+    "screen_date": "2026-10-10",
+    "start_time": "12:30",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "492",
+    "screen_date": "2026-10-12",
+    "start_time": "20:00",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "87113",
+  "film_c_idx": "436",
+  "title_kor": "바람을 타고",
+  "sessions": [
+   {
+    "booking_code": "062",
+    "screen_date": "2026-10-07",
+    "start_time": "19:20",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "326",
+    "screen_date": "2026-10-10",
+    "start_time": "12:30",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "492",
+    "screen_date": "2026-10-12",
+    "start_time": "20:00",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "86452",
+  "film_c_idx": "436",
+  "title_kor": "사라지는 것들",
+  "sessions": [
+   {
+    "booking_code": "146",
+    "screen_date": "2026-10-08",
+    "start_time": "20:00",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "327",
+    "screen_date": "2026-10-10",
+    "start_time": "15:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "581",
+    "screen_date": "2026-10-13",
+    "start_time": "19:30",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "83436",
+  "film_c_idx": "436",
+  "title_kor": "소금 전기",
+  "sessions": [
+   {
+    "booking_code": "062",
+    "screen_date": "2026-10-07",
+    "start_time": "19:20",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "326",
+    "screen_date": "2026-10-10",
+    "start_time": "12:30",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "492",
+    "screen_date": "2026-10-12",
+    "start_time": "20:00",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "87852",
+  "film_c_idx": "436",
+  "title_kor": "알파",
+  "sessions": [
+   {
+    "booking_code": "062",
+    "screen_date": "2026-10-07",
+    "start_time": "19:20",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "326",
+    "screen_date": "2026-10-10",
+    "start_time": "12:30",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "492",
+    "screen_date": "2026-10-12",
+    "start_time": "20:00",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "88893",
+  "film_c_idx": "436",
+  "title_kor": "잔치는 끝났다",
+  "sessions": [
+   {
+    "booking_code": "146",
+    "screen_date": "2026-10-08",
+    "start_time": "20:00",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "327",
+    "screen_date": "2026-10-10",
+    "start_time": "15:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "581",
+    "screen_date": "2026-10-13",
+    "start_time": "19:30",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "87638",
+  "film_c_idx": "436",
+  "title_kor": "춤파 인형",
+  "sessions": [
+   {
+    "booking_code": "146",
+    "screen_date": "2026-10-08",
+    "start_time": "20:00",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "327",
+    "screen_date": "2026-10-10",
+    "start_time": "15:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "581",
+    "screen_date": "2026-10-13",
+    "start_time": "19:30",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "87001",
+  "film_c_idx": "436",
+  "title_kor": "파티마",
+  "sessions": [
+   {
+    "booking_code": "146",
+    "screen_date": "2026-10-08",
+    "start_time": "20:00",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "327",
+    "screen_date": "2026-10-10",
+    "start_time": "15:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "581",
+    "screen_date": "2026-10-13",
+    "start_time": "19:30",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "85457",
+  "film_c_idx": "436",
+  "title_kor": "혼란 속에서",
+  "sessions": [
+   {
+    "booking_code": "146",
+    "screen_date": "2026-10-08",
+    "start_time": "20:00",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "327",
+    "screen_date": "2026-10-10",
+    "start_time": "15:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "581",
+    "screen_date": "2026-10-13",
+    "start_time": "19:30",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "83554",
+  "film_c_idx": "436",
+  "title_kor": "771일 후",
+  "sessions": [
+   {
+    "booking_code": "245",
+    "screen_date": "2026-10-09",
+    "start_time": "14:50",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "302",
+    "screen_date": "2026-10-10",
+    "start_time": "12:10",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "444",
+    "screen_date": "2026-10-11",
+    "start_time": "19:10",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "86416",
+  "film_c_idx": "436",
+  "title_kor": "나무는 태어난 곳에서 죽는다",
+  "sessions": [
+   {
+    "booking_code": "106",
+    "screen_date": "2026-10-08",
+    "start_time": "12:20",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "203",
+    "screen_date": "2026-10-09",
+    "start_time": "12:30",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "354",
+    "screen_date": "2026-10-10",
+    "start_time": "19:30",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "86111",
+  "film_c_idx": "436",
+  "title_kor": "리커버리",
+  "sessions": [
+   {
+    "booking_code": "301",
+    "screen_date": "2026-10-10",
+    "start_time": "09:20",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "443",
+    "screen_date": "2026-10-11",
+    "start_time": "16:10",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "542",
+    "screen_date": "2026-10-12",
+    "start_time": "17:40",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90598",
+  "film_c_idx": "436",
+  "title_kor": "소리그물",
+  "sessions": [
+   {
+    "booking_code": "243",
+    "screen_date": "2026-10-09",
+    "start_time": "19:00",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "402",
+    "screen_date": "2026-10-11",
+    "start_time": "12:50",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "541",
+    "screen_date": "2026-10-12",
+    "start_time": "15:20",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "88907",
+  "film_c_idx": "436",
+  "title_kor": "야생 참나무의 꿈",
+  "sessions": [
+   {
+    "booking_code": "217",
+    "screen_date": "2026-10-09",
+    "start_time": "13:10",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "292",
+    "screen_date": "2026-10-10",
+    "start_time": "09:40",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "404",
+    "screen_date": "2026-10-11",
+    "start_time": "19:20",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "90746",
+  "film_c_idx": "436",
+  "title_kor": "어크로스: 전쟁은 어떻게 잊혀지는가",
+  "sessions": [
+   {
+    "booking_code": "192",
+    "screen_date": "2026-10-09",
+    "start_time": "19:30",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "304",
+    "screen_date": "2026-10-10",
+    "start_time": "18:20",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "487",
+    "screen_date": "2026-10-12",
+    "start_time": "15:30",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91191",
+  "film_c_idx": "436",
+  "title_kor": "온 더 로드: 압바스 키아로스타미",
+  "sessions": [
+   {
+    "booking_code": "303",
+    "screen_date": "2026-10-10",
+    "start_time": "15:20",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "455",
+    "screen_date": "2026-10-11",
+    "start_time": "17:20",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "527",
+    "screen_date": "2026-10-12",
+    "start_time": "19:00",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91015",
+  "film_c_idx": "436",
+  "title_kor": "지금 얘기해도 돼요?",
+  "sessions": [
+   {
+    "booking_code": "228",
+    "screen_date": "2026-10-09",
+    "start_time": "19:10",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "401",
+    "screen_date": "2026-10-11",
+    "start_time": "09:20",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "490",
+    "screen_date": "2026-10-12",
+    "start_time": "12:40",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90137",
+  "film_c_idx": "436",
+  "title_kor": "초원의 아가르",
+  "sessions": [
+   {
+    "booking_code": "190",
+    "screen_date": "2026-10-09",
+    "start_time": "13:00",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "341",
+    "screen_date": "2026-10-10",
+    "start_time": "16:00",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "403",
+    "screen_date": "2026-10-11",
+    "start_time": "15:40",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91028",
+  "film_c_idx": "436",
+  "title_kor": "파도 위에서 춤추는 여자",
+  "sessions": [
+   {
+    "booking_code": "204",
+    "screen_date": "2026-10-09",
+    "start_time": "16:00",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "340",
+    "screen_date": "2026-10-10",
+    "start_time": "12:40",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "446",
+    "screen_date": "2026-10-11",
+    "start_time": "13:30",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "83199",
+  "film_c_idx": "436",
+  "title_kor": "58번째",
+  "sessions": [
+   {
+    "booking_code": "191",
+    "screen_date": "2026-10-09",
+    "start_time": "16:30",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "331",
+    "screen_date": "2026-10-10",
+    "start_time": "12:20",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "454",
+    "screen_date": "2026-10-11",
+    "start_time": "14:20",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91237",
+  "film_c_idx": "436",
+  "title_kor": "권진규: 예술가의 일생",
+  "sessions": [
+   {
+    "booking_code": "193",
+    "screen_date": "2026-10-09",
+    "start_time": "09:40",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "432",
+    "screen_date": "2026-10-11",
+    "start_time": "12:00",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "540",
+    "screen_date": "2026-10-12",
+    "start_time": "12:00",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91010",
+  "film_c_idx": "436",
+  "title_kor": "김윤신은 미술관에 없다",
+  "sessions": [
+   {
+    "booking_code": "194",
+    "screen_date": "2026-10-09",
+    "start_time": "13:30",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "332",
+    "screen_date": "2026-10-10",
+    "start_time": "15:30",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "456",
+    "screen_date": "2026-10-11",
+    "start_time": "20:00",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91148",
+  "film_c_idx": "436",
+  "title_kor": "리허설 포 레볼루션",
+  "sessions": [
+   {
+    "booking_code": "094",
+    "screen_date": "2026-10-08",
+    "start_time": "09:40",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "247",
+    "screen_date": "2026-10-09",
+    "start_time": "11:00",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "431",
+    "screen_date": "2026-10-11",
+    "start_time": "09:20",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90923",
+  "film_c_idx": "436",
+  "title_kor": "바람의 빛깔",
+  "sessions": [
+   {
+    "booking_code": "353",
+    "screen_date": "2026-10-10",
+    "start_time": "17:00",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "398",
+    "screen_date": "2026-10-11",
+    "start_time": "15:20",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "523",
+    "screen_date": "2026-10-12",
+    "start_time": "19:00",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "90424",
+  "film_c_idx": "436",
+  "title_kor": "베이비 잭프루츠 베이비 구아바",
+  "sessions": [
+   {
+    "booking_code": "216",
+    "screen_date": "2026-10-09",
+    "start_time": "09:40",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "293",
+    "screen_date": "2026-10-10",
+    "start_time": "12:40",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "434",
+    "screen_date": "2026-10-11",
+    "start_time": "19:00",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91233",
+  "film_c_idx": "436",
+  "title_kor": "새벽에서 다시 새벽으로",
+  "sessions": [
+   {
+    "booking_code": "389",
+    "screen_date": "2026-10-11",
+    "start_time": "15:20",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "566",
+    "screen_date": "2026-10-13",
+    "start_time": "19:30",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "664",
+    "screen_date": "2026-10-14",
+    "start_time": "18:00",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90558",
+  "film_c_idx": "436",
+  "title_kor": "시골 소년 가벵과 함께한 10년",
+  "sessions": [
+   {
+    "booking_code": "334",
+    "screen_date": "2026-10-10",
+    "start_time": "22:10",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "416",
+    "screen_date": "2026-10-11",
+    "start_time": "09:00",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "662",
+    "screen_date": "2026-10-14",
+    "start_time": "12:00",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91019",
+  "film_c_idx": "436",
+  "title_kor": "안녕, 스텔라",
+  "sessions": [
+   {
+    "booking_code": "195",
+    "screen_date": "2026-10-09",
+    "start_time": "16:40",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "333",
+    "screen_date": "2026-10-10",
+    "start_time": "18:50",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "486",
+    "screen_date": "2026-10-12",
+    "start_time": "09:20",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91193",
+  "film_c_idx": "436",
+  "title_kor": "유니온 타운: 뉴욕을 달리는 사람들",
+  "sessions": [
+   {
+    "booking_code": "031",
+    "screen_date": "2026-10-07",
+    "start_time": "16:00",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "080",
+    "screen_date": "2026-10-08",
+    "start_time": "08:40",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "645",
+    "screen_date": "2026-10-14",
+    "start_time": "10:00",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89789",
+  "film_c_idx": "436",
+  "title_kor": "전쟁의 새들",
+  "sessions": [
+   {
+    "booking_code": "201",
+    "screen_date": "2026-10-09",
+    "start_time": "22:20",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "351",
+    "screen_date": "2026-10-10",
+    "start_time": "11:00",
+    "venue_name": "롯데시네마 센텀시티 10관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "520",
+    "screen_date": "2026-10-12",
+    "start_time": "09:40",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90781",
+  "film_c_idx": "436",
+  "title_kor": "청춘길일",
+  "sessions": [
+   {
+    "booking_code": "295",
+    "screen_date": "2026-10-10",
+    "start_time": "19:00",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "442",
+    "screen_date": "2026-10-11",
+    "start_time": "13:10",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "522",
+    "screen_date": "2026-10-12",
+    "start_time": "15:20",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91108",
+  "film_c_idx": "436",
+  "title_kor": "홈시크: 바다의 끝에서",
+  "sessions": [
+   {
+    "booking_code": "244",
+    "screen_date": "2026-10-09",
+    "start_time": "12:20",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "294",
+    "screen_date": "2026-10-10",
+    "start_time": "16:00",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "521",
+    "screen_date": "2026-10-12",
+    "start_time": "12:10",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91232",
+  "film_c_idx": "436",
+  "title_kor": "화이트 록의 색깔",
+  "sessions": [
+   {
+    "booking_code": "289",
+    "screen_date": "2026-10-10",
+    "start_time": "15:40",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "433",
+    "screen_date": "2026-10-11",
+    "start_time": "15:50",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "579",
+    "screen_date": "2026-10-13",
+    "start_time": "13:20",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91163",
+  "film_c_idx": "436",
+  "title_kor": "흐르는 세월",
+  "sessions": [
+   {
+    "booking_code": "047",
+    "screen_date": "2026-10-07",
+    "start_time": "19:00",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "330",
+    "screen_date": "2026-10-10",
+    "start_time": "09:00",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "489",
+    "screen_date": "2026-10-12",
+    "start_time": "09:40",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "640",
+    "screen_date": "2026-10-13",
+    "start_time": "10:20",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91156",
+  "film_c_idx": "437",
+  "title_kor": "그저 환상일 뿐",
+  "sessions": [
+   {
+    "booking_code": "229",
+    "screen_date": "2026-10-09",
+    "start_time": "22:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "644",
+    "screen_date": "2026-10-14",
+    "start_time": "20:00",
+    "venue_name": "영화의전당 루프씨어터",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91182",
+  "film_c_idx": "437",
+  "title_kor": "내일은 이름이 있다",
+  "sessions": [
+   {
+    "booking_code": "466",
+    "screen_date": "2026-10-12",
+    "start_time": "20:00",
+    "venue_name": "영화의전당 루프씨어터",
+    "has_gv": true
+   },
+   {
+    "booking_code": "560",
+    "screen_date": "2026-10-13",
+    "start_time": "12:30",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91123",
+  "film_c_idx": "437",
+  "title_kor": "룩백",
+  "sessions": [
+   {
+    "booking_code": "003",
+    "screen_date": "2026-10-07",
+    "start_time": "20:00",
+    "venue_name": "영화의전당 루프씨어터",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "87906",
+  "film_c_idx": "437",
+  "title_kor": "바이올리니스트",
+  "sessions": [
+   {
+    "booking_code": "325",
+    "screen_date": "2026-10-10",
+    "start_time": "20:00",
+    "venue_name": "영화의전당 루프씨어터",
+    "has_gv": true
+   },
+   {
+    "booking_code": "393",
+    "screen_date": "2026-10-11",
+    "start_time": "12:40",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "90313",
+  "film_c_idx": "437",
+  "title_kor": "세대유감",
+  "sessions": [
+   {
+    "booking_code": "139",
+    "screen_date": "2026-10-08",
+    "start_time": "12:20",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "197",
+    "screen_date": "2026-10-09",
+    "start_time": "09:00",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "554",
+    "screen_date": "2026-10-13",
+    "start_time": "20:00",
+    "venue_name": "영화의전당 루프씨어터",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91100",
+  "film_c_idx": "437",
+  "title_kor": "스파이럴",
+  "sessions": [
+   {
+    "booking_code": "075",
+    "screen_date": "2026-10-08",
+    "start_time": "23:59",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "163",
+    "screen_date": "2026-10-09",
+    "start_time": "20:00",
+    "venue_name": "영화의전당 루프씨어터",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91127",
+  "film_c_idx": "437",
+  "title_kor": "아름다운 초저녁달",
+  "sessions": [
+   {
+    "booking_code": "070",
+    "screen_date": "2026-10-08",
+    "start_time": "20:00",
+    "venue_name": "영화의전당 루프씨어터",
+    "has_gv": true
+   },
+   {
+    "booking_code": "724",
+    "screen_date": "2026-10-14",
+    "start_time": "12:20",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91180",
+  "film_c_idx": "437",
+  "title_kor": "인헤릿",
+  "sessions": [
+   {
+    "booking_code": "362",
+    "screen_date": "2026-10-11",
+    "start_time": "20:00",
+    "venue_name": "영화의전당 루프씨어터",
+    "has_gv": true
+   },
+   {
+    "booking_code": "546",
+    "screen_date": "2026-10-12",
+    "start_time": "19:40",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91197",
+  "film_c_idx": "438",
+  "title_kor": "불청객",
+  "sessions": [
+   {
+    "booking_code": "168",
+    "screen_date": "2026-10-09",
+    "start_time": "23:59",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "385",
+    "screen_date": "2026-10-11",
+    "start_time": "19:00",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "697",
+    "screen_date": "2026-10-14",
+    "start_time": "13:00",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91241",
+  "film_c_idx": "438",
+  "title_kor": "붉은 실",
+  "sessions": [
+   {
+    "booking_code": "168",
+    "screen_date": "2026-10-09",
+    "start_time": "23:59",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "510",
+    "screen_date": "2026-10-12",
+    "start_time": "15:30",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "633",
+    "screen_date": "2026-10-13",
+    "start_time": "10:00",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90357",
+  "film_c_idx": "438",
+  "title_kor": "사피엔스",
+  "sessions": [
+   {
+    "booking_code": "040",
+    "screen_date": "2026-10-07",
+    "start_time": "19:40",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "075",
+    "screen_date": "2026-10-08",
+    "start_time": "23:59",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "232",
+    "screen_date": "2026-10-09",
+    "start_time": "15:30",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "539",
+    "screen_date": "2026-10-12",
+    "start_time": "19:20",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91181",
+  "film_c_idx": "438",
+  "title_kor": "스카페이스 캣: 수라도",
+  "sessions": [
+   {
+    "booking_code": "153",
+    "screen_date": "2026-10-08",
+    "start_time": "18:00",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": true
+   },
+   {
+    "booking_code": "168",
+    "screen_date": "2026-10-09",
+    "start_time": "23:59",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "462",
+    "screen_date": "2026-10-11",
+    "start_time": "10:00",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91100",
+  "film_c_idx": "438",
+  "title_kor": "스파이럴",
+  "sessions": [
+   {
+    "booking_code": "075",
+    "screen_date": "2026-10-08",
+    "start_time": "23:59",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "163",
+    "screen_date": "2026-10-09",
+    "start_time": "20:00",
+    "venue_name": "영화의전당 루프씨어터",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "89479",
+  "film_c_idx": "438",
+  "title_kor": "웰컴 투 돌리 하우스",
+  "sessions": [
+   {
+    "booking_code": "093",
+    "screen_date": "2026-10-08",
+    "start_time": "22:00",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "196",
+    "screen_date": "2026-10-09",
+    "start_time": "20:40",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "269",
+    "screen_date": "2026-10-10",
+    "start_time": "23:59",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "376",
+    "screen_date": "2026-10-11",
+    "start_time": "22:00",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "711",
+    "screen_date": "2026-10-14",
+    "start_time": "18:40",
+    "venue_name": "롯데시네마 센텀시티 8관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89770",
+  "film_c_idx": "438",
+  "title_kor": "장미의 사슬",
+  "sessions": [
+   {
+    "booking_code": "037",
+    "screen_date": "2026-10-07",
+    "start_time": "09:00",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "075",
+    "screen_date": "2026-10-08",
+    "start_time": "23:59",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "205",
+    "screen_date": "2026-10-09",
+    "start_time": "22:50",
+    "venue_name": "CGV센텀시티 4관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "685",
+    "screen_date": "2026-10-14",
+    "start_time": "13:00",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91133",
+  "film_c_idx": "438",
+  "title_kor": "짐 퀸",
+  "sessions": [
+   {
+    "booking_code": "269",
+    "screen_date": "2026-10-10",
+    "start_time": "23:59",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "414",
+    "screen_date": "2026-10-11",
+    "start_time": "18:50",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "555",
+    "screen_date": "2026-10-13",
+    "start_time": "10:00",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91178",
+  "film_c_idx": "438",
+  "title_kor": "천사의 알",
+  "sessions": [
+   {
+    "booking_code": "009",
+    "screen_date": "2026-10-07",
+    "start_time": "12:30",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "269",
+    "screen_date": "2026-10-10",
+    "start_time": "23:59",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91114",
+  "film_c_idx": "439",
+  "title_kor": "꿀알바",
+  "sessions": [
+   {
+    "booking_code": "048",
+    "screen_date": "2026-10-07",
+    "start_time": "09:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "226",
+    "screen_date": "2026-10-09",
+    "start_time": "11:50",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "618",
+    "screen_date": "2026-10-13",
+    "start_time": "12:20",
+    "venue_name": "롯데시네마 센텀시티 7관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91107",
+  "film_c_idx": "439",
+  "title_kor": "재혼 황후",
+  "sessions": [
+   {
+    "booking_code": "238",
+    "screen_date": "2026-10-09",
+    "start_time": "18:40",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "265",
+    "screen_date": "2026-10-10",
+    "start_time": "08:20",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "516",
+    "screen_date": "2026-10-12",
+    "start_time": "09:40",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91109",
+  "film_c_idx": "439",
+  "title_kor": "푸른길",
+  "sessions": [
+   {
+    "booking_code": "057",
+    "screen_date": "2026-10-07",
+    "start_time": "13:30",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "157",
+    "screen_date": "2026-10-08",
+    "start_time": "14:20",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": true
+   },
+   {
+    "booking_code": "543",
+    "screen_date": "2026-10-12",
+    "start_time": "09:20",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90038",
+  "film_c_idx": "440",
+  "title_kor": "개그맨",
+  "sessions": [
+   {
+    "booking_code": "026",
+    "screen_date": "2026-10-07",
+    "start_time": "18:20",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "097",
+    "screen_date": "2026-10-08",
+    "start_time": "09:20",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "90036",
+  "film_c_idx": "440",
+  "title_kor": "고래사냥",
+  "sessions": [
+   {
+    "booking_code": "022",
+    "screen_date": "2026-10-07",
+    "start_time": "12:00",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "100",
+    "screen_date": "2026-10-08",
+    "start_time": "20:10",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "90034",
+  "film_c_idx": "440",
+  "title_kor": "바람불어 좋은날",
+  "sessions": [
+   {
+    "booking_code": "023",
+    "screen_date": "2026-10-07",
+    "start_time": "15:30",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "098",
+    "screen_date": "2026-10-08",
+    "start_time": "13:00",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91204",
+  "film_c_idx": "440",
+  "title_kor": "축제",
+  "sessions": [
+   {
+    "booking_code": "491",
+    "screen_date": "2026-10-12",
+    "start_time": "15:40",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "90037",
+  "film_c_idx": "440",
+  "title_kor": "칠수와 만수",
+  "sessions": [
+   {
+    "booking_code": "025",
+    "screen_date": "2026-10-07",
+    "start_time": "15:00",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "488",
+    "screen_date": "2026-10-12",
+    "start_time": "19:00",
+    "venue_name": "CGV센텀시티 1관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "90039",
+  "film_c_idx": "440",
+  "title_kor": "하얀전쟁",
+  "sessions": [
+   {
+    "booking_code": "024",
+    "screen_date": "2026-10-07",
+    "start_time": "11:00",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "099",
+    "screen_date": "2026-10-08",
+    "start_time": "16:30",
+    "venue_name": "CGV센텀시티 2관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91154",
+  "film_c_idx": "440",
+  "title_kor": "고스트 - 밤의 끝",
+  "sessions": [
+   {
+    "booking_code": "077",
+    "screen_date": "2026-10-12",
+    "start_time": "10:20",
+    "venue_name": "롯데시네마 센텀시티 9관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "596",
+    "screen_date": "2026-10-13",
+    "start_time": "16:00",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "683",
+    "screen_date": "2026-10-14",
+    "start_time": "19:40",
+    "venue_name": "CGV센텀시티 6관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91177",
+  "film_c_idx": "440",
+  "title_kor": "마인드 게임",
+  "sessions": [
+   {
+    "booking_code": "054",
+    "screen_date": "2026-10-07",
+    "start_time": "16:00",
+    "venue_name": "롯데시네마 센텀시티 5관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "396",
+    "screen_date": "2026-10-11",
+    "start_time": "09:20",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "567",
+    "screen_date": "2026-10-13",
+    "start_time": "10:40",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91247",
+  "film_c_idx": "440",
+  "title_kor": "메모리즈",
+  "sessions": [
+   {
+    "booking_code": "033",
+    "screen_date": "2026-10-07",
+    "start_time": "09:00",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "558",
+    "screen_date": "2026-10-13",
+    "start_time": "19:00",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91246",
+  "film_c_idx": "440",
+  "title_kor": "메트로폴리스",
+  "sessions": [
+   {
+    "booking_code": "187",
+    "screen_date": "2026-10-09",
+    "start_time": "18:20",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "272",
+    "screen_date": "2026-10-10",
+    "start_time": "20:20",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91146",
+  "film_c_idx": "440",
+  "title_kor": "백사전",
+  "sessions": [
+   {
+    "booking_code": "063",
+    "screen_date": "2026-10-07",
+    "start_time": "09:30",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": false
+   },
+   {
+    "booking_code": "568",
+    "screen_date": "2026-10-13",
+    "start_time": "13:30",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91200",
+  "film_c_idx": "440",
+  "title_kor": "불새 2772 사랑의 코스모존",
+  "sessions": [
+   {
+    "booking_code": "459",
+    "screen_date": "2026-10-11",
+    "start_time": "13:00",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91238",
+  "film_c_idx": "440",
+  "title_kor": "숨바꼭질",
+  "sessions": [
+   {
+    "booking_code": "034",
+    "screen_date": "2026-10-07",
+    "start_time": "12:00",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "122",
+    "screen_date": "2026-10-08",
+    "start_time": "19:50",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "590",
+    "screen_date": "2026-10-13",
+    "start_time": "10:40",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91236",
+  "film_c_idx": "440",
+  "title_kor": "슬픔의 벨라돈나",
+  "sessions": [
+   {
+    "booking_code": "359",
+    "screen_date": "2026-10-10",
+    "start_time": "19:20",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91099",
+  "film_c_idx": "440",
+  "title_kor": "시라누이",
+  "sessions": [
+   {
+    "booking_code": "034",
+    "screen_date": "2026-10-07",
+    "start_time": "12:00",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "122",
+    "screen_date": "2026-10-08",
+    "start_time": "19:50",
+    "venue_name": "롯데시네마 센텀시티 2관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "590",
+    "screen_date": "2026-10-13",
+    "start_time": "10:40",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91176",
+  "film_c_idx": "440",
+  "title_kor": "왕과 새",
+  "sessions": [
+   {
+    "booking_code": "155",
+    "screen_date": "2026-10-08",
+    "start_time": "09:00",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   },
+   {
+    "booking_code": "524",
+    "screen_date": "2026-10-12",
+    "start_time": "10:00",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91143",
+  "film_c_idx": "440",
+  "title_kor": "우리는 외계인",
+  "sessions": [
+   {
+    "booking_code": "036",
+    "screen_date": "2026-10-07",
+    "start_time": "19:20",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "128",
+    "screen_date": "2026-10-08",
+    "start_time": "09:00",
+    "venue_name": "롯데시네마 센텀시티 4관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "658",
+    "screen_date": "2026-10-14",
+    "start_time": "10:00",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91178",
+  "film_c_idx": "440",
+  "title_kor": "천사의 알",
+  "sessions": [
+   {
+    "booking_code": "009",
+    "screen_date": "2026-10-07",
+    "start_time": "12:30",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": false
+   },
+   {
+    "booking_code": "269",
+    "screen_date": "2026-10-10",
+    "start_time": "23:59",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91098",
+  "film_c_idx": "440",
+  "title_kor": "파리스 그린이 밝는 날에",
+  "sessions": [
+   {
+    "booking_code": "164",
+    "screen_date": "2026-10-09",
+    "start_time": "09:20",
+    "venue_name": "영화의전당 하늘연극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "337",
+    "screen_date": "2026-10-10",
+    "start_time": "16:40",
+    "venue_name": "롯데시네마 센텀시티 6관",
+    "has_gv": true
+   },
+   {
+    "booking_code": "381",
+    "screen_date": "2026-10-11",
+    "start_time": "22:10",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   },
+   {
+    "booking_code": "572",
+    "screen_date": "2026-10-13",
+    "start_time": "14:40",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91169",
+  "film_c_idx": "440",
+  "title_kor": "검우강호",
+  "sessions": [
+   {
+    "booking_code": "281",
+    "screen_date": "2026-10-10",
+    "start_time": "18:50",
+    "venue_name": "영화의전당 시네마테크",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91166",
+  "film_c_idx": "440",
+  "title_kor": "산디와라",
+  "sessions": [
+   {
+    "booking_code": "104",
+    "screen_date": "2026-10-08",
+    "start_time": "19:40",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "258",
+    "screen_date": "2026-10-09",
+    "start_time": "16:20",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91165",
+  "film_c_idx": "440",
+  "title_kor": "에브리씽 에브리웨어 올 앳 원스",
+  "sessions": [
+   {
+    "booking_code": "104",
+    "screen_date": "2026-10-08",
+    "start_time": "19:40",
+    "venue_name": "CGV센텀시티 3관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "258",
+    "screen_date": "2026-10-09",
+    "start_time": "16:20",
+    "venue_name": "소향씨어터 우리은행홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91125",
+  "film_c_idx": "440",
+  "title_kor": "우리 할머니는 큐브왕",
+  "sessions": [
+   {
+    "booking_code": "011",
+    "screen_date": "2026-10-07",
+    "start_time": "19:30",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   },
+   {
+    "booking_code": "112",
+    "screen_date": "2026-10-08",
+    "start_time": "20:30",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": false
+   },
+   {
+    "booking_code": "263",
+    "screen_date": "2026-10-09",
+    "start_time": "18:20",
+    "venue_name": "부산시청자미디어센터 공개홀",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91239",
+  "film_c_idx": "441",
+  "title_kor": "매드 맥스",
+  "sessions": [
+   {
+    "booking_code": "170",
+    "screen_date": "2026-10-09",
+    "start_time": "11:30",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91280",
+  "film_c_idx": "441",
+  "title_kor": "멜랑콜리아",
+  "sessions": [
+   {
+    "booking_code": "742",
+    "screen_date": "2026-10-08",
+    "start_time": "14:50",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "91189",
+  "film_c_idx": "441",
+  "title_kor": "버스정류장",
+  "sessions": [
+   {
+    "booking_code": "010",
+    "screen_date": "2026-10-07",
+    "start_time": "15:30",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91242",
+  "film_c_idx": "441",
+  "title_kor": "세 가지 색 : 블루",
+  "sessions": [
+   {
+    "booking_code": "110",
+    "screen_date": "2026-10-08",
+    "start_time": "12:50",
+    "venue_name": "CGV센텀시티 5관",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91243",
+  "film_c_idx": "441",
+  "title_kor": "아가씨",
+  "sessions": [
+   {
+    "booking_code": "082",
+    "screen_date": "2026-10-08",
+    "start_time": "15:30",
+    "venue_name": "영화의전당 소극장",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91257",
+  "film_c_idx": "441",
+  "title_kor": "콜드 워 1994",
+  "sessions": [
+   {
+    "booking_code": "283",
+    "screen_date": "2026-10-10",
+    "start_time": "09:00",
+    "venue_name": "CGV센텀시티 IMAX관",
+    "has_gv": false
+   }
+  ]
+ },
+ {
+  "film_idx": "89213",
+  "film_c_idx": "441",
+  "title_kor": "플레시 임팩트",
+  "sessions": [
+   {
+    "booking_code": "010",
+    "screen_date": "2026-10-07",
+    "start_time": "15:30",
+    "venue_name": "영화의전당 중극장",
+    "has_gv": true
+   }
+  ]
+ },
+ {
+  "film_idx": "91113",
+  "film_c_idx": "441",
+  "title_kor": "M (4K 리마스터링)",
+  "sessions": [
+   {
+    "booking_code": "255",
+    "screen_date": "2026-10-09",
+    "start_time": "18:00",
+    "venue_name": "영화진흥위원회 표준시사실",
+    "has_gv": true
+   },
+   {
+    "booking_code": "425",
+    "screen_date": "2026-10-11",
+    "start_time": "22:10",
+    "venue_name": "롯데시네마 센텀시티 3관",
+    "has_gv": false
+   }
+  ]
+ }
+]

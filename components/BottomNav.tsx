@@ -8,6 +8,9 @@ const ICONS = {
     <path d="M3 10.5 12 3l9 7.5M5.5 9.5V20h13V9.5" strokeLinecap="round" strokeLinejoin="round" />
   ),
   films: <path d="M3 4h18v16H3zM8 4v16M16 4v16M3 12h18" />,
+  events: (
+    <path d="M12 2 2 8.5l10 6.5 10-6.5L12 2ZM2 15.5 12 22l10-6.5" strokeLinecap="round" strokeLinejoin="round" />
+  ),
   schedule: <path d="M3 5h18v16H3zM3 10h18M8 3v4M16 3v4" />,
   board: (
     <path d="M4 4h16v12H8l-4 4V4z" strokeLinecap="round" strokeLinejoin="round" />
@@ -24,6 +27,7 @@ const ICONS = {
 const TABS: { key: keyof typeof ICONS; label: string; href: (t: string) => string }[] = [
   { key: "home", label: "홈", href: (t) => `/s/${t}` },
   { key: "films", label: "상영작", href: (t) => `/s/${t}/films` },
+  { key: "events", label: "행사", href: (t) => `/s/${t}/events` },
   { key: "schedule", label: "시간표", href: (t) => `/s/${t}/schedule` },
   { key: "board", label: "게시판", href: (t) => `/s/${t}/board` },
   { key: "food", label: "맛집", href: (t) => `/s/${t}/food` },
@@ -33,7 +37,7 @@ export function BottomNav({ token }: { token: string }) {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-5 border-t border-border bg-white/95 pt-2 backdrop-blur-md [padding-bottom:env(safe-area-inset-bottom)]">
+    <nav className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-6 border-t border-border bg-white/95 pt-2 backdrop-blur-md [padding-bottom:env(safe-area-inset-bottom)]">
       {TABS.map((tab) => {
         const href = tab.href(token);
         const active = href === `/s/${token}` ? pathname === href : pathname.startsWith(href);

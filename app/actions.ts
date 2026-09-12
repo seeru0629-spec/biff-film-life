@@ -25,6 +25,38 @@ export async function removeFromSchedule(token: string, screeningId: string) {
   revalidatePath(`/s/${token}/schedule`);
 }
 
+export async function addEventToSchedule(token: string, eventSessionId: string) {
+  const admin = supabaseAdmin();
+  // filmlife_schedule_items의 (viewer_token, event_session_id) 유니크 인덱스가 부분 인덱스라
+  // upsert(onConflict)로 바로 타깃할 수 없어(screening_id/event_session_id 배타 체크 때문에
+  // 컬럼 하나만으로는 매칭 안 됨) 존재 확인 후 삽입하는 방식으로 멱등하게 처리한다.
+  const { data: existing } = await admin
+    .from("filmlife_schedule_items")
+    .select("id")
+    .eq("viewer_token", token)
+    .eq("event_session_id", eventSessionId)
+    .maybeSingle();
+  if (!existing) {
+    const { error } = await admin
+      .from("filmlife_schedule_items")
+      .insert({ viewer_token: token, event_session_id: eventSessionId });
+    if (error) throw new Error(error.message);
+  }
+  revalidatePath(`/s/${token}`);
+  revalidatePath(`/s/${token}/schedule`);
+}
+
+export async function removeEventFromSchedule(token: string, eventSessionId: string) {
+  const { error } = await supabaseAdmin()
+    .from("filmlife_schedule_items")
+    .delete()
+    .eq("viewer_token", token)
+    .eq("event_session_id", eventSessionId);
+  if (error) throw new Error(error.message);
+  revalidatePath(`/s/${token}`);
+  revalidatePath(`/s/${token}/schedule`);
+}
+
 export async function likeFilm(token: string, filmId: string) {
   const { error } = await supabaseAdmin()
     .from("filmlife_film_likes")

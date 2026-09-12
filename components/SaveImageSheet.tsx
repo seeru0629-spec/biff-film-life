@@ -5,9 +5,9 @@ import { toPng } from "html-to-image";
 import { fmtTimeRange, fmtMonthDay } from "@/lib/format";
 import { weekdayKor } from "@/lib/festival";
 import { findTravelWarnings } from "@/lib/travel";
-import type { ScreeningWithDetails, VenueTravelTime } from "@/lib/types";
+import type { TimetableItem, VenueTravelTime } from "@/lib/types";
 
-type DayGroup = { date: string; screenings: ScreeningWithDetails[] };
+type DayGroup = { date: string; items: TimetableItem[] };
 
 export function SaveImageSheet({
   groups,
@@ -159,8 +159,8 @@ export function SaveImageSheet({
       <div style={{ position: "fixed", top: 0, left: -99999, width: 1080 }}>
         <div ref={exportRef} style={{ width: 1080, background: bg, color: fg, display: "flex", flexDirection: "column" }}>
           {activeGroups.map((g) => {
-            const warnings = includeWarnings ? findTravelWarnings(g.screenings, travelMatrix) : [];
-            const sorted = [...g.screenings].sort((a, b) => a.start_time.localeCompare(b.start_time));
+            const warnings = includeWarnings ? findTravelWarnings(g.items, travelMatrix) : [];
+            const sorted = [...g.items].sort((a, b) => a.start_time.localeCompare(b.start_time));
             return (
               <div
                 key={g.date}
@@ -218,10 +218,10 @@ export function SaveImageSheet({
                           borderLeft: "8px solid #E0362B",
                         }}
                       >
-                        {s.film.still_image_url && (
+                        {s.still_image_url && (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img
-                            src={`/api/img-proxy?url=${encodeURIComponent(s.film.still_image_url)}`}
+                            src={`/api/img-proxy?url=${encodeURIComponent(s.still_image_url)}`}
                             crossOrigin="anonymous"
                             alt=""
                             style={{ width: 200, height: 126, borderRadius: 12, objectFit: "cover", flex: "none" }}
@@ -231,8 +231,8 @@ export function SaveImageSheet({
                           <div style={{ fontWeight: 700, fontSize: 36, color: "#F5C518", fontVariantNumeric: "tabular-nums", marginBottom: 12 }}>
                             {fmtTimeRange(s.start_time, s.end_time)}
                           </div>
-                          <div style={{ fontWeight: 800, fontSize: 44, marginBottom: 10 }}>{s.film.title_kor}</div>
-                          <div style={{ fontSize: 26, color: fgDim }}>{s.venue.name}</div>
+                          <div style={{ fontWeight: 800, fontSize: 44, marginBottom: 10 }}>{s.title}</div>
+                          <div style={{ fontSize: 26, color: fgDim }}>{s.venue_name}</div>
                         </div>
                       </div>
                       {warnings.some((w) => w.fromScreeningId === s.id) && (

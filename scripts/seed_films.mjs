@@ -1,9 +1,15 @@
-// data/biff_films.json(본편) + data/community_biff_films.json(커뮤니티비프)를 filmlife_films 테이블에 upsert.
+// data/biff_films.json(본편)을 filmlife_films 테이블에 upsert.
+// 커뮤니티비프는 filmlife_events/filmlife_event_sessions로 이전됐다 — scripts/seed_events.mjs 참고.
 // films 테이블은 전체 delete+reinsert 방식이라 film_id를 참조하는 찜/별점은 cascade로 같이 지워지는데,
-// source_url(=idx+c_idx)로 remap해서 자동 복구한다(회차/시간표는 아직 크롤링 대상 아니라 복구 대상 아님).
-// 실행: node --env-file=.env.local scripts/seed_films.mjs
+// source_url(=idx+c_idx)로 remap해서 자동 복구한다.
+// ⚠️ filmlife_screenings(회차)는 여기서 복구 대상이 아니다 — film 삭제가 cascade로 회차까지,
+// 회차 삭제가 다시 cascade로 filmlife_schedule_items(실사용자 개인 시간표)까지 날려버린다.
+// 2026-09-12에 이걸 놓쳐서 실제 운영 DB의 개인 시간표를 전부 날린 사고가 있었다 — 그래서
+// 진짜 회차가 하나라도 걸려있으면 --force 없이는 무조건 중단한다 (scripts/lib/guard.mjs).
+// 실행: node --env-file=.env.local scripts/seed_films.mjs [--force]
 import { readFile } from "node:fs/promises";
 import { createClient } from "@supabase/supabase-js";
+import { guardAgainstScheduleLoss } from "./lib/guard.mjs";
 
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -66,9 +72,6 @@ const CENTURYSTUDIO_IMPORTS = new Set(["와일드 호스 나인"]);
 const NETFLIX_IMPORTS = new Set(["가능한 사랑", "꿀알바", "푸른길", "레이 건", "우리, 파도처럼"]);
 
 const main = JSON.parse(await readFile(new URL("../data/biff_films.json", import.meta.url)));
-const community = JSON.parse(
-  await readFile(new URL("../data/community_biff_films.json", import.meta.url)).catch(() => "[]")
-);
 
 function importDistributor(titleKor) {
   if (GREENNARAE_IMPORTS.has(titleKor)) return "그린나래미디어";
@@ -103,14 +106,20 @@ function toRow(f, sourceUrlBase) {
   };
 }
 
-const rows = [
-  ...main.map((f) => toRow(f, "https://www.biff.kr/kor/html/program/prog_view.asp")),
-  ...community.map((f) => toRow(f, "https://community.biff.kr/kor/addon/00000001/program_view.asp")),
-];
+const rows = main.map((f) => toRow(f, "https://www.biff.kr/kor/html/program/prog_view.asp"));
 
 // filmlife_films를 delete하면 film_id를 참조하는 찜/별점/회차(→시간표)가 전부 on delete cascade로
 // 같이 삭제된다. source_url(=idx+c_idx, festival 고유값)을 키로 삼아 찜·별점을 백업해뒀다가
-// 재삽입 후 새 id로 되살린다. 회차/시간표는 아직 크롤링 대상이 아니라(9/11 시간표 발표 전) 복구 대상에서 제외.
+// 재삽입 후 새 id로 되살린다. 회차(filmlife_screenings)는 여기서 복구하지 않으므로, 그걸 참조하는
+// 개인 시간표가 하나라도 있으면 아래 가드가 막는다.
+await guardAgainstScheduleLoss(supabase, {
+  label: "영화 재시딩 (filmlife_films 전체 delete → 회차 cascade 삭제)",
+  countQuery: supabase
+    .from("filmlife_schedule_items")
+    .select("*", { count: "exact", head: true })
+    .not("screening_id", "is", null),
+});
+
 console.log("기존 찜/별점 백업 중...");
 const { data: oldFilms, error: oldFilmsErr } = await supabase.from("filmlife_films").select("id, source_url");
 if (oldFilmsErr) {

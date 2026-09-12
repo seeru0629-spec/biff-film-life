@@ -1,4 +1,4 @@
-import type { ScreeningWithDetails, VenueTravelTime } from "./types";
+import type { TimetableItem, VenueTravelTime } from "./types";
 
 export type TravelWarning = {
   fromScreeningId: string;
@@ -13,23 +13,23 @@ function toMinutes(hms: string) {
 }
 
 function travelMinBetween(
-  fromVenueId: string,
-  toVenueId: string,
+  fromVenueId: string | null,
+  toVenueId: string | null,
   matrix: VenueTravelTime[]
 ): number {
-  if (fromVenueId === toVenueId) return 0;
+  if (!fromVenueId || !toVenueId || fromVenueId === toVenueId) return 0;
   const hit =
     matrix.find((t) => t.from_venue_id === fromVenueId && t.to_venue_id === toVenueId) ??
     matrix.find((t) => t.from_venue_id === toVenueId && t.to_venue_id === fromVenueId);
   return hit?.travel_min ?? 0;
 }
 
-/** 같은 날짜의 회차들(시작시각 오름차순 정렬)을 받아 이동시간 촉박 구간을 찾는다. */
+/** 같은 날짜의 항목들(시작시각 오름차순 정렬, 영화/행사 혼합 가능)을 받아 이동시간 촉박 구간을 찾는다. */
 export function findTravelWarnings(
-  sameDayScreenings: ScreeningWithDetails[],
+  sameDayItems: TimetableItem[],
   travelMatrix: VenueTravelTime[]
 ): TravelWarning[] {
-  const sorted = [...sameDayScreenings].sort((a, b) =>
+  const sorted = [...sameDayItems].sort((a, b) =>
     a.start_time.localeCompare(b.start_time)
   );
   const warnings: TravelWarning[] = [];
@@ -37,7 +37,7 @@ export function findTravelWarnings(
     const cur = sorted[i];
     const next = sorted[i + 1];
     if (cur.venue_id === next.venue_id) continue;
-    const curEnd = cur.end_time ? toMinutes(cur.end_time) : toMinutes(cur.start_time) + (cur.film.runtime_min ?? 0);
+    const curEnd = cur.end_time ? toMinutes(cur.end_time) : toMinutes(cur.start_time) + (cur.runtime_min ?? 0);
     const gapMin = toMinutes(next.start_time) - curEnd;
     const requiredMin = travelMinBetween(cur.venue_id, next.venue_id, travelMatrix);
     if (requiredMin > 0 && gapMin < requiredMin) {

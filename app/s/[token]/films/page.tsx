@@ -196,7 +196,7 @@ async function FilmsByDate({ token, selectedDate }: { token: string; selectedDat
 
   const [screenings, schedule] = await Promise.all([getScreeningsByDate(date), getScheduleForViewer(token)]);
 
-  const scheduledIds = new Set(schedule.map((s) => s.screening_id));
+  const scheduledIds = new Set(schedule.filter((s) => s.kind === "film").map((s) => s.id));
 
   const byVenue = new Map<string, ScreeningWithDetails[]>();
   for (const s of screenings) {
@@ -247,6 +247,11 @@ async function FilmsByDate({ token, selectedDate }: { token: string; selectedDat
                         {s.end_time ? ` – ${fmtTime(s.end_time)}` : ""}
                         {s.has_gv ? " · GV" : ""}
                       </div>
+                      {s.film.section && (
+                        <div className="mb-1">
+                          <SectionBadge>{s.film.section}</SectionBadge>
+                        </div>
+                      )}
                       <Link href={`/s/${token}/films/${s.film.id}`} className="truncate text-[15px] font-bold">
                         {s.film.title_kor}
                       </Link>

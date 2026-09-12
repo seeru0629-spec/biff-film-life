@@ -1,7 +1,10 @@
-import { rawSectionsInGroup, sectionGroupOf } from "./sections";
+import { rawSectionsInGroup, sectionGroupOf, EVENT_SECTION_GROUP_PREFIX, eventSectionGroupOf } from "./sections";
 import { supabaseAdmin, supabasePublic } from "./supabase";
+import { toTimetableItem } from "./types";
 import type {
   CommentWithMeta,
+  Event,
+  EventSessionWithDetails,
   Film,
   FilmWithLikes,
   FilmWithRating,
@@ -11,8 +14,8 @@ import type {
   RatingSummary,
   RatingWithMeta,
   Restaurant,
-  ScheduleItem,
   ScreeningWithDetails,
+  TimetableItem,
   Venue,
   VenueTravelTime,
 } from "./types";
@@ -79,13 +82,20 @@ export async function getScreeningsByDate(date: string): Promise<ScreeningWithDe
   return data as unknown as ScreeningWithDetails[];
 }
 
-export async function getScheduleForViewer(token: string): Promise<(ScheduleItem & { screening: ScreeningWithDetails })[]> {
+/** 영화 회차 + 행사 세션을 한 시간표로 합쳐서 반환 (렌더링은 lib/timetable.ts, lib/travel.ts 참고) */
+export async function getScheduleForViewer(token: string): Promise<TimetableItem[]> {
   const { data, error } = await supabaseAdmin()
     .from("filmlife_schedule_items")
-    .select("*, screening:filmlife_screenings(*, film:filmlife_films(*), venue:filmlife_venues(*))")
+    .select(
+      "*, screening:filmlife_screenings(*, film:filmlife_films(*), venue:filmlife_venues(*)), event_session:filmlife_event_sessions(*, event:filmlife_events(*), venue:filmlife_venues(*))"
+    )
     .eq("viewer_token", token);
   if (error) throw error;
-  return data as unknown as (ScheduleItem & { screening: ScreeningWithDetails })[];
+  const rows = data as unknown as {
+    screening: ScreeningWithDetails | null;
+    event_session: EventSessionWithDetails | null;
+  }[];
+  return rows.map((r) => toTimetableItem((r.screening ?? r.event_session)!));
 }
 
 export async function isScreeningInSchedule(token: string, screeningId: string) {
@@ -96,6 +106,58 @@ export async function isScreeningInSchedule(token: string, screeningId: string) 
     .eq("screening_id", screeningId)
     .maybeSingle();
   return !!data;
+}
+
+export async function isEventSessionInSchedule(token: string, eventSessionId: string) {
+  const { data } = await supabaseAdmin()
+    .from("filmlife_schedule_items")
+    .select("id")
+    .eq("viewer_token", token)
+    .eq("event_session_id", eventSessionId)
+    .maybeSingle();
+  return !!data;
+}
+
+export async function getEvents(opts: { search?: string; section?: string } = {}) {
+  let q = supabasePublic().from("filmlife_events").select("*").order("title", { ascending: true });
+  if (opts.search) {
+    const term = opts.search.replace(/[%,]/g, "");
+    q = q.or(`title.ilike.%${term}%,host.ilike.%${term}%`);
+  }
+  if (opts.section === "커뮤니티비프") {
+    q = q.ilike("section", `${EVENT_SECTION_GROUP_PREFIX}%`);
+  } else if (opts.section && opts.section !== "전체") {
+    q = q.eq("section", opts.section);
+  }
+  const { data, error } = await q;
+  if (error) throw error;
+  return data as Event[];
+}
+
+/** 상단 필터 칩 목록 — lib/sections.ts의 eventSectionGroupOf로 묶어서 보여줌 */
+export async function getEventSections() {
+  const { data, error } = await supabasePublic().from("filmlife_events").select("section");
+  if (error) throw error;
+  const rawSet = new Set((data as { section: string | null }[]).map((r) => r.section).filter(Boolean) as string[]);
+  const groupSet = new Set(Array.from(rawSet).map(eventSectionGroupOf));
+  return Array.from(groupSet);
+}
+
+export async function getEvent(id: string) {
+  const { data, error } = await supabasePublic().from("filmlife_events").select("*").eq("id", id).single();
+  if (error) throw error;
+  return data as Event;
+}
+
+export async function getSessionsForEvent(eventId: string): Promise<EventSessionWithDetails[]> {
+  const { data, error } = await supabasePublic()
+    .from("filmlife_event_sessions")
+    .select("*, event:filmlife_events(*), venue:filmlife_venues(*)")
+    .eq("event_id", eventId)
+    .order("session_date", { ascending: true })
+    .order("start_time", { ascending: true });
+  if (error) throw error;
+  return data as unknown as EventSessionWithDetails[];
 }
 
 export async function getFilmLikeCounts(): Promise<Map<string, number>> {

@@ -15,11 +15,11 @@ export default async function HomePage({ params }: PageProps<"/s/[token]">) {
     getVenueTravelTimes(),
   ]);
 
-  const screenings = schedule.map((s) => s.screening).sort((a, b) => `${a.screen_date}${a.start_time}`.localeCompare(`${b.screen_date}${b.start_time}`));
-  const next = screenings[0];
+  const items = [...schedule].sort((a, b) => `${a.screen_date}${a.start_time}`.localeCompare(`${b.screen_date}${b.start_time}`));
+  const next = items[0];
 
-  const byDate = new Map<string, typeof screenings>();
-  for (const s of screenings) byDate.set(s.screen_date, [...(byDate.get(s.screen_date) ?? []), s]);
+  const byDate = new Map<string, typeof items>();
+  for (const s of items) byDate.set(s.screen_date, [...(byDate.get(s.screen_date) ?? []), s]);
   const allWarnings = Array.from(byDate.entries()).flatMap(([date, list]) =>
     findTravelWarnings(list, travelMatrix).map((w) => ({ ...w, date }))
   );
@@ -43,7 +43,7 @@ export default async function HomePage({ params }: PageProps<"/s/[token]">) {
             </span>
           </div>
           <div className="text-[13px] text-white/70">
-            담은 회차 <b className="text-white">{screenings.length}</b>편
+            담은 일정 <b className="text-white">{items.length}</b>건
           </div>
         </div>
       </div>
@@ -67,9 +67,9 @@ export default async function HomePage({ params }: PageProps<"/s/[token]">) {
             <div className="flex gap-3 border-b border-hairline pb-3">
               <div className="w-[3px] rounded-full bg-biff-red" />
               <div className="flex-1">
-                <div className="mb-0.5 text-[14.5px] font-semibold">{next.film.title_kor}</div>
+                <div className="mb-0.5 text-[14.5px] font-semibold">{next.title}</div>
                 <div className="tabular text-[12.5px] text-text-muted">
-                  {fmtTimeRange(next.start_time, next.end_time)} · {next.venue.name}
+                  {fmtTimeRange(next.start_time, next.end_time)} · {next.venue_name}
                 </div>
               </div>
             </div>

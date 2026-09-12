@@ -19,10 +19,9 @@ export default async function SchedulePage({ params, searchParams }: PageProps<"
   const { token } = await params;
   const sp = await searchParams;
 
-  const [schedule, travelMatrix] = await Promise.all([getScheduleForViewer(token), getVenueTravelTimes()]);
-  const screenings = schedule.map((s) => s.screening);
+  const [items, travelMatrix] = await Promise.all([getScheduleForViewer(token), getVenueTravelTimes()]);
 
-  if (screenings.length === 0) {
+  if (items.length === 0) {
     return (
       <div className="px-4 pt-16">
         <div className="mb-4.5 text-[24px] font-extrabold tracking-tight">내 시간표</div>
@@ -36,8 +35,8 @@ export default async function SchedulePage({ params, searchParams }: PageProps<"
     );
   }
 
-  const byDate = new Map<string, typeof screenings>();
-  for (const s of screenings) byDate.set(s.screen_date, [...(byDate.get(s.screen_date) ?? []), s]);
+  const byDate = new Map<string, typeof items>();
+  for (const s of items) byDate.set(s.screen_date, [...(byDate.get(s.screen_date) ?? []), s]);
   const datesWithItems = Array.from(byDate.keys()).sort();
 
   const chunks = chunkDates(datesWithItems, CHUNK_SIZE);
@@ -49,14 +48,14 @@ export default async function SchedulePage({ params, searchParams }: PageProps<"
   const layout = buildMultiDayLayout(activeDates, byDate, travelMatrix);
   const totalHeight = layout.hours.length * ROW_HEIGHT;
 
-  const exportGroups = datesWithItems.map((date) => ({ date, screenings: byDate.get(date)! }));
+  const exportGroups = datesWithItems.map((date) => ({ date, items: byDate.get(date)! }));
 
   return (
     <div>
       <div className="px-4 pt-16">
         <div className="mb-3.5 flex items-center justify-between">
           <span className="text-[24px] font-extrabold tracking-tight">내 시간표</span>
-          <span className="text-[12.5px] text-text-faint">총 {screenings.length}편</span>
+          <span className="text-[12.5px] text-text-faint">총 {items.length}건</span>
         </div>
         <div className="mb-3.5 flex gap-1.75 overflow-x-auto pb-1">
           {chunks.map((c, i) => {
@@ -118,9 +117,9 @@ export default async function SchedulePage({ params, searchParams }: PageProps<"
             >
               {col.blocks.map((b) => (
                 <ScheduleBlock
-                  key={b.screening.id}
+                  key={b.item.id}
                   token={token}
-                  screening={b.screening}
+                  item={b.item}
                   top={b.top}
                   height={b.height}
                   lane={b.lane}
