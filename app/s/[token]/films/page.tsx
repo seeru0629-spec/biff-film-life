@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { addToSchedule, removeFromSchedule } from "@/app/actions";
@@ -27,64 +28,80 @@ export default async function FilmsPage({
 
   return (
     <div>
-      <div className="sticky top-0 z-10 bg-surface px-4 pt-16">
-        <div className="mb-3.5 flex items-center justify-between">
-          <span className="text-[24px] font-extrabold tracking-tight">상영작</span>
-          <div className="flex items-center gap-1.5">
-            <Link
-              href={`/s/${token}/liked`}
-              aria-label="찜한 영화"
-              className="flex items-center justify-center rounded-full border border-border-2 bg-card p-1.5 text-biff-red-dark"
-            >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 21s-7.5-4.6-10-9.2C.4 8.4 2 4.5 5.8 4c2.2-.3 4 .9 6.2 3.4C14.2 4.9 16 3.7 18.2 4c3.8.5 5.4 4.4 3.8 7.8C19.5 16.4 12 21 12 21z" />
-              </svg>
-            </Link>
-            <Link
-              href={`/s/${token}/ratings`}
-              aria-label="내 별점"
-              className="flex items-center justify-center rounded-full border border-border-2 bg-card p-1.5 text-[#F2994A]"
-            >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2.5l2.9 6.06 6.6.77-4.85 4.63 1.25 6.6L12 17.4l-5.9 3.16 1.25-6.6L2.5 9.33l6.6-.77L12 2.5z" />
-              </svg>
-            </Link>
-            <Link
-              href={`/s/${token}/popular`}
-              className="flex items-center gap-1 rounded-full border border-border-2 bg-card px-3 py-1.5 text-[12.5px] font-semibold text-biff-red-dark"
-            >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 21s-7.5-4.6-10-9.2C.4 8.4 2 4.5 5.8 4c2.2-.3 4 .9 6.2 3.4C14.2 4.9 16 3.7 18.2 4c3.8.5 5.4 4.4 3.8 7.8C19.5 16.4 12 21 12 21z" />
-              </svg>
-              인기 상영작
-            </Link>
-          </div>
-        </div>
-        <div className="mb-3.5 flex gap-1.5 rounded-[11px] bg-skeleton-2 p-1">
-          <Link
-            href={`/s/${token}/films`}
-            className={`flex-1 rounded-lg py-2.25 text-center text-[13px] ${
-              view === "title" ? "bg-white font-semibold shadow-sm" : "font-medium text-text-muted"
-            }`}
-          >
-            작품별
-          </Link>
-          <Link
-            href={`/s/${token}/films?view=date`}
-            className={`flex-1 rounded-lg py-2.25 text-center text-[13px] ${
-              view === "date" ? "bg-white font-semibold shadow-sm" : "font-medium text-text-muted"
-            }`}
-          >
-            날짜별
-          </Link>
-        </div>
-      </div>
-
       {view === "date" ? (
         <FilmsByDate token={token} selectedDate={typeof sp.date === "string" ? sp.date : undefined} />
       ) : (
         <FilmsByTitle token={token} q={q} section={section} />
       )}
+    </div>
+  );
+}
+
+/** 제목+아이콘 row와 작품별/날짜별 탭 — 검색/카테고리(또는 날짜) 칩까지 한 sticky 블록으로 묶어서
+ * 스크롤해도 전부 같이 고정되게 한다 (예전엔 top-0 / top-[130px] 두 개로 나뉘어 있어 하드코딩된
+ * 130px가 실제 높이와 어긋나면 밀리거나 겹치는 문제가 있었음). */
+function FilmsHeader({
+  token,
+  view,
+  children,
+}: {
+  token: string;
+  view: "title" | "date";
+  children: ReactNode;
+}) {
+  return (
+    <div className="sticky top-0 z-10 bg-surface px-4 pt-16">
+      <div className="mb-3.5 flex items-center justify-between">
+        <span className="text-[24px] font-extrabold tracking-tight">상영작</span>
+        <div className="flex items-center gap-1.5">
+          <Link
+            href={`/s/${token}/liked`}
+            aria-label="찜한 영화"
+            className="flex items-center justify-center rounded-full border border-border-2 bg-card p-1.5 text-biff-red-dark"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 21s-7.5-4.6-10-9.2C.4 8.4 2 4.5 5.8 4c2.2-.3 4 .9 6.2 3.4C14.2 4.9 16 3.7 18.2 4c3.8.5 5.4 4.4 3.8 7.8C19.5 16.4 12 21 12 21z" />
+            </svg>
+          </Link>
+          <Link
+            href={`/s/${token}/ratings`}
+            aria-label="내 별점"
+            className="flex items-center justify-center rounded-full border border-border-2 bg-card p-1.5 text-[#F2994A]"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.5l2.9 6.06 6.6.77-4.85 4.63 1.25 6.6L12 17.4l-5.9 3.16 1.25-6.6L2.5 9.33l6.6-.77L12 2.5z" />
+            </svg>
+          </Link>
+          <Link
+            href={`/s/${token}/popular`}
+            className="flex items-center gap-1 rounded-full border border-border-2 bg-card px-3 py-1.5 text-[12.5px] font-semibold text-biff-red-dark"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 21s-7.5-4.6-10-9.2C.4 8.4 2 4.5 5.8 4c2.2-.3 4 .9 6.2 3.4C14.2 4.9 16 3.7 18.2 4c3.8.5 5.4 4.4 3.8 7.8C19.5 16.4 12 21 12 21z" />
+            </svg>
+            인기 상영작
+          </Link>
+        </div>
+      </div>
+      <div className="mb-3.5 flex gap-1.5 rounded-[11px] bg-skeleton-2 p-1">
+        <Link
+          href={`/s/${token}/films`}
+          className={`flex-1 rounded-lg py-2.25 text-center text-[13px] ${
+            view === "title" ? "bg-white font-semibold shadow-sm" : "font-medium text-text-muted"
+          }`}
+        >
+          작품별
+        </Link>
+        <Link
+          href={`/s/${token}/films?view=date`}
+          className={`flex-1 rounded-lg py-2.25 text-center text-[13px] ${
+            view === "date" ? "bg-white font-semibold shadow-sm" : "font-medium text-text-muted"
+          }`}
+        >
+          날짜별
+        </Link>
+      </div>
+      {children}
     </div>
   );
 }
@@ -100,7 +117,7 @@ async function FilmsByTitle({ token, q, section }: { token: string; q?: string; 
 
   return (
     <>
-      <div className="sticky top-[130px] z-10 bg-surface px-4">
+      <FilmsHeader token={token} view="title">
         <form method="get" className="mb-3.5 flex items-center gap-2.5 rounded-xl border border-border-2 bg-card px-3.5 py-2.5">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#A69C90" strokeWidth="2.1" strokeLinecap="round">
             <circle cx="11" cy="11" r="7" />
@@ -115,7 +132,7 @@ async function FilmsByTitle({ token, q, section }: { token: string; q?: string; 
           />
           {section && <input type="hidden" name="section" value={section} />}
         </form>
-        <div className="mb-3.5 flex gap-2 overflow-x-auto pb-1">
+        <div className="flex gap-2 overflow-x-auto pb-1">
           <Link
             href={`/s/${token}/films`}
             className={`flex-none whitespace-nowrap rounded-full px-3.5 py-2 text-[12px] font-semibold ${
@@ -136,9 +153,9 @@ async function FilmsByTitle({ token, q, section }: { token: string; q?: string; 
             </Link>
           ))}
         </div>
-      </div>
+      </FilmsHeader>
 
-      <div className="flex flex-col gap-2.5 px-4">
+      <div className="flex flex-col gap-2.5 px-4 pt-3.5">
         <div className="flex items-center justify-between px-0.5 pb-0.5">
           <span className="text-[12px] text-text-faint">전체 {films.length}편</span>
         </div>
@@ -206,8 +223,8 @@ async function FilmsByDate({ token, selectedDate }: { token: string; selectedDat
 
   return (
     <>
-      <div className="sticky top-[130px] z-10 bg-surface px-4">
-        <div className="mb-3.5 flex gap-1.75 overflow-x-auto pb-1">
+      <FilmsHeader token={token} view="date">
+        <div className="flex gap-1.75 overflow-x-auto pb-1">
           {dates.map((d) => (
             <Link
               key={d}
@@ -225,9 +242,9 @@ async function FilmsByDate({ token, selectedDate }: { token: string; selectedDat
             </Link>
           ))}
         </div>
-      </div>
+      </FilmsHeader>
 
-      <div className="flex flex-col gap-4 px-4">
+      <div className="flex flex-col gap-4 px-4 pt-3.5">
         {screenings.length === 0 && (
           <div className="rounded-[14px] border border-border bg-card p-8 text-center text-[13px] text-text-faint">
             이 날짜엔 등록된 상영 회차가 없어요
