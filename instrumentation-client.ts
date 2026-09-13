@@ -15,10 +15,25 @@ window.addEventListener("error", (event) => {
   reportClientError(event.error?.message ?? event.message, event.error?.stack);
 });
 
+function describeRejectionReason(reason: unknown): string {
+  if (reason instanceof Error) return reason.message;
+  if (typeof reason === "string") return reason;
+  if (typeof Event !== "undefined" && reason instanceof Event) {
+    const target = reason.target as { tagName?: string; src?: string; currentSrc?: string } | null;
+    const targetInfo = target?.currentSrc ?? target?.src ?? target?.tagName;
+    return `${reason.type} event${targetInfo ? ` on ${targetInfo}` : ""}`;
+  }
+  try {
+    return JSON.stringify(reason);
+  } catch {
+    return String(reason);
+  }
+}
+
 window.addEventListener("unhandledrejection", (event) => {
   const reason = event.reason;
   reportClientError(
-    reason instanceof Error ? reason.message : String(reason),
+    describeRejectionReason(reason),
     reason instanceof Error ? reason.stack : undefined,
     "client-unhandled-rejection"
   );

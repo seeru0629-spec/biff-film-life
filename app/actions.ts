@@ -6,10 +6,22 @@ import { supabaseAdmin } from "@/lib/supabase";
 import type { PostCategory } from "@/lib/types";
 
 export async function addToSchedule(token: string, screeningId: string) {
-  const { error } = await supabaseAdmin()
+  const admin = supabaseAdmin();
+  // filmlife_schedule_items의 (viewer_token, screening_id) 유니크 인덱스가 0008 마이그레이션 이후
+  // 부분 인덱스라 upsert(onConflict)로 타깃할 수 없어(addEventToSchedule과 동일한 이유) 존재 확인 후
+  // 삽입하는 방식으로 멱등하게 처리한다.
+  const { data: existing } = await admin
     .from("filmlife_schedule_items")
-    .upsert({ viewer_token: token, screening_id: screeningId }, { onConflict: "viewer_token,screening_id" });
-  if (error) throw new Error(error.message);
+    .select("id")
+    .eq("viewer_token", token)
+    .eq("screening_id", screeningId)
+    .maybeSingle();
+  if (!existing) {
+    const { error } = await admin
+      .from("filmlife_schedule_items")
+      .insert({ viewer_token: token, screening_id: screeningId });
+    if (error) throw new Error(error.message);
+  }
   revalidatePath(`/s/${token}`);
   revalidatePath(`/s/${token}/schedule`);
 }
