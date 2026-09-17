@@ -41,6 +41,7 @@ export function SaveImageSheet({
   const [includeWarnings, setIncludeWarnings] = useState(true);
   const [busy, setBusy] = useState(false);
   const [stillDataUrls, setStillDataUrls] = useState<Record<string, string>>({});
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const exportRef = useRef<HTMLDivElement>(null);
   const isStory = ratio === "story";
 
@@ -111,17 +112,30 @@ export function SaveImageSheet({
         reportSaveImageError(`save completed but ${missingStillCount}/${activeStillUrls.length} stillcuts missing`);
       }
       const dataUrl = await toPng(exportRef.current, { pixelRatio: 1, cacheBust: true });
-      const a = document.createElement("a");
-      a.href = dataUrl;
-      a.download = `부국쨈_시간표_${groups[0]?.date ?? "export"}${isStory ? "_9x16" : ""}.png`;
-      a.click();
-      setOpen(false);
+      // iOS Safari는 data URL을 가리키는 <a download>를 클릭하면 다운로드 대신
+      // 그 URL로 페이지 자체가 이동해버리는 경우가 있어, 자동 다운로드 대신
+      // 미리보기를 띄우고 길게 눌러 저장하도록 안내한다 (데스크톱/안드로이드는
+      // 미리보기의 "다운로드" 버튼으로 기존 방식도 함께 시도할 수 있다).
+      setPreviewUrl(dataUrl);
     } catch (e) {
       reportSaveImageError(`toPng threw: ${e instanceof Error ? e.message : String(e)}`);
       throw e;
     } finally {
       setBusy(false);
     }
+  }
+
+  function downloadPreview() {
+    if (!previewUrl) return;
+    const a = document.createElement("a");
+    a.href = previewUrl;
+    a.download = `부국쨈_시간표_${groups[0]?.date ?? "export"}${isStory ? "_9x16" : ""}.png`;
+    a.click();
+  }
+
+  function closePreview() {
+    setPreviewUrl(null);
+    setOpen(false);
   }
 
   const bg = theme === "dark" ? "#1B1815" : "#FAF8F4";
@@ -228,6 +242,32 @@ export function SaveImageSheet({
                 {busy ? "생성 중…" : stillsReady ? "이미지 저장" : "스틸컷 불러오는 중…"}
               </button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {previewUrl && (
+        <div className="fixed inset-0 z-[60] flex flex-col bg-black/90 px-4 pb-8 pt-6">
+          <div className="mb-3 flex items-center justify-between">
+            <span className="text-[15px] font-bold text-white">저장할 이미지</span>
+            <button onClick={closePreview} className="text-[13px] font-medium text-white/70">
+              닫기
+            </button>
+          </div>
+          <div className="flex flex-1 items-center justify-center overflow-auto">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={previewUrl} alt="시간표 이미지" className="max-h-full max-w-full rounded-[14px] object-contain" />
+          </div>
+          <div className="mt-4 space-y-2.5">
+            <div className="text-center text-[12.5px] text-white/70">
+              저장이 안 되면 이미지를 길게 눌러 &quot;사진에 추가&quot;를 선택해주세요
+            </div>
+            <button
+              onClick={downloadPreview}
+              className="w-full rounded-xl bg-biff-red py-4 text-center text-[14.5px] font-bold text-white"
+            >
+              다운로드
+            </button>
           </div>
         </div>
       )}
