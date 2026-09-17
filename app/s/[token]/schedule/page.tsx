@@ -143,7 +143,7 @@ export default async function SchedulePage({ params, searchParams }: PageProps<"
 
       <div className="h-[190px]" />
 
-      <SaveImageSheet groups={exportGroups} travelMatrix={travelMatrix} />
+      <SaveImageSheet groups={exportGroups} travelMatrix={travelMatrix} initialDate={activeDates[0]} />
     </div>
   );
 }

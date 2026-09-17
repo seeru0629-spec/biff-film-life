@@ -30,9 +30,12 @@ function reportSaveImageError(message: string, extra?: Record<string, unknown>) 
 export function SaveImageSheet({
   groups,
   travelMatrix,
+  initialDate,
 }: {
   groups: DayGroup[];
   travelMatrix: VenueTravelTime[];
+  /** "이 날짜만" 범위로 저장할 때 쓸 날짜 — 지금 화면에 보이는 날짜. 없으면 groups[0](가장 이른 날짜)로 대체. */
+  initialDate?: string;
 }) {
   const [open, setOpen] = useState(false);
   const [scope, setScope] = useState<"day" | "all">("day");
@@ -45,7 +48,8 @@ export function SaveImageSheet({
   const exportRef = useRef<HTMLDivElement>(null);
   const isStory = ratio === "story";
 
-  const activeGroups = scope === "day" || isStory ? groups.slice(0, 1) : groups;
+  const dayGroup = groups.find((g) => g.date === initialDate) ?? groups[0];
+  const activeGroups = scope === "day" || isStory ? (dayGroup ? [dayGroup] : []) : groups;
   const activeStillUrls = Array.from(
     new Set(activeGroups.flatMap((g) => g.items.map((i) => i.still_image_url).filter((u): u is string => !!u)))
   );
@@ -133,7 +137,8 @@ export function SaveImageSheet({
     if (!previewUrl) return;
     const a = document.createElement("a");
     a.href = previewUrl;
-    a.download = `부국쨈_시간표_${groups[0]?.date ?? "export"}${isStory ? "_9x16" : ""}.png`;
+    const filenameDate = scope === "day" || isStory ? dayGroup?.date : groups[0]?.date;
+    a.download = `부국쨈_시간표_${filenameDate ?? "export"}${isStory ? "_9x16" : ""}.png`;
     a.click();
   }
 
