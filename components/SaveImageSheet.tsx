@@ -222,7 +222,6 @@ export function SaveImageSheet({
                           // eslint-disable-next-line @next/next/no-img-element
                           <img
                             src={`/api/img-proxy?url=${encodeURIComponent(s.still_image_url)}`}
-                            crossOrigin="anonymous"
                             alt=""
                             style={{ width: 200, height: 126, borderRadius: 12, objectFit: "cover", flex: "none" }}
                           />
