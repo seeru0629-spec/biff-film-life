@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-// 이미지로 저장(html-to-image) 캡처 시 CloudFront 스틸컷이 CORS 헤더를 안 줘서
+// 이미지로 저장(html2canvas) 캡처 시 CloudFront 스틸컷이 CORS 헤더를 안 줘서
 // canvas가 tainted 되는 문제를 막기 위한 동일 출처 프록시. BIFF CDN 이미지만 허용.
 const ALLOWED_HOSTS = new Set(["d2j6u4o1bq9z89.cloudfront.net", "community.biff.kr", "www.biff.kr"]);
 

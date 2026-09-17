@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { toPng } from "html-to-image";
+import html2canvas from "html2canvas-pro";
 import { fmtTimeRange, fmtMonthDay } from "@/lib/format";
 import { weekdayKor } from "@/lib/festival";
 import { findTravelWarnings } from "@/lib/travel";
@@ -51,9 +51,8 @@ export function SaveImageSheet({
   );
   const stillsReady = activeStillUrls.every((u) => u in stillDataUrls);
 
-  // Safari/WebKit는 html-to-image가 캡처 시점에 원격 URL을 fetch해 data URL로
-  // 치환하는 방식이 종종 실패해 스틸컷만 빠뜨린다. 미리 base64로 변환해두면
-  // 캡처 시점엔 이미 완성된 data URL만 그리면 되므로 이 문제를 피할 수 있다.
+  // 캡처 시점에 프록시 URL을 새로 fetch하지 않고 이미 로드된 데이터로 바로
+  // 그릴 수 있도록 미리 base64로 변환해둔다 (stillsReady로 캡처 전 대기).
   useEffect(() => {
     const urls = Array.from(new Set(groups.flatMap((g) => g.items.map((i) => i.still_image_url).filter((u): u is string => !!u))));
     const missing = urls.filter((u) => !(u in stillDataUrls));
@@ -111,14 +110,19 @@ export function SaveImageSheet({
       if (missingStillCount > 0) {
         reportSaveImageError(`save completed but ${missingStillCount}/${activeStillUrls.length} stillcuts missing`);
       }
-      const dataUrl = await toPng(exportRef.current, { pixelRatio: 1, cacheBust: true });
+      // html-to-image는 SVG foreignObject에 이미지를 그려 넣는 방식인데, iOS
+      // Safari(WebKit)는 이 경로로 들어간 raster 이미지를 에러 없이 조용히
+      // 누락시키는 버그가 있어(실기기로 확인함) html2canvas(DOM을 직접 캔버스에
+      // 그리는 방식)로 교체했다.
+      const canvas = await html2canvas(exportRef.current, { scale: 1, backgroundColor: bg, useCORS: true });
+      const dataUrl = canvas.toDataURL("image/png");
       // iOS Safari는 data URL을 가리키는 <a download>를 클릭하면 다운로드 대신
       // 그 URL로 페이지 자체가 이동해버리는 경우가 있어, 자동 다운로드 대신
       // 미리보기를 띄우고 길게 눌러 저장하도록 안내한다 (데스크톱/안드로이드는
       // 미리보기의 "다운로드" 버튼으로 기존 방식도 함께 시도할 수 있다).
       setPreviewUrl(dataUrl);
     } catch (e) {
-      reportSaveImageError(`toPng threw: ${e instanceof Error ? e.message : String(e)}`);
+      reportSaveImageError(`capture threw: ${e instanceof Error ? e.message : String(e)}`);
       throw e;
     } finally {
       setBusy(false);
