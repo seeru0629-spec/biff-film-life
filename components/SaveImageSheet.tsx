@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { toPng } from "html-to-image";
 import { fmtTimeRange, fmtMonthDay } from "@/lib/format";
 import { weekdayKor } from "@/lib/festival";
@@ -22,10 +22,53 @@ export function SaveImageSheet({
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [includeWarnings, setIncludeWarnings] = useState(true);
   const [busy, setBusy] = useState(false);
+  const [stillDataUrls, setStillDataUrls] = useState<Record<string, string>>({});
   const exportRef = useRef<HTMLDivElement>(null);
   const isStory = ratio === "story";
 
   const activeGroups = scope === "day" || isStory ? groups.slice(0, 1) : groups;
+  const activeStillUrls = Array.from(
+    new Set(activeGroups.flatMap((g) => g.items.map((i) => i.still_image_url).filter((u): u is string => !!u)))
+  );
+  const stillsReady = activeStillUrls.every((u) => u in stillDataUrls);
+
+  // Safari/WebKit는 html-to-image가 캡처 시점에 원격 URL을 fetch해 data URL로
+  // 치환하는 방식이 종종 실패해 스틸컷만 빠뜨린다. 미리 base64로 변환해두면
+  // 캡처 시점엔 이미 완성된 data URL만 그리면 되므로 이 문제를 피할 수 있다.
+  useEffect(() => {
+    const urls = Array.from(new Set(groups.flatMap((g) => g.items.map((i) => i.still_image_url).filter((u): u is string => !!u))));
+    const missing = urls.filter((u) => !(u in stillDataUrls));
+    if (missing.length === 0) return;
+    let cancelled = false;
+    Promise.all(
+      missing.map(async (url) => {
+        try {
+          const res = await fetch(`/api/img-proxy?url=${encodeURIComponent(url)}`);
+          const blob = await res.blob();
+          const dataUrl = await new Promise<string>((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onerror = reject;
+            reader.onloadend = () => resolve(reader.result as string);
+            reader.readAsDataURL(blob);
+          });
+          return [url, dataUrl] as const;
+        } catch {
+          return [url, ""] as const;
+        }
+      })
+    ).then((entries) => {
+      if (cancelled) return;
+      setStillDataUrls((prev) => {
+        const next = { ...prev };
+        for (const [url, dataUrl] of entries) next[url] = dataUrl; // "" 실패도 settled로 기록해 무한 대기 방지
+        return next;
+      });
+    });
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [groups]);
 
   function handleRatio(v: "feed" | "story") {
     setRatio(v);
@@ -145,10 +188,10 @@ export function SaveImageSheet({
             <div className="flex gap-2.25">
               <button
                 onClick={handleSave}
-                disabled={busy}
+                disabled={busy || !stillsReady}
                 className="flex-1 rounded-xl bg-biff-red py-4 text-center text-[14.5px] font-bold text-white disabled:opacity-60"
               >
-                {busy ? "생성 중…" : "이미지 저장"}
+                {busy ? "생성 중…" : stillsReady ? "이미지 저장" : "스틸컷 불러오는 중…"}
               </button>
             </div>
           </div>
@@ -221,7 +264,10 @@ export function SaveImageSheet({
                         {s.still_image_url && (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img
-                            src={`/api/img-proxy?url=${encodeURIComponent(s.still_image_url)}`}
+                            src={
+                              stillDataUrls[s.still_image_url] ||
+                              `/api/img-proxy?url=${encodeURIComponent(s.still_image_url)}`
+                            }
                             alt=""
                             style={{ width: 200, height: 126, borderRadius: 12, objectFit: "cover", flex: "none" }}
                           />
