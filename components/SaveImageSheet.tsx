@@ -9,6 +9,24 @@ import type { TimetableItem, VenueTravelTime } from "@/lib/types";
 
 type DayGroup = { date: string; items: TimetableItem[] };
 
+function reportSaveImageError(message: string, extra?: Record<string, unknown>) {
+  try {
+    fetch("/api/report-error", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message,
+        path: typeof window !== "undefined" ? window.location.pathname : undefined,
+        routeType: "client-save-image",
+        extra: { userAgent: typeof navigator !== "undefined" ? navigator.userAgent : undefined, ...extra },
+      }),
+      keepalive: true,
+    }).catch(() => {});
+  } catch {
+    // 리포팅 실패가 저장 기능에 영향을 주면 안 됨
+  }
+}
+
 export function SaveImageSheet({
   groups,
   travelMatrix,
@@ -44,7 +62,15 @@ export function SaveImageSheet({
       missing.map(async (url) => {
         try {
           const res = await fetch(`/api/img-proxy?url=${encodeURIComponent(url)}`);
+          if (!res.ok) {
+            reportSaveImageError(`stillcut fetch not ok: ${res.status}`, { url });
+            return [url, ""] as const;
+          }
           const blob = await res.blob();
+          if (!blob.type.startsWith("image/") || blob.size === 0) {
+            reportSaveImageError(`stillcut blob invalid: type=${blob.type} size=${blob.size}`, { url });
+            return [url, ""] as const;
+          }
           const dataUrl = await new Promise<string>((resolve, reject) => {
             const reader = new FileReader();
             reader.onerror = reject;
@@ -52,7 +78,8 @@ export function SaveImageSheet({
             reader.readAsDataURL(blob);
           });
           return [url, dataUrl] as const;
-        } catch {
+        } catch (e) {
+          reportSaveImageError(`stillcut fetch threw: ${e instanceof Error ? e.message : String(e)}`, { url });
           return [url, ""] as const;
         }
       })
@@ -79,12 +106,19 @@ export function SaveImageSheet({
     if (!exportRef.current) return;
     setBusy(true);
     try {
+      const missingStillCount = activeStillUrls.filter((u) => !stillDataUrls[u]).length;
+      if (missingStillCount > 0) {
+        reportSaveImageError(`save completed but ${missingStillCount}/${activeStillUrls.length} stillcuts missing`);
+      }
       const dataUrl = await toPng(exportRef.current, { pixelRatio: 1, cacheBust: true });
       const a = document.createElement("a");
       a.href = dataUrl;
       a.download = `부국쨈_시간표_${groups[0]?.date ?? "export"}${isStory ? "_9x16" : ""}.png`;
       a.click();
       setOpen(false);
+    } catch (e) {
+      reportSaveImageError(`toPng threw: ${e instanceof Error ? e.message : String(e)}`);
+      throw e;
     } finally {
       setBusy(false);
     }
@@ -198,8 +232,10 @@ export function SaveImageSheet({
         </div>
       )}
 
-      {/* 오프스크린 캡처 대상 */}
-      <div style={{ position: "fixed", top: 0, left: -99999, width: 1080 }}>
+      {/* 오프스크린 캡처 대상 — 일부 모바일 브라우저는 뷰포트에서 아주 멀리(-99999px)
+          떨어진 fixed 요소를 컴포지팅/래스터화하지 못하는 경우가 있어, 화면 밖으로
+          미는 대신 크기 0인 overflow:hidden 컨테이너로 실제 렌더링만 감춘다. */}
+      <div style={{ position: "fixed", top: 0, left: 0, width: 0, height: 0, overflow: "hidden" }}>
         <div ref={exportRef} style={{ width: 1080, background: bg, color: fg, display: "flex", flexDirection: "column" }}>
           {activeGroups.map((g) => {
             const warnings = includeWarnings ? findTravelWarnings(g.items, travelMatrix) : [];

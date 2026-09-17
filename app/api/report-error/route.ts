@@ -12,6 +12,7 @@ export async function POST(req: NextRequest) {
       digest: typeof body.digest === "string" ? body.digest : undefined,
       path: typeof body.path === "string" ? body.path : undefined,
       routeType: typeof body.routeType === "string" ? body.routeType : "client",
+      extra: body.extra && typeof body.extra === "object" ? body.extra : undefined,
     });
   } catch {
     // 리포팅 자체의 실패는 조용히 무시
