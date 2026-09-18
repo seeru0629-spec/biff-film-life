@@ -69,6 +69,26 @@ export async function removeEventFromSchedule(token: string, eventSessionId: str
   revalidatePath(`/s/${token}/schedule`);
 }
 
+export async function removeManyFromSchedule(token: string, ids: string[]) {
+  if (ids.length === 0) return;
+  const idList = ids.join(",");
+  const { error } = await supabaseAdmin()
+    .from("filmlife_schedule_items")
+    .delete()
+    .eq("viewer_token", token)
+    .or(`screening_id.in.(${idList}),event_session_id.in.(${idList})`);
+  if (error) throw new Error(error.message);
+  revalidatePath(`/s/${token}`);
+  revalidatePath(`/s/${token}/schedule`);
+}
+
+export async function clearSchedule(token: string) {
+  const { error } = await supabaseAdmin().from("filmlife_schedule_items").delete().eq("viewer_token", token);
+  if (error) throw new Error(error.message);
+  revalidatePath(`/s/${token}`);
+  revalidatePath(`/s/${token}/schedule`);
+}
+
 export async function likeFilm(token: string, filmId: string) {
   const { error } = await supabaseAdmin()
     .from("filmlife_film_likes")

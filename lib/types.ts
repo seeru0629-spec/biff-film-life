@@ -39,6 +39,7 @@ export type Screening = {
   has_gv: boolean;
   is_sold_out: boolean;
   source_url: string | null;
+  booking_code: string | null;
 };
 
 export type ScreeningWithDetails = Screening & {
@@ -102,6 +103,7 @@ export type TimetableItem = {
   runtime_min: number | null;
   still_image_url: string | null;
   has_gv: boolean;
+  booking_code: string | null;
   source: ScreeningWithDetails | EventSessionWithDetails;
 };
 
@@ -120,6 +122,7 @@ export function toTimetableItem(item: ScreeningWithDetails | EventSessionWithDet
       runtime_min: item.film.runtime_min,
       still_image_url: item.film.still_image_url,
       has_gv: item.has_gv,
+      booking_code: item.booking_code,
       source: item,
     };
   }
@@ -136,6 +139,7 @@ export function toTimetableItem(item: ScreeningWithDetails | EventSessionWithDet
     runtime_min: null,
     still_image_url: item.event.still_image_url,
     has_gv: false,
+    booking_code: item.booking_code,
     source: item,
   };
 }

@@ -4,6 +4,7 @@ import { buildMultiDayLayout, ROW_HEIGHT } from "@/lib/timetable";
 import { weekdayKor } from "@/lib/festival";
 import { fmtMonthDay } from "@/lib/format";
 import { ScheduleBlock } from "@/components/ScheduleBlock";
+import { ScheduleSelectionProvider, ScheduleToolbar } from "@/components/ScheduleSelection";
 import { SaveImageSheet } from "@/components/SaveImageSheet";
 import { EmptyState } from "@/components/ui";
 
@@ -51,11 +52,14 @@ export default async function SchedulePage({ params, searchParams }: PageProps<"
   const exportGroups = datesWithItems.map((date) => ({ date, items: byDate.get(date)! }));
 
   return (
-    <div>
+    <ScheduleSelectionProvider>
       <div className="px-4 pt-16">
-        <div className="mb-3.5 flex items-center justify-between">
+        <div className="mb-3 flex items-center justify-between">
           <span className="text-[24px] font-extrabold tracking-tight">내 시간표</span>
           <span className="text-[12.5px] text-text-faint">총 {items.length}건</span>
+        </div>
+        <div className="mb-3.5 flex justify-end">
+          <ScheduleToolbar token={token} />
         </div>
         <div className="mb-3.5 flex gap-1.75 overflow-x-auto pb-1">
           {chunks.map((c, i) => {
@@ -144,6 +148,6 @@ export default async function SchedulePage({ params, searchParams }: PageProps<"
       <div className="h-[190px]" />
 
       <SaveImageSheet groups={exportGroups} travelMatrix={travelMatrix} initialDate={activeDates[0]} />
-    </div>
+    </ScheduleSelectionProvider>
   );
 }

@@ -152,6 +152,7 @@ export function SaveImageSheet({
   const fgDim = theme === "dark" ? "rgba(255,255,255,.55)" : "#6B6259";
   const fgDim2 = theme === "dark" ? "rgba(255,255,255,.35)" : "#8C8378";
   const cardBg = theme === "dark" ? "rgba(255,255,255,.06)" : "#fff";
+  const codeBadgeBg = theme === "dark" ? "rgba(245,197,24,.18)" : "#FDECC8";
 
   return (
     <>
@@ -358,10 +359,28 @@ export function SaveImageSheet({
                           />
                         )}
                         <div style={{ flex: 1, minWidth: 0 }}>
-                          <div style={{ fontWeight: 700, fontSize: 36, color: "#F5C518", fontVariantNumeric: "tabular-nums", marginBottom: 12 }}>
-                            {fmtTimeRange(s.start_time, s.end_time)}
+                          <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 12 }}>
+                            <span style={{ fontWeight: 700, fontSize: 36, color: "#F5C518", fontVariantNumeric: "tabular-nums" }}>
+                              {fmtTimeRange(s.start_time, s.end_time)}
+                            </span>
+                            {s.booking_code && (
+                              <span
+                                style={{
+                                  flex: "none",
+                                  fontWeight: 800,
+                                  fontSize: 24,
+                                  color: "#B8380B",
+                                  background: codeBadgeBg,
+                                  borderRadius: 999,
+                                  padding: "4px 16px",
+                                  fontVariantNumeric: "tabular-nums",
+                                }}
+                              >
+                                {s.booking_code}
+                              </span>
+                            )}
                           </div>
-                          <div style={{ fontWeight: 800, fontSize: 44, marginBottom: 10 }}>{s.title}</div>
+                          <div style={{ fontWeight: 800, fontSize: 44, marginBottom: 10, lineHeight: 1.25 }}>{s.title}</div>
                           <div style={{ fontSize: 26, color: fgDim }}>{s.venue_name}</div>
                         </div>
                       </div>

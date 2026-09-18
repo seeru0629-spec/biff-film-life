@@ -70,6 +70,11 @@ export default async function EventDetailPage({ params }: PageProps<"/s/[token]/
               <div className="flex-1">
                 <div className="tabular mb-1 flex items-center gap-1.5 text-[14px] font-semibold">
                   {fmtDateWithWeekday(session.session_date)} {fmtTime(session.start_time)}
+                  {session.booking_code && (
+                    <span className="rounded-full bg-ink-2 px-1.5 py-0.5 text-[10px] font-bold leading-tight text-white">
+                      {session.booking_code}
+                    </span>
+                  )}
                 </div>
                 <div className="text-[12.5px] text-text-muted">
                   {session.venue?.name ?? session.venue_name}
