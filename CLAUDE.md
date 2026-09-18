@@ -17,10 +17,13 @@
   (본편 회차의 `source_url`에 있는 `#code=NNN`에서 추출 — 이미 프로덕션에 백필 완료돼 있어 재실행 불필요, 참고용으로만 포팅).
 - "내 시간표" 선택 삭제 기능 — `components/ScheduleSelection.tsx` 신규 + `ScheduleBlock`에 체크박스 연동
   + `app/actions.ts`에 `removeManyFromSchedule`/`clearSchedule` 추가 + 스케줄 페이지에 `ScheduleToolbar` 연결.
+- `lib/reportError.ts` 잡음 필터 + 급증 감지 — `Script error.`(stack 없음)와 `iabjs://` 브릿지 스크립트
+  에러는 고칠 수 없는 잡음으로 분류해 개별 알림은 건너뛰고, 같은 잡음이 최근 1시간 10건에 "도달하는
+  순간"에만 급증 알림을 보낸다.
 
 **아직 포팅 안 한 것 — 두 리포가 여전히 다른 부분** (전체 diff 기준, 2026-09-18 확인):
 `layout.tsx`, `globals.css`, `proxy.ts`, `error.tsx`/`global-error.tsx`, `instrumentation.ts`/
-`instrumentation-client.ts`, `lib/reportError.ts`(suzy 쪽엔 잡음 필터+급증 감지가 추가돼 있음),
+`instrumentation-client.ts`,
 `lib/supabase.ts`, `lib/festival.ts`, `lib/token.ts`, `components/ui.tsx`/`BottomNav.tsx`/
 `FoodExplorer.tsx`/`InstallHintBanner.tsx`/`ShareAppButton.tsx`/`StarRatingInput.tsx`/
 `TravelTimeTable.tsx`, `app/s/[token]/{food,liked,popular,ratings,board/*,films/[filmId]}/page.tsx`,
