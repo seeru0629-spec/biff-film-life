@@ -135,6 +135,25 @@
  {
   "category": "행사안내",
   "section": "마스터 클래스",
+  "title": "마스터 클래스 : 영화로 구현한 알폰소 쿠아론의 세계",
+  "host": "감독 알폰소 쿠아론",
+  "synopsis": "혁신적인 시각 언어와 깊은 울림으로 영화 매체의 지평을 끊임없이 확장해 온 거장 알폰소 쿠아론 감독. 게스트 모더레이터 연상호 감독의 진행으로 열리는 이번 마스터 클래스는 쿠아론의 독보적인 영화 여정을 조망하고, 그의 창작 세계를 한층 깊이 파고드는 특별한 시간이 될 것이다.",
+  "still_image_url": "https://www.biff.kr/kor/img/event/2026/master_img5.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10878#scode-815",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 중극장(B1)",
+    "session_date": "2026-10-08",
+    "start_time": "12:30",
+    "end_time": "14:00",
+    "booking_code": "815",
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10878#scode-815"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "마스터 클래스",
   "title": "마스터 클래스 : 라브 디아즈, 시간과 기억",
   "host": "감독 라브 디아즈",
   "synopsis": "10여년 만에 한국 관객과 마주하는 라브 디아즈 감독은 역사의 상흔과 인간의 시간을 스크린에 새겨온 시네아스트다. 그의 독보적인 창작 세계를 들여다보고 영화의 본질과 영화적 시간에 대해 관객과 편안하게 이야기를 나눈다.",
@@ -249,44 +268,6 @@
  {
   "category": "행사안내",
   "section": "스페셜 토크",
-  "title": "까르뜨 블랑슈: <너의 눈을 들여다보면> x 은희경",
-  "host": null,
-  "synopsis": null,
-  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2025_H2P0_4PHZ/thumb/1754443006.jpg",
-  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10882#scode-338",
-  "sessions": [
-   {
-    "venue_name": "영화의전당 시네마테크",
-    "session_date": "2026-09-22",
-    "start_time": "16:30",
-    "end_time": null,
-    "booking_code": "338",
-    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10882#scode-338"
-   }
-  ]
- },
- {
-  "category": "행사안내",
-  "section": "스페셜 토크",
-  "title": "까르뜨 블랑슈: <유레카 (리마스터링)> x 봉준호",
-  "host": null,
-  "synopsis": null,
-  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2025_H2P0_4PHZ/thumb/1753784767.jpg",
-  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10882#scode-408",
-  "sessions": [
-   {
-    "venue_name": "영화의전당 중극장",
-    "session_date": "2026-09-23",
-    "start_time": "18:00",
-    "end_time": null,
-    "booking_code": "408",
-    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10882#scode-408"
-   }
-  ]
- },
- {
-  "category": "행사안내",
-  "section": "스페셜 토크",
   "title": "<마더 메리>, 국민 예능 연출자에서 영화 배급으로 TEO 유니버스를 확장한 김태호 PD의 선택",
   "host": null,
   "synopsis": "대한민국 대표 예능을 만들어온 김태호 PD가 영화 배급으로 안목을 넓히며 직접 선택한 영화 <마더 메리> 속 음악과 영감으로 관객들과 이야기 나눕니다.",
@@ -300,6 +281,44 @@
     "end_time": null,
     "booking_code": "021",
     "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10882#scode-021"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "스페셜 토크",
+  "title": "<그래비티>, 그 너머: 알폰소 & 호나스 쿠아론과의 대화",
+  "host": null,
+  "synopsis": "아카데미상 수상에 빛나는 알폰소 쿠아론 감독이 공동 각본가이자 아들인 영화감독 겸 각본가 호나스 쿠아론과 함께 무대에 오른다. 상영 후 이어지는 특별 대담을 통해 두 사람이 빚어낸 독창적인 창작 협업의 세계와 그 뒷이야기를 생생하게 전한다.",
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1789696785.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10882#scode-743",
+  "sessions": [
+   {
+    "venue_name": "CGV센텀시티 IMAX관",
+    "session_date": "2026-10-07",
+    "start_time": "20:20",
+    "end_time": null,
+    "booking_code": "743",
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10882#scode-743"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "스페셜 토크",
+  "title": "<멜랑콜리아>, 라스 폰 트리에의 여러 작품에서 열연을 펼친 샤를로트 갱스부르의 선택",
+  "host": null,
+  "synopsis": "세계적인 배우 샤를로트 갱스부르와 섬세한 연기로 신뢰받는 한국 배우 정은채가 만나, 연기와 영화에 대해 이야기 나누는 자리입니다.",
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1788758296.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10882#scode-742",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 중극장",
+    "session_date": "2026-10-08",
+    "start_time": "14:50",
+    "end_time": null,
+    "booking_code": "742",
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10882#scode-742"
    }
   ]
  },
@@ -338,6 +357,25 @@
     "end_time": "21:00",
     "booking_code": "831",
     "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10882#scode-831"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "씨네 클래스",
+  "title": "샤를로트 갱스부르, 프렌치 시크의 뮤즈",
+  "host": null,
+  "synopsis": "세월이 흘러도 빛바래지 않는 우아함으로 '프렌치 시크'라는 말 자체를 완성해온 배우이자 뮤지션, 샤를로트 갱스부르가 부산을 찾는다. 라스 폰 트리에를 비롯한 거장들의 영원한 뮤즈이자, 스크린과 음악을 오가며 스스로 자신의 예술을 완성해온 그가 지나온 세월과 연기에 관해 고요하고도 깊은 이야기를 들려준다.",
+  "still_image_url": null,
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=11043#scode-827",
+  "sessions": [
+   {
+    "venue_name": "신세계백화점 센텀시티점 9층 문화홀",
+    "session_date": "2026-10-08",
+    "start_time": "13:30",
+    "end_time": "14:30",
+    "booking_code": "827",
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=11043#scode-827"
    }
   ]
  },
@@ -452,6 +490,633 @@
     "end_time": "20:00",
     "booking_code": "826",
     "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=11043#scode-826"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "오픈토크",
+  "title": "가능한 사랑",
+  "host": "게스트 감독 이창동 배우 전도연, 설경구, 조인성, 조여정",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1785389350.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-07-13%3A30-%EA%B0%80%EB%8A%A5%ED%95%9C%20%EC%82%AC%EB%9E%91",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-07",
+    "start_time": "13:30",
+    "end_time": "14:20",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-07-13%3A30-%EA%B0%80%EB%8A%A5%ED%95%9C%20%EC%82%AC%EB%9E%91"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "오픈토크",
+  "title": "정가네",
+  "host": "게스트 감독 김지현, 배우 류승룡, 박해준, 옹성우, 이상희",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1785116267.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-07-15%3A00-%EC%A0%95%EA%B0%80%EB%84%A4",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-07",
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-07-15%3A00-%EC%A0%95%EA%B0%80%EB%84%A4"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "오픈토크",
+  "title": "낮과 밤은 서로에게",
+  "host": "게스트 감독 김종관, 배우 김민하, 주종혁, 한선화, 심은경, 전소영, 김동휘",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1787028033.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-07-17%3A00-%EB%82%AE%EA%B3%BC%20%EB%B0%A4%EC%9D%80%20%EC%84%9C%EB%A1%9C%EC%97%90%EA%B2%8C",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-07",
+    "start_time": "17:00",
+    "end_time": "17:40",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-07-17%3A00-%EB%82%AE%EA%B3%BC%20%EB%B0%A4%EC%9D%80%20%EC%84%9C%EB%A1%9C%EC%97%90%EA%B2%8C"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "오픈토크",
+  "title": "사피엔스",
+  "host": "게스트 감독 이후빈, 배우 정성일, 유재명, 류현경",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1785485711.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-08-14%3A00-%EC%82%AC%ED%94%BC%EC%97%94%EC%8A%A4",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-08",
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-08-14%3A00-%EC%82%AC%ED%94%BC%EC%97%94%EC%8A%A4"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "오픈토크",
+  "title": "꿀알바",
+  "host": "게스트 감독 김다민, 기획총괄 한준희, 배우 김민하, 최현욱",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1786690407.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-08-15%3A00-%EA%BF%80%EC%95%8C%EB%B0%94",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-08",
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-08-15%3A00-%EA%BF%80%EC%95%8C%EB%B0%94"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "오픈토크",
+  "title": "푸른길",
+  "host": "게스트 감독 한준희, 배우 손석구, 나가야마 에이타, 김신록",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1785390528.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-09-12%3A30-%ED%91%B8%EB%A5%B8%EA%B8%B8",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-09",
+    "start_time": "12:30",
+    "end_time": "13:20",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-09-12%3A30-%ED%91%B8%EB%A5%B8%EA%B8%B8"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "오픈토크",
+  "title": "수능, 출제의 비밀",
+  "host": "게스트 감독 이용재, 배우 이선빈, 유재명, 전석호, 김영민",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1785919211.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-09-13%3A30-%EC%88%98%EB%8A%A5%2C%20%EC%B6%9C%EC%A0%9C%EC%9D%98%20%EB%B9%84%EB%B0%80",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-09",
+    "start_time": "13:30",
+    "end_time": "14:20",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-09-13%3A30-%EC%88%98%EB%8A%A5%2C%20%EC%B6%9C%EC%A0%9C%EC%9D%98%20%EB%B9%84%EB%B0%80"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "오픈토크",
+  "title": "세대유감",
+  "host": "게스트 감독 김성윤, 배우 정재영, 김주령, 이이경, 김아영",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1787546185.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-09-14%3A30-%EC%84%B8%EB%8C%80%EC%9C%A0%EA%B0%90",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-09",
+    "start_time": "14:30",
+    "end_time": "15:20",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-09-14%3A30-%EC%84%B8%EB%8C%80%EC%9C%A0%EA%B0%90"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "오픈토크",
+  "title": "BIFF의 발견, 빛나는 신예",
+  "host": "게스트 <낮과 밤은 서로에게> 배우 전소영, 김동휘 <새>, <첫세계> 배우 심수빈",
+  "synopsis": null,
+  "still_image_url": "https://www.biff.kr/kor/img/event/2026/event_thum_2.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-10-11%3A00-BIFF%EC%9D%98%20%EB%B0%9C%EA%B2%AC%2C%20%EB%B9%9B%EB%82%98%EB%8A%94%20%EC%8B%A0%EC%98%88",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-10",
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-10-11%3A00-BIFF%EC%9D%98%20%EB%B0%9C%EA%B2%AC%2C%20%EB%B9%9B%EB%82%98%EB%8A%94%20%EC%8B%A0%EC%98%88"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "오픈토크",
+  "title": "살아있는 전설 이자벨 위페르가 유쾌한 감독 마르크 피투시를 만났을 때",
+  "host": "게스트 배우 이자벨 위페르, 감독 마르크 피투시",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1786080184.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-13-17%3A00-%EC%82%B4%EC%95%84%EC%9E%88%EB%8A%94%20%EC%A0%84%EC%84%A4%20%EC%9D%B4%EC%9E%90%EB%B2%A8%20%EC%9C%84%ED%8E%98%EB%A5%B4%EA%B0%80%20%EC%9C%A0%EC%BE%8C%ED%95%9C%20%EA%B0%90%EB%8F%85%20%EB%A7%88%EB%A5%B4%ED%81%AC%20%ED%94%BC%ED%88%AC%EC%8B%9C%EB%A5%BC%20%EB%A7%8C%EB%82%AC%EC%9D%84%20%EB%95%8C",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-13",
+    "start_time": "17:00",
+    "end_time": "17:50",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10880#2026-10-13-17%3A00-%EC%82%B4%EC%95%84%EC%9E%88%EB%8A%94%20%EC%A0%84%EC%84%A4%20%EC%9D%B4%EC%9E%90%EB%B2%A8%20%EC%9C%84%ED%8E%98%EB%A5%B4%EA%B0%80%20%EC%9C%A0%EC%BE%8C%ED%95%9C%20%EA%B0%90%EB%8F%85%20%EB%A7%88%EB%A5%B4%ED%81%AC%20%ED%94%BC%ED%88%AC%EC%8B%9C%EB%A5%BC%20%EB%A7%8C%EB%82%AC%EC%9D%84%20%EB%95%8C"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "베드포드 파크",
+  "host": "게스트 감독 스테파니 안, 배우 최희서, 손석구",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1783353165.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-07-11%3A20-%EB%B2%A0%EB%93%9C%ED%8F%AC%EB%93%9C%20%ED%8C%8C%ED%81%AC",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-07",
+    "start_time": "11:20",
+    "end_time": "11:40",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-07-11%3A20-%EB%B2%A0%EB%93%9C%ED%8F%AC%EB%93%9C%20%ED%8C%8C%ED%81%AC"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "그대, 별처럼",
+  "host": "게스트 감독 후지이 미치히토, 배우 요코하마 류세이",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1787042573.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-07-12%3A00-%EA%B7%B8%EB%8C%80%2C%20%EB%B3%84%EC%B2%98%EB%9F%BC",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-07",
+    "start_time": "12:00",
+    "end_time": "12:20",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-07-12%3A00-%EA%B7%B8%EB%8C%80%2C%20%EB%B3%84%EC%B2%98%EB%9F%BC"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "장미의 사슬",
+  "host": "게스트 감독 사토 사키치, 배우 마루야마 류헤이, 사와지리 에리카",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1786939865.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-07-12%3A30-%EC%9E%A5%EB%AF%B8%EC%9D%98%20%EC%82%AC%EC%8A%AC",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-07",
+    "start_time": "12:30",
+    "end_time": "12:50",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-07-12%3A30-%EC%9E%A5%EB%AF%B8%EC%9D%98%20%EC%82%AC%EC%8A%AC"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "암살자(들)",
+  "host": "게스트 감독 허진호, 배우 유해진, 박해일, 이민호",
+  "synopsis": null,
+  "still_image_url": "https://www.biff.kr/kor/img/event/2026/event_thum_3.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-07-13%3A00-%EC%95%94%EC%82%B4%EC%9E%90%28%EB%93%A4%29",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-07",
+    "start_time": "13:00",
+    "end_time": "13:20",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-07-13%3A00-%EC%95%94%EC%82%B4%EC%9E%90%28%EB%93%A4%29"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "오래오래 행복하게",
+  "host": "게스트 감독 펑이 피오나 롼, 배우 슈화, 진선, 채범희",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1785747485.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-07-14%3A30-%EC%98%A4%EB%9E%98%EC%98%A4%EB%9E%98%20%ED%96%89%EB%B3%B5%ED%95%98%EA%B2%8C",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-07",
+    "start_time": "14:30",
+    "end_time": "14:50",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-07-14%3A30-%EC%98%A4%EB%9E%98%EC%98%A4%EB%9E%98%20%ED%96%89%EB%B3%B5%ED%95%98%EA%B2%8C"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "메이드 인 코리아 시즌2",
+  "host": "게스트 감독 우민호, 배우 현빈, 정우성, 우도환",
+  "synopsis": null,
+  "still_image_url": "https://www.biff.kr/kor/img/event/2026/event_thum_4.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-07-16%3A00-%EB%A9%94%EC%9D%B4%EB%93%9C%20%EC%9D%B8%20%EC%BD%94%EB%A6%AC%EC%95%84%20%EC%8B%9C%EC%A6%8C2",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-07",
+    "start_time": "16:00",
+    "end_time": "16:20",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-07-16%3A00-%EB%A9%94%EC%9D%B4%EB%93%9C%20%EC%9D%B8%20%EC%BD%94%EB%A6%AC%EC%95%84%20%EC%8B%9C%EC%A6%8C2"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "룩백",
+  "host": "게스트 감독 고레에다 히로카즈, 배우 데구치 나츠키, 마키타 아쥬, 나나세 후리, 오카다 로카",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1786100358.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-07-16%3A30-%EB%A3%A9%EB%B0%B1",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-07",
+    "start_time": "16:30",
+    "end_time": "16:50",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-07-16%3A30-%EB%A3%A9%EB%B0%B1"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "도라",
+  "host": "게스트 감독 정주리, 배우 김도연, 최원영",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1785289602.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-08-11%3A00-%EB%8F%84%EB%9D%BC",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-08",
+    "start_time": "11:00",
+    "end_time": "11:20",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-08-11%3A00-%EB%8F%84%EB%9D%BC"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "최종면접",
+  "host": "게스트 감독 김정훈, 배우 조이현, 김재원, 강유석, 배강희",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1787131849.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-08-11%3A30-%EC%B5%9C%EC%A2%85%EB%A9%B4%EC%A0%91",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-08",
+    "start_time": "11:30",
+    "end_time": "11:50",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-08-11%3A30-%EC%B5%9C%EC%A2%85%EB%A9%B4%EC%A0%91"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "BIFF의 발견, 빛나는 신예",
+  "host": "게스트 <도라> 배우 김도연",
+  "synopsis": null,
+  "still_image_url": "https://www.biff.kr/kor/img/event/2026/event_thum_3.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-08-12%3A00-BIFF%EC%9D%98%20%EB%B0%9C%EA%B2%AC%2C%20%EB%B9%9B%EB%82%98%EB%8A%94%20%EC%8B%A0%EC%98%88",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-08",
+    "start_time": "12:00",
+    "end_time": "12:20",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-08-12%3A00-BIFF%EC%9D%98%20%EB%B0%9C%EA%B2%AC%2C%20%EB%B9%9B%EB%82%98%EB%8A%94%20%EC%8B%A0%EC%98%88"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "자필",
+  "host": "게스트 감독 홍성민, 배우 정성일, 박지현",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1786068456.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-08-12%3A30-%EC%9E%90%ED%95%84",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-08",
+    "start_time": "12:30",
+    "end_time": "12:50",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-08-12%3A30-%EC%9E%90%ED%95%84"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "여전히 찬란하게",
+  "host": "게스트 감독 송일곤, 배우 김혜자, 박서경, 최주은, 문성현, 이세영",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1787120822.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-08-13%3A00-%EC%97%AC%EC%A0%84%ED%9E%88%20%EC%B0%AC%EB%9E%80%ED%95%98%EA%B2%8C",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-08",
+    "start_time": "13:00",
+    "end_time": "13:20",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-08-13%3A00-%EC%97%AC%EC%A0%84%ED%9E%88%20%EC%B0%AC%EB%9E%80%ED%95%98%EA%B2%8C"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "자바의 사계절",
+  "host": "게스트 감독 카밀라 안디니, 프로듀서 이파 이스판샤, 배우 푸트리 마리노, 크리스틴 하킴, 아리아 살로카",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1786792167.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-08-13%3A30-%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%82%AC%EA%B3%84%EC%A0%88",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-08",
+    "start_time": "13:30",
+    "end_time": "13:50",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-08-13%3A30-%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%82%AC%EA%B3%84%EC%A0%88"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "아름다운 초저녁달",
+  "host": "게스트 감독 타케무라 켄타로, 배우 미치에다 슌스케, 안자이 세이라",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1785729540.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-08-16%3A00-%EC%95%84%EB%A6%84%EB%8B%A4%EC%9A%B4%20%EC%B4%88%EC%A0%80%EB%85%81%EB%8B%AC",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-08",
+    "start_time": "16:00",
+    "end_time": "16:20",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-08-16%3A00-%EC%95%84%EB%A6%84%EB%8B%A4%EC%9A%B4%20%EC%B4%88%EC%A0%80%EB%85%81%EB%8B%AC"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "zi",
+  "host": "게스트 배우 미셸 마오, 진 하",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1783927064.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-08-16%3A30-zi",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-08",
+    "start_time": "16:30",
+    "end_time": "16:50",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-08-16%3A30-zi"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "실낙원",
+  "host": "게스트 감독 연상호, 배우 김현주",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1788671016.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-09-12%3A00-%EC%8B%A4%EB%82%99%EC%9B%90",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-09",
+    "start_time": "12:00",
+    "end_time": "12:20",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-09-12%3A00-%EC%8B%A4%EB%82%99%EC%9B%90"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "스카페이스 캣: 수라도",
+  "host": "게스트 감독 왕이판, 배우 후쿠시 소타, 한닝",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1785948112.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-09-15%3A30-%EC%8A%A4%EC%B9%B4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%BA%A3%3A%20%EC%88%98%EB%9D%BC%EB%8F%84",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-09",
+    "start_time": "15:30",
+    "end_time": "15:50",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-09-15%3A30-%EC%8A%A4%EC%B9%B4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%BA%A3%3A%20%EC%88%98%EB%9D%BC%EB%8F%84"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "첫세계",
+  "host": "게스트 감독 윤단비, 배우 심수빈, 김어진",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1785732139.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-09-16%3A00-%EC%B2%AB%EC%84%B8%EA%B3%84",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-09",
+    "start_time": "16:00",
+    "end_time": "16:20",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-09-16%3A00-%EC%B2%AB%EC%84%B8%EA%B3%84"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "재혼 황후",
+  "host": "게스트 배우 신민아, 주지훈, 이종석, 이세영",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1785484758.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-10-12%3A00-%EC%9E%AC%ED%98%BC%20%ED%99%A9%ED%9B%84",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-10",
+    "start_time": "12:00",
+    "end_time": "12:20",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-10-12%3A00-%EC%9E%AC%ED%98%BC%20%ED%99%A9%ED%9B%84"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "눈 둘 데가 없네",
+  "host": "게스트 배우 권해효, 박미소",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1785135229.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-10-12%3A30-%EB%88%88%20%EB%91%98%20%EB%8D%B0%EA%B0%80%20%EC%97%86%EB%84%A4",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-10",
+    "start_time": "12:30",
+    "end_time": "12:50",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-10-12%3A30-%EB%88%88%20%EB%91%98%20%EB%8D%B0%EA%B0%80%20%EC%97%86%EB%84%A4"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "이탈리아의 무서운 신인들 <딥 블루> + <옛날 옛적, 미래에",
+  "host": "게스트 <딥 블루> 감독 에르네스토 마리아 첸소리, 배우 안드레아 아르칸젤리, 프로듀서 조르조 구찌, 각본 로렌초 마리넬리, 편집 키키 <옛날 옛적, 미래에> 감독 마르게리타 페라리, 프로듀서 라파엘레 페릴로",
+  "synopsis": null,
+  "still_image_url": "https://www.biff.kr/kor/img/event/2026/event_thum_3.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-11-12%3A00-%EC%9D%B4%ED%83%88%EB%A6%AC%EC%95%84%EC%9D%98%20%EB%AC%B4%EC%84%9C%EC%9A%B4%20%EC%8B%A0%EC%9D%B8%EB%93%A4%20%3C%EB%94%A5%20%EB%B8%94%EB%A3%A8%3E%20%2B%20%3C%EC%98%9B%EB%82%A0%20%EC%98%9B%EC%A0%81%2C%20%EB%AF%B8%EB%9E%98%EC%97%90",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-11",
+    "start_time": "12:00",
+    "end_time": "12:20",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-11-12%3A00-%EC%9D%B4%ED%83%88%EB%A6%AC%EC%95%84%EC%9D%98%20%EB%AC%B4%EC%84%9C%EC%9A%B4%20%EC%8B%A0%EC%9D%B8%EB%93%A4%20%3C%EB%94%A5%20%EB%B8%94%EB%A3%A8%3E%20%2B%20%3C%EC%98%9B%EB%82%A0%20%EC%98%9B%EC%A0%81%2C%20%EB%AF%B8%EB%9E%98%EC%97%90"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "인헤릿",
+  "host": "게스트 감독 반종 피산다나쿤, 배우 다위까 호네, 티티야 지라폰실프",
+  "synopsis": null,
+  "still_image_url": "https://d2j6u4o1bq9z89.cloudfront.net/9611_DATA/FILM_PHOTO/2026_MS8H_SL8F/thumb/1785984543.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-11-12%3A30-%EC%9D%B8%ED%97%A4%EB%A6%BF",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-11",
+    "start_time": "12:30",
+    "end_time": "12:50",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-11-12%3A30-%EC%9D%B8%ED%97%A4%EB%A6%BF"
+   }
+  ]
+ },
+ {
+  "category": "행사안내",
+  "section": "야외무대인사",
+  "title": "우리가 미래의 거장이다 ! 플래시 포워드 섹션 감독들의 무대 인사",
+  "host": "게스트 감독 리스 마크 존스, 야니스 렌츠, 페르난다 토바르, 자클린 렌주, 에마뉘엘 마레, 마누엘 베트셔, 마르게리타 페라리, 그제고시 뎅보프스키, 마누엘라 마르텔리",
+  "synopsis": null,
+  "still_image_url": "https://www.biff.kr/kor/img/event/2026/event_thum_3.jpg",
+  "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-11-15%3A00-%EC%9A%B0%EB%A6%AC%EA%B0%80%20%EB%AF%B8%EB%9E%98%EC%9D%98%20%EA%B1%B0%EC%9E%A5%EC%9D%B4%EB%8B%A4%20%21%20%ED%94%8C%EB%9E%98%EC%8B%9C%20%ED%8F%AC%EC%9B%8C%EB%93%9C%20%EC%84%B9%EC%85%98%20%EA%B0%90%EB%8F%85%EB%93%A4%EC%9D%98%20%EB%AC%B4%EB%8C%80%20%EC%9D%B8%EC%82%AC",
+  "sessions": [
+   {
+    "venue_name": "영화의전당 루프씨어터",
+    "session_date": "2026-10-11",
+    "start_time": "15:00",
+    "end_time": "15:20",
+    "booking_code": null,
+    "source_url": "https://www.biff.kr/kor/addon/10000001/page.asp?page_num=10881#2026-10-11-15%3A00-%EC%9A%B0%EB%A6%AC%EA%B0%80%20%EB%AF%B8%EB%9E%98%EC%9D%98%20%EA%B1%B0%EC%9E%A5%EC%9D%B4%EB%8B%A4%20%21%20%ED%94%8C%EB%9E%98%EC%8B%9C%20%ED%8F%AC%EC%9B%8C%EB%93%9C%20%EC%84%B9%EC%85%98%20%EA%B0%90%EB%8F%85%EB%93%A4%EC%9D%98%20%EB%AC%B4%EB%8C%80%20%EC%9D%B8%EC%82%AC"
    }
   ]
  }
