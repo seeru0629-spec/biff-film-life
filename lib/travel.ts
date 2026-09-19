@@ -12,6 +12,12 @@ function toMinutes(hms: string) {
   return h * 60 + m;
 }
 
+/** 자정을 넘겨 끝나는 회차(예: 22:30~00:05)의 end < start 문제를 보정한다 (lib/timetable.ts의 toEndMinutes와 동일한 이유, 2026-09-19). */
+function toEndMinutes(startMin: number, endHms: string) {
+  const raw = toMinutes(endHms);
+  return raw < startMin ? 24 * 60 : raw;
+}
+
 function travelMinBetween(
   fromVenueId: string | null,
   toVenueId: string | null,
@@ -37,7 +43,8 @@ export function findTravelWarnings(
     const cur = sorted[i];
     const next = sorted[i + 1];
     if (cur.venue_id === next.venue_id) continue;
-    const curEnd = cur.end_time ? toMinutes(cur.end_time) : toMinutes(cur.start_time) + (cur.runtime_min ?? 0);
+    const curStart = toMinutes(cur.start_time);
+    const curEnd = cur.end_time ? toEndMinutes(curStart, cur.end_time) : curStart + (cur.runtime_min ?? 0);
     const gapMin = toMinutes(next.start_time) - curEnd;
     const requiredMin = travelMinBetween(cur.venue_id, next.venue_id, travelMatrix);
     if (requiredMin > 0 && gapMin < requiredMin) {
