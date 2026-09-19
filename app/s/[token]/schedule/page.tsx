@@ -58,9 +58,9 @@ export default async function SchedulePage({ params }: PageProps<"/s/[token]/sch
             동기화된다 — 따로 스크롤되면 날짜 라벨이 자기 컬럼과 어긋난다. */}
         <div className="overflow-x-auto">
           <div className="grid border-b border-hairline bg-[#FCFAF7]" style={{ gridTemplateColumns }}>
-            <div className="sticky left-0 z-20 bg-[#FCFAF7]" />
+            <div className="sticky left-0 z-20 bg-[#FCFAF7]" style={{ willChange: "transform" }} />
             {datesWithItems.map((date) => (
-              <div key={date} className="border-l border-hairline px-1 py-2.25 text-center">
+              <div key={date} className="border-l border-hairline bg-[#FCFAF7] px-1 py-2.25 text-center">
                 <div className="text-[10px] font-medium text-text-faint">{weekdayKor(date)}요일</div>
                 <div className="tabular text-[12.5px] font-semibold">{fmtMonthDay(date)}</div>
               </div>
@@ -68,7 +68,7 @@ export default async function SchedulePage({ params }: PageProps<"/s/[token]/sch
           </div>
 
           <div className="relative grid" style={{ gridTemplateColumns, height: totalHeight }}>
-            <div className="sticky left-0 z-20 bg-card">
+            <div className="sticky left-0 z-20 bg-card" style={{ willChange: "transform" }}>
               {layout.hours.map((h, i) => (
                 <div
                   key={h}
