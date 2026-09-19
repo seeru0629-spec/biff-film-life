@@ -106,7 +106,7 @@ export default async function SchedulePage({ params, searchParams }: PageProps<"
                 className="tabular absolute left-2 text-[10px] font-medium text-icon-muted"
                 style={{ top: i * ROW_HEIGHT + 4 }}
               >
-                {String(h).padStart(2, "0")}:00
+                {String(h % 24).padStart(2, "0")}:00
               </div>
             ))}
           </div>

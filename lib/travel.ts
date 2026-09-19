@@ -15,7 +15,7 @@ function toMinutes(hms: string) {
 /** 자정을 넘겨 끝나는 회차(예: 22:30~00:05)의 end < start 문제를 보정한다 (lib/timetable.ts의 toEndMinutes와 동일한 이유, 2026-09-19). */
 function toEndMinutes(startMin: number, endHms: string) {
   const raw = toMinutes(endHms);
-  return raw < startMin ? 24 * 60 : raw;
+  return raw < startMin ? raw + 24 * 60 : raw;
 }
 
 function travelMinBetween(

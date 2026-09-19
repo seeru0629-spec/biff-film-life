@@ -9,11 +9,14 @@ function toMinutes(hms: string) {
   return h * 60 + m;
 }
 
-/** 자정을 넘겨 끝나는 회차(예: 22:30~00:05)는 end가 start보다 작게 나와 음수 길이가 되던 버그(2026-09-19)를 막는다.
- * 그리드는 당일 24:00까지만 그리므로(hourEnd가 24로 캡됨) 자정 이후분은 24:00에서 잘라 표시한다. */
+/** 자정을 넘겨 끝나는 회차(예: 22:30~00:05, 23:59~01:54)는 end가 start보다 작게 나와 음수 길이가
+ * 되던 버그(2026-09-19)를 막는다. 다음날로 넘어간 것으로 보고 +24h 보정 — 새벽 상영은 실제로 꽤
+ * 흔해서(2026-10 기준 회차의 3.5%가 자정을 넘김, 그 중 다수는 23:59 시작이라 상영시간 대부분이
+ * 자정 이후) 24:00에서 그냥 잘라버리면 이 회차들도 다시 최소 높이로 눌린다. 그리드의 hourEnd는
+ * 이 값을 반영해 24시 이후로도 늘어난다.*/
 function toEndMinutes(startMin: number, endHms: string) {
   const raw = toMinutes(endHms);
-  return raw < startMin ? 24 * 60 : raw;
+  return raw < startMin ? raw + 24 * 60 : raw;
 }
 
 export type DayColumn = {
@@ -56,7 +59,9 @@ export function buildMultiDayLayout(
     s.end_time ? toEndMinutes(allStarts[i], s.end_time) : allStarts[i] + (s.runtime_min ?? 90)
   );
   const hourStart = Math.max(0, Math.floor(Math.min(...allStarts, 9 * 60) / 60));
-  const hourEnd = Math.min(24, Math.ceil(Math.max(...allEnds, 18 * 60) / 60));
+  // 새벽까지 넘어가는 회차를 온전히 보여주려면 24시를 넘어설 수 있어야 한다 — 30(다음날 06:00)은
+  // 잘못된 데이터가 그리드를 무한정 늘리는 걸 막는 안전판일 뿐, 실제 심야 상영은 이 안에 다 들어온다.
+  const hourEnd = Math.min(30, Math.ceil(Math.max(...allEnds, 18 * 60) / 60));
   const hours = Array.from({ length: hourEnd - hourStart }, (_, i) => hourStart + i);
 
   const columns = dates.map((date): DayColumn => {
