@@ -61,6 +61,11 @@ export async function getFilm(id: string) {
   return data as Film;
 }
 
+// film_id/venue_id가 가리키는 행이 삭제돼 조인이 null로 돌아온 회차는 걸러낸다 (2026-09-19, films 날짜뷰 크래시 수정).
+function dropOrphanedScreenings(rows: unknown[]): ScreeningWithDetails[] {
+  return (rows as ScreeningWithDetails[]).filter((r) => r.film && r.venue);
+}
+
 export async function getScreeningsForFilm(filmId: string): Promise<ScreeningWithDetails[]> {
   const { data, error } = await supabasePublic()
     .from("filmlife_screenings")
@@ -69,7 +74,7 @@ export async function getScreeningsForFilm(filmId: string): Promise<ScreeningWit
     .order("screen_date", { ascending: true })
     .order("start_time", { ascending: true });
   if (error) throw error;
-  return data as unknown as ScreeningWithDetails[];
+  return dropOrphanedScreenings(data ?? []);
 }
 
 export async function getScreeningsByDate(date: string): Promise<ScreeningWithDetails[]> {
@@ -79,7 +84,7 @@ export async function getScreeningsByDate(date: string): Promise<ScreeningWithDe
     .eq("screen_date", date)
     .order("start_time", { ascending: true });
   if (error) throw error;
-  return data as unknown as ScreeningWithDetails[];
+  return dropOrphanedScreenings(data ?? []);
 }
 
 /** 영화 회차 + 행사 세션을 한 시간표로 합쳐서 반환 (렌더링은 lib/timetable.ts, lib/travel.ts 참고) */
@@ -95,7 +100,11 @@ export async function getScheduleForViewer(token: string): Promise<TimetableItem
     screening: ScreeningWithDetails | null;
     event_session: EventSessionWithDetails | null;
   }[];
-  return rows.map((r) => toTimetableItem((r.screening ?? r.event_session)!));
+  // screening/event_session이 삭제돼 둘 다 null인 고아 schedule_item은 건너뛴다 (2026-09-19, 홈 화면 크래시 수정).
+  return rows.flatMap((r) => {
+    const item = r.screening ?? r.event_session;
+    return item ? [toTimetableItem(item)] : [];
+  });
 }
 
 export async function isScreeningInSchedule(token: string, screeningId: string) {
