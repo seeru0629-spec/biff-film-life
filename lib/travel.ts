@@ -30,7 +30,8 @@ function travelMinBetween(
   return hit?.travel_min ?? 0;
 }
 
-/** 같은 날짜의 항목들(시작시각 오름차순 정렬, 영화/행사 혼합 가능)을 받아 이동시간 촉박 구간을 찾는다. */
+/** 같은 날짜의 항목들(시작시각 오름차순 정렬, 영화/행사 혼합 가능)을 받아 이동시간 촉박 구간을 찾는다.
+ * SaveImageSheet(저장 이미지)에서 "문제 있을 때만" 보여주는 용도로 계속 쓰인다. */
 export function findTravelWarnings(
   sameDayItems: TimetableItem[],
   travelMatrix: VenueTravelTime[]
@@ -52,4 +53,41 @@ export function findTravelWarnings(
     }
   }
   return warnings;
+}
+
+export type ScheduleGap = {
+  fromScreeningId: string;
+  toScreeningId: string;
+  gapMin: number;
+  requiredMin: number;
+  isTight: boolean;
+};
+
+/** 같은 날짜의 연속된 두 일정 사이 간격을 장소가 같아도 전부 계산한다 — 시간표 화면에
+ * "다음 상영까지 OO분"을 항상 보여주기 위한 용도(2026-09-19, 사용자 피드백). isTight 조건은
+ * findTravelWarnings와 동일해서 부족한 구간은 화면에서 그대로 경고 스타일로 구분할 수 있다. */
+export function computeScheduleGaps(
+  sameDayItems: TimetableItem[],
+  travelMatrix: VenueTravelTime[]
+): ScheduleGap[] {
+  const sorted = [...sameDayItems].sort((a, b) =>
+    a.start_time.localeCompare(b.start_time)
+  );
+  const gaps: ScheduleGap[] = [];
+  for (let i = 0; i < sorted.length - 1; i++) {
+    const cur = sorted[i];
+    const next = sorted[i + 1];
+    const curStart = toMinutes(cur.start_time);
+    const curEnd = cur.end_time ? toEndMinutes(curStart, cur.end_time) : curStart + (cur.runtime_min ?? 0);
+    const gapMin = toMinutes(next.start_time) - curEnd;
+    const requiredMin = travelMinBetween(cur.venue_id, next.venue_id, travelMatrix);
+    gaps.push({
+      fromScreeningId: cur.id,
+      toScreeningId: next.id,
+      gapMin,
+      requiredMin,
+      isTight: requiredMin > 0 && gapMin < requiredMin,
+    });
+  }
+  return gaps;
 }

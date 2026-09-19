@@ -130,14 +130,20 @@ export default async function SchedulePage({ params, searchParams }: PageProps<"
                 />
               ))}
 
-              {col.warnings.map((w, i) => (
+              {col.gaps.map((g, i) => (
                 <div
                   key={i}
-                  className="absolute left-1 right-1 z-20 flex -translate-y-1/2 items-center justify-center gap-1 whitespace-nowrap rounded-full bg-warn-red px-1.5 py-1 text-white shadow-lg"
-                  style={{ top: w.top }}
+                  className={`absolute left-1 right-1 z-20 flex -translate-y-1/2 items-center justify-center gap-1 whitespace-nowrap rounded-full px-1.5 py-1 ${
+                    g.isTight
+                      ? "bg-warn-red text-white shadow-lg"
+                      : "border border-border-2 bg-white/90 text-text-faint"
+                  }`}
+                  style={{ top: g.top }}
                 >
-                  <span className="h-1 w-1 flex-none rounded-full bg-white" />
-                  <span className="truncate text-[9px] font-bold">{w.gapMin}분 부족</span>
+                  {g.isTight && <span className="h-1 w-1 flex-none rounded-full bg-white" />}
+                  <span className="truncate text-[9px] font-semibold">
+                    {g.isTight ? `${g.gapMin}분 부족` : `다음 상영까지 ${g.gapMin}분`}
+                  </span>
                 </div>
               ))}
             </div>

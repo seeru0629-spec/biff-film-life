@@ -1,5 +1,5 @@
 import type { TimetableItem, VenueTravelTime } from "./types";
-import { findTravelWarnings } from "./travel";
+import { computeScheduleGaps } from "./travel";
 
 export const ROW_HEIGHT = 64; // px per hour
 const LANE_STAGGER = 12; // px : 겹치는 항목이 있을 때 뒤 블록을 앞 블록 오른쪽으로 살짝 밀어 겹쳐 쌓는다
@@ -27,7 +27,7 @@ export type DayColumn = {
     height: number;
     lane: number; // 0 = 겹침 없음/첫 블록, 1+ = 겹쳐서 뒤로 밀린 순번
   }[];
-  warnings: { top: number; gapMin: number }[];
+  gaps: { top: number; gapMin: number; isTight: boolean }[];
 };
 
 export type MultiDayLayout = {
@@ -79,15 +79,15 @@ export function buildMultiDayLayout(
       lane: lanes[i],
     }));
 
-    const rawWarnings = findTravelWarnings(sorted, travelMatrix);
-    const warnings = rawWarnings.map((w) => {
-      const fromIdx = sorted.findIndex((s) => s.id === w.fromScreeningId);
-      const toIdx = sorted.findIndex((s) => s.id === w.toScreeningId);
-      const midMinutes = (ends[fromIdx] + starts[toIdx]) / 2;
-      return { top: ((midMinutes - hourStart * 60) / 60) * ROW_HEIGHT, gapMin: w.gapMin };
+    // computeScheduleGaps도 동일하게 start_time 오름차순 정렬해 연속 쌍을 순회하므로
+    // gaps[i]는 항상 sorted[i]->sorted[i+1] 구간과 1:1 대응한다.
+    const rawGaps = computeScheduleGaps(sorted, travelMatrix);
+    const gaps = rawGaps.map((g, i) => {
+      const midMinutes = (ends[i] + starts[i + 1]) / 2;
+      return { top: ((midMinutes - hourStart * 60) / 60) * ROW_HEIGHT, gapMin: g.gapMin, isTight: g.isTight };
     });
 
-    return { date, blocks, warnings };
+    return { date, blocks, gaps };
   });
 
   return { hourStart, hourEnd, hours, columns };
