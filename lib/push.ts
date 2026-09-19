@@ -89,3 +89,29 @@ export async function notifyNewComment({
     )
   );
 }
+
+/** 새 게시글이 올라오면 운영자(ADMIN_VIEWER_TOKEN)에게 알린다 — 중요한 수정 요청을 놓치지
+ * 않기 위한 용도(2026-09-19). 운영자 본인이 쓴 글이면 스킵. 링크는 운영자 본인 토큰 기준. */
+export async function notifyAdminOfNewPost({
+  authorToken,
+  postId,
+  category,
+  title,
+  body,
+}: {
+  authorToken: string;
+  postId: string;
+  category: string;
+  title: string;
+  body: string;
+}) {
+  const adminToken = process.env.ADMIN_VIEWER_TOKEN;
+  if (!adminToken || adminToken === authorToken) return;
+
+  const preview = body.length > 60 ? `${body.slice(0, 60)}…` : body;
+  await sendToToken(adminToken, {
+    title: `[${category}] 새 글: ${title}`,
+    body: preview,
+    url: `/s/${adminToken}/board/${postId}`,
+  });
+}

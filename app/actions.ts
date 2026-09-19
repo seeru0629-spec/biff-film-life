@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { supabaseAdmin } from "@/lib/supabase";
-import { notifyNewComment } from "@/lib/push";
+import { notifyAdminOfNewPost, notifyNewComment } from "@/lib/push";
 import type { PostCategory } from "@/lib/types";
 
 export async function addToSchedule(token: string, screeningId: string) {
@@ -123,6 +123,12 @@ export async function createPost(token: string, category: PostCategory, formData
     .select("id")
     .single();
   if (error) throw new Error(error.message);
+  // redirect()는 내부적으로 예외를 던져 그 아래 코드가 실행되지 않으므로 알림은 그 전에 보낸다.
+  try {
+    await notifyAdminOfNewPost({ authorToken: token, postId: data.id, category, title, body });
+  } catch (e) {
+    console.error("[createPost] 운영자 알림 발송 실패", e);
+  }
   revalidatePath(`/s/${token}/board`);
   redirect(`/s/${token}/board/${data.id}`);
 }
