@@ -31,6 +31,7 @@ export default async function EventDetailPage({ params }: PageProps<"/s/[token]/
             alt={`${event.title} 이미지`}
             width={124}
             height={124}
+            referrerPolicy="no-referrer"
             className="h-[124px] w-[124px] flex-none rounded-[10px] bg-white/10 object-cover"
           />
           <div className="min-w-0 flex-1">

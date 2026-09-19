@@ -30,6 +30,7 @@ export default async function PopularFilmsPage({ params }: PageProps<"/s/[token]
                 alt={`${film.title_kor} 스틸`}
                 width={72}
                 height={72}
+                referrerPolicy="no-referrer"
                 className="h-[72px] w-[72px] flex-none rounded-lg bg-skeleton object-cover"
               />
             ) : (

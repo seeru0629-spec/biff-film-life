@@ -72,6 +72,7 @@ export default async function EventsPage({
               alt={`${event.title} 이미지`}
               width={92}
               height={92}
+              referrerPolicy="no-referrer"
               className="h-[92px] w-[92px] flex-none rounded-lg bg-skeleton object-cover"
             />
             <div className="min-w-0 flex-1">

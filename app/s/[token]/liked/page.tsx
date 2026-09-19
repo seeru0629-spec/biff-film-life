@@ -29,6 +29,7 @@ export default async function LikedFilmsPage({ params }: PageProps<"/s/[token]/l
                 alt={`${film.title_kor} 스틸`}
                 width={72}
                 height={72}
+                referrerPolicy="no-referrer"
                 className="h-[72px] w-[72px] flex-none rounded-lg bg-skeleton object-cover"
               />
             ) : (

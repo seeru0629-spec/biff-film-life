@@ -173,6 +173,7 @@ async function FilmsByTitle({ token, q, section }: { token: string; q?: string; 
                 alt={`${film.title_kor} 스틸`}
                 width={92}
                 height={92}
+                referrerPolicy="no-referrer"
                 className="h-[92px] w-[92px] flex-none rounded-lg bg-skeleton object-cover"
               />
             ) : (

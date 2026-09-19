@@ -52,6 +52,7 @@ export default async function FilmDetailPage({ params }: PageProps<"/s/[token]/f
               alt={`${film.title_kor} 스틸`}
               width={124}
               height={124}
+              referrerPolicy="no-referrer"
               className="h-[124px] w-[124px] flex-none rounded-[10px] bg-white/10 object-cover"
             />
           ) : (
