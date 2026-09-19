@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getPosts } from "@/lib/queries";
 import { fmtRelativeTime } from "@/lib/format";
 import { SectionBadge } from "@/components/ui";
+import { PushSubscribeToggle } from "@/components/PushSubscribeToggle";
 import type { PostCategory } from "@/lib/types";
 
 export default async function BoardPage({ params, searchParams }: PageProps<"/s/[token]/board">) {
@@ -33,6 +34,10 @@ export default async function BoardPage({ params, searchParams }: PageProps<"/s/
             표 나눔·양도
           </Link>
         </div>
+      </div>
+
+      <div className="px-4">
+        <PushSubscribeToggle token={token} />
       </div>
 
       {category === "양도" && (

@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { supabaseAdmin } from "@/lib/supabase";
+import { notifyNewComment } from "@/lib/push";
 import type { PostCategory } from "@/lib/types";
 
 export async function addToSchedule(token: string, screeningId: string) {
@@ -140,6 +141,12 @@ export async function createComment(token: string, postId: string, parentComment
     .from("filmlife_comments")
     .insert({ viewer_token: token, post_id: postId, parent_comment_id: parentCommentId, body });
   if (error) throw new Error(error.message);
+  // 알림 발송 실패가 댓글 작성 자체를 막으면 안 되므로 별도 try/catch로 감싼다.
+  try {
+    await notifyNewComment({ commenterToken: token, postId, parentCommentId, commentBody: body });
+  } catch (e) {
+    console.error("[createComment] 알림 발송 실패", e);
+  }
   revalidatePath(`/s/${token}/board/${postId}`);
 }
 
