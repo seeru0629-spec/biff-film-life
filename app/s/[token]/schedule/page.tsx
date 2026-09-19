@@ -102,18 +102,18 @@ export default async function SchedulePage({ params }: PageProps<"/s/[token]/sch
                 ))}
 
                 {col.gaps.map((g, i) => (
+                  // 문구를 짧게(위치상 "다음 상영"이라는 맥락이 이미 있어 반복 안 함) + 진한 배경으로
+                  // 눈에 띄게 하고, truncate 대신 줄바꿈을 허용해 세 자리 분(예: 213분)도 절대 안 잘리게 한다.
                   <div
                     key={i}
-                    className={`absolute left-1 right-1 z-10 flex -translate-y-1/2 items-center justify-center gap-1 whitespace-nowrap rounded-full px-1.5 py-1 ${
-                      g.isTight
-                        ? "bg-warn-red text-white shadow-lg"
-                        : "border border-border-2 bg-white/90 text-text-faint"
+                    className={`absolute left-1 right-1 z-10 flex -translate-y-1/2 items-center justify-center gap-1 rounded-lg px-1.5 py-1 text-center shadow-sm ${
+                      g.isTight ? "bg-warn-red text-white" : "bg-ink-2 text-white"
                     }`}
                     style={{ top: g.top }}
                   >
                     {g.isTight && <span className="h-1 w-1 flex-none rounded-full bg-white" />}
-                    <span className="truncate text-[9px] font-semibold">
-                      {g.isTight ? `${g.gapMin}분 부족` : `다음 상영까지 ${g.gapMin}분`}
+                    <span className="text-[9.5px] font-bold leading-tight">
+                      {g.isTight ? `${g.gapMin}분 부족` : `${g.gapMin}분 후`}
                     </span>
                   </div>
                 ))}
