@@ -27,6 +27,40 @@ function reportSaveImageError(message: string, extra?: Record<string, unknown>) 
   }
 }
 
+async function fetchStillcutOnce(url: string): Promise<string> {
+  const res = await fetch(`/api/img-proxy?url=${encodeURIComponent(url)}`);
+  if (!res.ok) throw new Error(`stillcut fetch not ok: ${res.status}`);
+  const blob = await res.blob();
+  if (!blob.type.startsWith("image/") || blob.size === 0) {
+    throw new Error(`stillcut blob invalid: type=${blob.type} size=${blob.size}`);
+  }
+  return new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = reject;
+    reader.onloadend = () => resolve(reader.result as string);
+    reader.readAsDataURL(blob);
+  });
+}
+
+const RETRY_DELAY_MS = 600;
+
+/** 카카오톡 인앱 브라우저 등에서 페이지 진입 직후 여러 스틸컷 요청이 한꺼번에 실패하는 버스트가
+ * 관찰돼(2026-09-21, Slack 부국쨈 에러 채널) 짧게 기다렸다 한 번만 재시도한다. 재시도까지
+ * 실패해야만 리포트해 일시적 네트워크 버스트로 인한 알림도 같이 줄어드는 효과가 있다. */
+async function fetchStillcutWithRetry(url: string): Promise<readonly [string, string]> {
+  try {
+    return [url, await fetchStillcutOnce(url)] as const;
+  } catch {
+    await new Promise((resolve) => setTimeout(resolve, RETRY_DELAY_MS));
+    try {
+      return [url, await fetchStillcutOnce(url)] as const;
+    } catch (e) {
+      reportSaveImageError(e instanceof Error ? e.message : String(e), { url, afterRetry: true });
+      return [url, ""] as const;
+    }
+  }
+}
+
 export function SaveImageSheet({
   groups,
   travelMatrix,
@@ -62,32 +96,7 @@ export function SaveImageSheet({
     const missing = urls.filter((u) => !(u in stillDataUrls));
     if (missing.length === 0) return;
     let cancelled = false;
-    Promise.all(
-      missing.map(async (url) => {
-        try {
-          const res = await fetch(`/api/img-proxy?url=${encodeURIComponent(url)}`);
-          if (!res.ok) {
-            reportSaveImageError(`stillcut fetch not ok: ${res.status}`, { url });
-            return [url, ""] as const;
-          }
-          const blob = await res.blob();
-          if (!blob.type.startsWith("image/") || blob.size === 0) {
-            reportSaveImageError(`stillcut blob invalid: type=${blob.type} size=${blob.size}`, { url });
-            return [url, ""] as const;
-          }
-          const dataUrl = await new Promise<string>((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onerror = reject;
-            reader.onloadend = () => resolve(reader.result as string);
-            reader.readAsDataURL(blob);
-          });
-          return [url, dataUrl] as const;
-        } catch (e) {
-          reportSaveImageError(`stillcut fetch threw: ${e instanceof Error ? e.message : String(e)}`, { url });
-          return [url, ""] as const;
-        }
-      })
-    ).then((entries) => {
+    Promise.all(missing.map(fetchStillcutWithRetry)).then((entries) => {
       if (cancelled) return;
       setStillDataUrls((prev) => {
         const next = { ...prev };
