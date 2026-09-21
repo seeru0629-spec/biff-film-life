@@ -1,4 +1,85 @@
 {
-  "generated_at": "2026-09-20T23:40:34.702Z",
-  "errors": []
+  "generated_at": "2026-09-21T23:54:05.339Z",
+  "errors": [
+    {
+      "id": "65db3505-eaba-49f5-9bed-5aa391ff0ddb",
+      "created_at": "2026-09-20T23:41:02.552761+00:00",
+      "message": "Script error.",
+      "stack": null,
+      "digest": null,
+      "path": "/s/N_GA9dXvabvv2sHqZbnC",
+      "route_type": "client",
+      "extra": null
+    },
+    {
+      "id": "43462ba1-376a-47ec-9c80-2f66575285cb",
+      "created_at": "2026-09-21T00:30:00.857762+00:00",
+      "message": "Script error.",
+      "stack": null,
+      "digest": null,
+      "path": "/s/-S1HoBv5J9jmAdCkUtEb",
+      "route_type": "client",
+      "extra": null
+    },
+    {
+      "id": "06ecd5e2-3bc2-4afc-8efd-0f1ff6a6399e",
+      "created_at": "2026-09-21T02:13:36.950664+00:00",
+      "message": "Load failed",
+      "stack": null,
+      "digest": null,
+      "path": "/s/wActWB6rvwyHlT370lLS/films/ba848a1f-a4e1-4e3c-a058-57e991f33bc4",
+      "route_type": "render",
+      "extra": null
+    },
+    {
+      "id": "7833f44a-ed10-470d-922a-6560d0d9f807",
+      "created_at": "2026-09-21T04:47:42.293852+00:00",
+      "message": "Script error.",
+      "stack": null,
+      "digest": null,
+      "path": "/s/NQW3bdTi6uGfM4YbMyYR",
+      "route_type": "client",
+      "extra": null
+    },
+    {
+      "id": "4a75410c-6813-4184-8154-b06170d92363",
+      "created_at": "2026-09-21T05:35:34.696776+00:00",
+      "message": "Load failed",
+      "stack": null,
+      "digest": null,
+      "path": "/s/m0RITrQp7QHrHNN5qcO1/schedule",
+      "route_type": "client-unhandled-rejection",
+      "extra": null
+    },
+    {
+      "id": "51a5a97f-eae3-4ed9-b07f-7df98d5bd03b",
+      "created_at": "2026-09-21T05:43:40.770932+00:00",
+      "message": "Script error.",
+      "stack": null,
+      "digest": null,
+      "path": "/s/EFgagf_efKm7QlOcOMFT",
+      "route_type": "client",
+      "extra": null
+    },
+    {
+      "id": "70338ce4-1ce8-4112-9b9f-745782cc3863",
+      "created_at": "2026-09-21T07:56:23.548895+00:00",
+      "message": "Script error.",
+      "stack": null,
+      "digest": null,
+      "path": "/s/ocvZarrj-Brsw-T6cKVo/schedule",
+      "route_type": "client",
+      "extra": null
+    },
+    {
+      "id": "4e6d0f1d-abbd-40ee-b1a3-e3da9bb99343",
+      "created_at": "2026-09-21T10:50:04.982086+00:00",
+      "message": "Script error.",
+      "stack": null,
+      "digest": null,
+      "path": "/s/zdwkK3prdJnbsyymhyjL",
+      "route_type": "client",
+      "extra": null
+    }
+  ]
 }
