@@ -21,12 +21,18 @@ const NOISE_SPIKE_THRESHOLD = 10; // 이 창 안에서 같은 잡음 메시지�
  *   지운 것. 우리 코드가 원인인지조차 알 수 없어 고칠 대상이 없다.
  * - stack에 iabjs:// 포함: 카카오톡 등 인앱브라우저가 자체 주입하는 브릿지 스크립트
  *   에러(2026-09-12 확인, 우리 앱 코드와 무관).
+ * - message === "Load failed": WebKit/Safari 계열이 fetch 실패 시 던지는 메시지
+ *   (Chrome의 "Failed to fetch"에 대응). 페이지 전환 중 네트워크가 끊기거나 사용자가
+ *   이탈/백그라운드 전환하면 RSC 페이로드 fetch가 이 메시지로 실패함 — 앱 코드가
+ *   원인이 아님(2026-09-21 확인). client 전역 핸들러뿐 아니라 error.tsx 렌더 바운더리
+ *   (routeType "render")로도 들어오므로 이 패턴만 routeType 게이트 밖에서 먼저 체크.
  *
- * 두 경우 다 "message는 같은데 stack이 새로 붙는" 식으로 정보가 더 생기면 이 함수가
+ * 세 경우 다 "message는 같은데 stack이 새로 붙는" 식으로 정보가 더 생기면 이 함수가
  * 더 이상 매치하지 않으므로 자동으로 일반 알림 경로로 넘어간다 — 별도 로직 없이도
  * "패턴이 바뀌면 알림"이 성립한다.
  */
 function isKnownUnfixableNoise({ routeType, message, stack }: ReportErrorInput): boolean {
+  if (message === "Load failed" && (routeType === "client" || routeType === "render")) return true;
   if (routeType !== "client") return false;
   if (message === "Script error." && !stack) return true;
   if (stack?.includes("iabjs://")) return true;
