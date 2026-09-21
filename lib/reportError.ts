@@ -22,17 +22,22 @@ const NOISE_SPIKE_THRESHOLD = 10; // 이 창 안에서 같은 잡음 메시지�
  * - stack에 iabjs:// 포함: 카카오톡 등 인앱브라우저가 자체 주입하는 브릿지 스크립트
  *   에러(2026-09-12 확인, 우리 앱 코드와 무관).
  * - message === "Load failed": WebKit/Safari 계열이 fetch 실패 시 던지는 메시지
- *   (Chrome의 "Failed to fetch"에 대응). 페이지 전환 중 네트워크가 끊기거나 사용자가
- *   이탈/백그라운드 전환하면 RSC 페이로드 fetch가 이 메시지로 실패함 — 앱 코드가
- *   원인이 아님(2026-09-21 확인). client 전역 핸들러뿐 아니라 error.tsx 렌더 바운더리
- *   (routeType "render")로도 들어오므로 이 패턴만 routeType 게이트 밖에서 먼저 체크.
+ *   (Chrome의 "Failed to fetch"에 대응, Node/undici는 "fetch failed"로 표기가 달라
+ *   서버 쪽에서 이 정확한 문자열이 나올 일이 없음 — 브라우저발이라는 신호로 안전하게
+ *   씀). 페이지 전환 중 네트워크가 끊기거나 사용자가 이탈/백그라운드 전환하면 RSC
+ *   페이로드 fetch가 이 메시지로 실패함 — 앱 코드가 원인이 아님(2026-09-21 확인).
+ *   client 전역 핸들러(error.tsx의 "render")뿐 아니라, 시간표 화면의 회차 삭제
+ *   (ScheduleBlock.tsx)/선택삭제·전체삭제(ScheduleSelection.tsx)가 Server Action을
+ *   startTransition 안에서 await/catch 없이 fire-and-forget으로 호출하는 지점에서도
+ *   같은 원인으로 "client-unhandled-rejection"이 뜸 — 모두 같은 네트워크 잡음이라
+ *   routeType 게이트 없이 메시지만으로 판단.
  *
- * 세 경우 다 "message는 같은데 stack이 새로 붙는" 식으로 정보가 더 생기면 이 함수가
- * 더 이상 매치하지 않으므로 자동으로 일반 알림 경로로 넘어간다 — 별도 로직 없이도
- * "패턴이 바뀌면 알림"이 성립한다.
+ * 나머지 두 경우는 "message는 같은데 stack이 새로 붙는" 식으로 정보가 더 생기면 이
+ * 함수가 더 이상 매치하지 않으므로 자동으로 일반 알림 경로로 넘어간다 — 별도 로직
+ * 없이도 "패턴이 바뀌면 알림"이 성립한다.
  */
 function isKnownUnfixableNoise({ routeType, message, stack }: ReportErrorInput): boolean {
-  if (message === "Load failed" && (routeType === "client" || routeType === "render")) return true;
+  if (message === "Load failed") return true;
   if (routeType !== "client") return false;
   if (message === "Script error." && !stack) return true;
   if (stack?.includes("iabjs://")) return true;
