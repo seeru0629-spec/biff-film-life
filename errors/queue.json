@@ -1,15 +1,4 @@
 {
-  "generated_at": "2026-10-06T23:40:29.603Z",
-  "errors": [
-    {
-      "id": "9171689f-4fbe-496d-81cb-6b155736f7e6",
-      "created_at": "2026-10-02T02:43:07.526187+00:00",
-      "message": "Script error.",
-      "stack": null,
-      "digest": null,
-      "path": "/s/siA5f-opVz1xPEDkS9EN/schedule",
-      "route_type": "client",
-      "extra": null
-    }
-  ]
+  "generated_at": "2026-10-07T23:50:41.234Z",
+  "errors": []
 }
