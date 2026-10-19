@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T23:51:11.053Z",
+  "generated_at": "2026-10-19T23:49:16.299Z",
   "errors": [
     {
       "id": "f81b9f04-7eba-4d70-8863-50d72fe75d88",
@@ -8,6 +8,16 @@
       "stack": null,
       "digest": null,
       "path": "/s/GwMZYL1jG6yuiwxZOH9H",
+      "route_type": "client",
+      "extra": null
+    },
+    {
+      "id": "0114e723-3a0e-41f3-81a7-a7d0d73c9ddc",
+      "created_at": "2026-10-19T01:41:19.397051+00:00",
+      "message": "Script error.",
+      "stack": null,
+      "digest": null,
+      "path": "/s/OVGbo1b8xNG96__hP7--/board",
       "route_type": "client",
       "extra": null
     }
