@@ -1,20 +1,25 @@
 import { weekdayKor } from "./festival";
 
 export function fmtTime(hms: string) {
+  if (!hms || typeof hms !== "string") return "";
   return hms.slice(0, 5);
 }
 
 export function fmtTimeRange(start: string, end: string | null) {
+  if (!start) return "";
   return end ? `${fmtTime(start)} – ${fmtTime(end)}` : fmtTime(start);
 }
 
 export function fmtDateWithWeekday(dateStr: string) {
+  if (!dateStr || typeof dateStr !== "string") return "";
   return `${dateStr} (${weekdayKor(dateStr)})`;
 }
 
 export function fmtMonthDay(dateStr: string) {
-  const [, m, d] = dateStr.split("-");
-  return `${m}.${d}`;
+  if (!dateStr || typeof dateStr !== "string") return "";
+  const parts = dateStr.split("-");
+  if (parts.length < 3) return dateStr;
+  return `${parts[1]}.${parts[2]}`;
 }
 
 export function fmtRelativeTime(iso: string) {
