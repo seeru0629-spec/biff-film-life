@@ -86,7 +86,7 @@ export function computeScheduleGaps(
       toScreeningId: next.id,
       gapMin,
       requiredMin,
-      isTight: requiredMin > 0 && gapMin < requiredMin,
+      isTight: gapMin < 0 || (requiredMin > 0 && gapMin < requiredMin),
     });
   }
   return gaps;
